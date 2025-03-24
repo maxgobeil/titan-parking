@@ -1,0 +1,87 @@
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/why-choose-us.css' %}" />
+{% endblock %}
+
+<section id="why-choose-us">
+  <div class="wcu-gradient-overlay"></div>
+  
+  <div class="wcu-container">
+    <div class="wcu-header">
+      <div class="badge">
+        Why Choose Us
+      </div>
+      <h2>The Professional Advantage</h2>
+      <p>
+        When it comes to parking lot striping, experience and precision matter. Here's why clients consistently choose our services:
+      </p>
+    </div>
+    <div class="reasons-grid">
+      <!-- Reason 1 -->
+      <div class="reason-card">
+        <div class="icon-container">
+          <span class="reason-icon" aria-label="Industry Experience">
+            {% include 'icons/award.svg' %}
+          </span>
+        </div>
+        <h3>Industry Experience</h3>
+        <p>Our team brings years of parking lot striping expertise to every project, ensuring professional results every time.</p>
+      </div>
+      
+      <!-- Reason 2 -->
+      <div class="reason-card">
+        <div class="icon-container">
+          <span class="reason-icon" aria-label="Premium Materials">
+            {% include 'icons/check-circle.svg' %}
+          </span>
+        </div>
+        <h3>Premium Materials</h3>
+        <p>We use only the highest quality paints and materials for maximum durability and visibility.</p>
+      </div>
+      
+      <!-- Reason 3 -->
+      <div class="reason-card">
+        <div class="icon-container">
+          <span class="reason-icon" aria-label="Fast Turnaround">
+            {% include 'icons/clock.svg' %}
+          </span>
+        </div>
+        <h3>Fast Turnaround</h3>
+        <p>We work efficiently to minimize disruption to your business operations.</p>
+      </div>
+      
+      <!-- Reason 4 -->
+      <div class="reason-card">
+        <div class="icon-container">
+          <span class="reason-icon" aria-label="Satisfaction Guaranteed">
+            {% include 'icons/thumbs-up.svg' %}
+          </span>
+        </div>
+        <h3>Satisfaction Guaranteed</h3>
+        <p>We're not satisfied until you are. Our work is backed by our commitment to excellence.</p>
+      </div>
+      
+      <!-- Reason 5 -->
+      <div class="reason-card">
+        <div class="icon-container">
+          <span class="reason-icon" aria-label="Fully Insured">
+            {% include 'icons/shield-check.svg' %}
+          </span>
+        </div>
+        <h3>Fully Insured</h3>
+        <p>Rest easy knowing our work is fully insured and we follow all safety protocols.</p>
+      </div>
+      
+      <!-- Reason 6 -->
+      <div class="reason-card">
+        <div class="icon-container">
+          <span class="reason-icon" aria-label="5-Star Service">
+            {% include 'icons/star.svg' %}
+          </span>
+        </div>
+        <h3>5-Star Service</h3>
+        <p>Our attention to detail and customer service has earned us consistent 5-star reviews.</p>
+      </div>
+    </div>
+  </div>
+</section>

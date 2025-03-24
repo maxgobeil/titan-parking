@@ -1,0 +1,135 @@
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}" />
+{% endblock %}
+
+<section id="gallery" class="portfolio-section">
+  <div class="portfolio-container">
+    <div class="portfolio-header">
+      <div class="portfolio-badge">Our Portfolio</div>
+      <h2 class="portfolio-title">See Our Work in Action</h2>
+      <p class="portfolio-subtitle">
+        Browse through our gallery of completed projects to see the quality and precision of our line striping services
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Gallery Item 1 -->
+      <div class="portfolio-item" data-id="1">
+        <div class="portfolio-image-container">
+          <img 
+            src="https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+            alt="Commercial Parking Lot" 
+            class="portfolio-image"
+            loading="lazy"
+          />
+        </div>
+        <div class="portfolio-overlay">
+          <h3 class="portfolio-item-title">Commercial Parking Lot</h3>
+          <p class="portfolio-item-description">Complete restriping of a shopping center parking lot</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 2 -->
+      <div class="portfolio-item" data-id="2">
+        <div class="portfolio-image-container">
+          <img 
+            src="https://images.unsplash.com/photo-1590174958492-95b1c4444497?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+            alt="ADA Compliance Upgrade" 
+            class="portfolio-image"
+            loading="lazy"
+          />
+        </div>
+        <div class="portfolio-overlay">
+          <h3 class="portfolio-item-title">ADA Compliance Upgrade</h3>
+          <p class="portfolio-item-description">Installation of ADA-compliant parking spaces and access aisles</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 3 -->
+      <div class="portfolio-item" data-id="3">
+        <div class="portfolio-image-container">
+          <img 
+            src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+            alt="Hotel Valet Area" 
+            class="portfolio-image"
+            loading="lazy"
+          />
+        </div>
+        <div class="portfolio-overlay">
+          <h3 class="portfolio-item-title">Hotel Valet Area</h3>
+          <p class="portfolio-item-description">Custom striping for hotel entrance and valet area</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 4 -->
+      <div class="portfolio-item" data-id="4">
+        <div class="portfolio-image-container">
+          <img 
+            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+            alt="Industrial Loading Zone" 
+            class="portfolio-image"
+            loading="lazy"
+          />
+        </div>
+        <div class="portfolio-overlay">
+          <h3 class="portfolio-item-title">Industrial Loading Zone</h3>
+          <p class="portfolio-item-description">Safety markings for industrial loading and unloading zones</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 5 -->
+      <div class="portfolio-item" data-id="5">
+        <div class="portfolio-image-container">
+          <img 
+            src="https://images.unsplash.com/photo-1573348722427-f1d6819fdf98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+            alt="Residential Community" 
+            class="portfolio-image"
+            loading="lazy"
+          />
+        </div>
+        <div class="portfolio-overlay">
+          <h3 class="portfolio-item-title">Residential Community</h3>
+          <p class="portfolio-item-description">Parking lot striping for a residential community</p>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 6 -->
+      <div class="portfolio-item" data-id="6">
+        <div class="portfolio-image-container">
+          <img 
+            src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+            alt="Fire Lane Marking" 
+            class="portfolio-image"
+            loading="lazy"
+          />
+        </div>
+        <div class="portfolio-overlay">
+          <h3 class="portfolio-item-title">Fire Lane Marking</h3>
+          <p class="portfolio-item-description">Clear fire lane markings for emergency access</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="portfolioModal" class="portfolio-modal">
+    <button class="portfolio-modal-close" aria-label="Close modal">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    
+    <div class="portfolio-modal-content">
+      <div class="portfolio-modal-image-container">
+        <img id="modalImage" src="" alt="" class="portfolio-modal-image" />
+      </div>
+      <div class="portfolio-modal-details">
+        <h3 id="modalTitle" class="portfolio-modal-title"></h3>
+        <p id="modalDescription" class="portfolio-modal-description"></p>
+      </div>
+    </div>
+  </div>
+</section>
+

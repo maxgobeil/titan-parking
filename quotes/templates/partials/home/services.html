@@ -1,0 +1,87 @@
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/services.css' %}" />
+{% endblock %}
+
+<section id="services">
+  <div class="gradient-overlay"></div>
+  
+  <div class="container">
+    <div class="headerr">
+      <div class="badge">
+        Our Expert Services
+      </div>
+      <h2>Complete Line Striping Solutions</h2>
+      <p>
+        We deliver high-quality line striping services for commercial, industrial, and residential properties
+      </p>
+    </div>
+    <div class="services-grid">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="icon-container">
+          <span class="service-icon" aria-label="Parking Lot Striping" >
+            {% include 'icons/paint-bucket.svg' %}
+          </span>
+        </div>
+        <h3>Parking Lot Striping</h3>
+        <p>Clearly marked parking spaces, fire lanes, and directional arrows to optimize traffic flow and maximize parking capacity.</p>
+      </div>
+      
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="icon-container">
+          <span class="service-icon" aria-label="ADA Compliance" >
+            {% include 'icons/map.svg' %}
+          </span>
+        </div>
+        <h3>ADA Compliance</h3>
+        <p>Expert installation of ADA-compliant handicap spaces, access aisles, and ramps according to current regulations.</p>
+      </div>
+      
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="icon-container">
+          <span class="service-icon" aria-label="Pavement Markings" >
+            {% include 'icons/construction.svg' %}
+          </span>
+        </div>
+        <h3>Pavement Markings</h3>
+        <p>Professional application of crosswalks, stop bars, and other critical traffic safety markings.</p>
+      </div>
+      
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="icon-container">
+          <span class="service-icon" aria-label="Custom Layout Design" >
+            {% include 'icons/ruler.svg' %}
+          </span>
+        </div>
+        <h3>Custom Layout Design</h3>
+        <p>Optimized parking lot layouts designed to maximize your available space while ensuring safety and compliance.</p>
+      </div>
+      
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="icon-container">
+          <span class="service-icon" aria-label="Sealcoating" >
+            {% include 'icons/check-circle.svg' %}
+          </span>
+        </div>
+        <h3>Sealcoating</h3>
+        <p>Protective sealcoating services to extend the life of your asphalt and enhance the appearance of your parking area.</p>
+      </div>
+      
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="icon-container">
+          <span class="service-icon" aria-label="Line Removal" >
+            {% include 'icons/check-circle.svg' %}
+          </span>
+        </div>
+        <h3>Line Removal</h3>
+        <p>Professional removal of outdated or incorrect lines to prepare for new parking lot layouts.</p>
+      </div>
+    </div>
+  </div>
+</section>

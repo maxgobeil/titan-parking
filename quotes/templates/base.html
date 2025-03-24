@@ -22,11 +22,17 @@
     {% block extra_css %}{% endblock %}
   </head>
   <body>
-    <header>{% block header %} {% include 'partials/home/header.html' %} {% endblock %}</header>
+    {% block header %}
+      {% include 'partials/home/header.html' %}
+    {% endblock %}
 
     <main>{% block content %}{% endblock %}</main>
 
-    <footer>{% block footer %} {% include 'partials/home/footer.html' %} {% endblock %}</footer>
+    {% block footer %}
+      {% include 'partials/home/footer.html' %}
+    {% endblock %}
+
     {% block extra_js %}{% endblock %}
+    <script src="{% static 'js/base.js' %}"></script>
   </body>
 </html>

@@ -1,0 +1,81 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+
+{% block title %}Titan Parking - Professional Parking Lot Striping{% endblock %} 
+{% block content %}
+<section class="hero-section">
+  <!-- Background Pattern -->
+  <div class="pattern-container">
+    <div class="pattern-overlay"></div>
+  </div>
+  
+  <!-- Yellow Line Animation -->
+  <div class="yellow-line-animation"></div>
+  
+  <div class="home-container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="service-tag">
+          Professional Line Striping Services
+        </div>
+        <h1 class="hero-title">
+          Precision Line Striping for Your Parking Lot
+        </h1>
+        <p class="hero-description">
+          Transform your parking area with clean, precise, and code-compliant line striping services from the industry experts.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="button-secondary">
+            Get a Free Quote <span class="icon-arrow">→</span>
+          </a>
+          <a href="#services" class="button-outline">
+            Our Services
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-diagram">
+        <div class="diagram-container">
+          <div class="diagram-inner">
+            <div class="parking-lot">
+              <!-- Parking spaces generated with Django -->
+              {% for i in "12345678" %}
+              <div class="parking-space" style="top: calc(15% + {{ forloop.counter0 }} * 10%)"></div>
+              {% endfor %}
+              
+              <!-- Center line -->
+              <div class="center-line"></div>
+              
+              <!-- Driving lanes -->
+              <div class="driving-lane left"></div>
+              <div class="driving-lane right"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Decorative elements -->
+        <div class="decorative-circle large"></div>
+        <div class="decorative-circle small"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/home/services.html" %}
+
+{% include 'partials/home/why-choose-us.html' %}
+
+{% include 'partials/home/portfolio.html' %}
+
+{% include 'partials/home/contact.html' %}
+
+<!-- Container for quick quote form -->
+<div id="quote-form-container"></div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/portfolio.js' %}"></script>
+{% endblock %}
