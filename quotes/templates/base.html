@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,17 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {% block meta %}
-    <meta
-      name="description"
-      content="{% block meta_description %}Default description{% endblock %}"
+    <meta 
+      name="description" 
+      content="{% block meta_description %}Titan Parking - Professional line striping services in Quebec. We offer exceptional customer service.{% endblock %}" 
     />
-    <meta
-      name="keywords"
-      content="{% block meta_keywords %}line striping, parking lot{% endblock %}"
-    />
+    <!-- Open Graph Meta Tags -->
+    <!-- <meta property="og:title" content="{% block og_title %}Default Title{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Default description{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% static 'default-image.jpg' %}{% endblock %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}"> -->
     <meta name="robots" content="index, follow" />
     {% endblock %}
-    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="canonical" href="{% block canonical_url %}{{ request.build_absolute_uri }}{% endblock %}" />
+
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+    <title>{% block title %}Home{% endblock %} | Titan Parking</title>
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% block extra_css %}{% endblock %}
