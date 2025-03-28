@@ -1,0 +1,108 @@
+/* Why Choose Us Section Styles */
+#why-choose-us {
+  padding: 96px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--dark-color, #1a1a1a);
+  color: white;
+}
+
+.wcu-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 128px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.wcu-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.wcu-header {
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto 64px auto;
+}
+
+#why-choose-us h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: white;
+}
+
+#why-choose-us .headerr p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#why-choose-us .reasons-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+#why-choose-us .reason-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#why-choose-us .reason-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#why-choose-us .icon-container {
+  margin-bottom: 24px;
+}
+
+#why-choose-us .reason-icon {
+  color: var(--primary-color, #ffd700);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#why-choose-us .reason-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--primary-color, #ffd700);
+}
+
+#why-choose-us h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: white;
+}
+
+#why-choose-us .reason-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* Responsive styles for Why Choose Us */
+@media (min-width: 768px) {
+  #why-choose-us .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  #why-choose-us .reasons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

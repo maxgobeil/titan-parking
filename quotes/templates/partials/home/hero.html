@@ -37,19 +37,7 @@
       <div class="hero-diagram">
         <div class="diagram-container">
           <div class="diagram-inner">
-            <div class="parking-lot">
-              <!-- Parking spaces generated with Django -->
-              {% for i in "12345678" %}
-              <div class="parking-space" style="top: calc(15% + {{ forloop.counter0 }} * 10%)"></div>
-              {% endfor %}
-              
-              <!-- Center line -->
-              <div class="center-line"></div>
-              
-              <!-- Driving lanes -->
-              <div class="driving-lane left"></div>
-              <div class="driving-lane right"></div>
-            </div>
+            <img src="{% static 'images/parking.jpg' %}" alt="Hero Diagram" />
           </div>
         </div>
         
