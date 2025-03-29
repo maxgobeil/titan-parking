@@ -1,0 +1,143 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Terms of Service - Titan Parking' %} {% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/legal.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="legal-section">
+  <div class="legal-gradient-top"></div>
+  <div class="legal-gradient-bottom"></div>
+  
+  <div class="legal-container">
+    <div class="legal-header">
+      <div class="badge">Legal</div>
+      <h1 class="legal-title">Terms of Service</h1>
+      <p class="legal-subtitle">Last Updated: <span id="current-date">March 29, 2025</span></p>
+    </div>
+
+    <div class="legal-content">
+      <p class="legal-intro">
+        These Terms of Service ("Terms") govern your use of services provided by Titan Parking ("Company", "we", "our", or "us"), 
+        including line striping, parking lot marking, and related services.
+      </p>
+      
+      <div class="legal-section-content">
+        <h2>1. Services</h2>
+        <p>
+          Titan Parking provides line striping and pavement marking services for parking lots, warehouses, and other commercial 
+          properties throughout Quebec. Our services may include, but are not limited to:
+        </p>
+        <ul>
+          <li>Parking lot striping and restriping</li>
+          <li>Handicap space marking</li>
+          <li>Warehouse floor marking</li>
+          <li>Curb painting</li>
+          <li>Custom stenciling</li>
+        </ul>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>2. Quotes and Acceptance</h2>
+        <p>
+          All quotes provided by us are valid for 30 days from the date of issue, unless otherwise specified. Acceptance of a 
+          quote must be confirmed in writing (email is acceptable) before any work will be scheduled. By accepting our quote, 
+          you agree to these Terms of Service.
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>3. Payment Terms</h2>
+        <p>Payment terms are as follows:</p>
+        <ul>
+          <li>For projects under $1,000: Payment in full is due upon completion of the work.</li>
+          <li>For projects over $1,000: A 50% deposit is required before work begins, with the balance due upon completion.</li>
+          <li>Payment methods accepted: Cash, Check, e-Transfer</li>
+          <li>Invoices are due within 30 days of issuance. Late payments may incur a fee of 1.5% per month.</li>
+        </ul>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>4. Weather Conditions and Scheduling</h2>
+        <p>
+          Line striping and pavement marking are weather-dependent services. We reserve the right to reschedule work due to 
+          unsuitable weather conditions (rain, snow, temperatures below 50°F/10°C, or excessively high humidity). We will make 
+          reasonable efforts to accommodate your schedule when rescheduling is necessary.
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>5. Surface Preparation</h2>
+        <p>
+          Unless otherwise specified in our quote, our services do not include cleaning, power washing, or repairing the surface 
+          to be marked. The client is responsible for ensuring that the surface is clean, dry, and in suitable condition for line 
+          striping. Additional charges may apply if we need to prepare surfaces that are not ready for marking.
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>6. Cancellation Policy</h2>
+        <p>If you need to cancel scheduled services:</p>
+        <ul>
+          <li>Cancellations made more than 48 hours before the scheduled start time: No cancellation fee</li>
+          <li>Cancellations made less than 48 hours before the scheduled start time: 25% of the quoted price may be charged to cover preparation costs.</li>
+        </ul>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>7. Warranty</h2>
+        <p>
+          We warrant our workmanship for a period of 6 months from the date of completion, under normal use conditions. This warranty 
+          is limited to the reapplication of markings that show premature wear or failure. This warranty does not cover:
+        </p>
+        <ul>
+          <li>Damage from snow plowing, chemical spills, or abrasive materials</li>
+          <li>Normal wear and tear from vehicle traffic</li>
+          <li>Damage from improper surface preparation if not performed by us</li>
+          <li>Fading due to UV exposure or harsh weather conditions</li>
+        </ul>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>8. Liability Limitation</h2>
+        <p>
+          Our maximum liability for any claim arising out of our services shall be limited to the amount paid for the services. 
+          We are not liable for any indirect, consequential, or incidental damages, including but not limited to loss of use or 
+          business interruption.
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>9. Compliance with Regulations</h2>
+        <p>
+          We strive to comply with all applicable regulations, including CSA B651 requirements for accessible parking. However, the client 
+          is ultimately responsible for ensuring their property meets all local, provincial (including Quebec's Act to secure handicapped persons in the exercise of their rights), and federal (Accessible Canada Act) requirements. We can provide guidance but cannot guarantee compliance with all regulatory requirements.
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>10. Changes to These Terms</h2>
+        <p>
+          We reserve the right to modify these Terms at any time. Changes will be effective upon posting to our website. 
+          Your continued use of our services constitutes agreement to the modified Terms.
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>Contact Information</h2>
+        <p>If you have any questions about these Terms, please contact us at:</p>
+        <p>
+          Phone: <a href="tel:+14189554461">(418) 955-4461</a><br>
+          Email: <a href="mailto:contact@titanparking.ca">contact@titanparking.ca</a><br>
+          Based in Drummondville, serving the entire province of Quebec
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

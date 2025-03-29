@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Allow all bots to access the entire site
+# Don't disallow anything
+
+# Sitemap location
+Sitemap: https://titanparking.ca/sitemap.xml

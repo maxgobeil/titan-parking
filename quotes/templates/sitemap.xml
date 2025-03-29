@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+ <!-- Home Page -->
+  <url>
+    <loc>https://titanparking.ca/fr/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/" />
+  </url>
+
+<!-- French Home Page -->
+  <url>
+    <loc>https://titanparking.ca/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/fr/" />
+  </url>
+
+  
+  <!-- Terms of Service Page -->
+  <url>
+    <loc>https://titanparking.ca/terms-of-service/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/fr/terms-of-service/" />
+  </url>
+  
+  <!-- English Terms of Service Page -->
+  <url>
+    <loc>https://titanparking.ca/terms-of-service/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/terms-of-service/" />
+  </url>
+  
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://titanparking.ca/privacy-policy/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/fr/privacy-policy/" />
+  </url>
+  
+  <!-- French Privacy Policy Page -->
+  <url>
+    <loc>https://titanparking.ca/fr/privacy-policy/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/privacy-policy/" />
+  </url>
+</urlset>
