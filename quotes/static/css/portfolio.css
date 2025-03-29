@@ -181,3 +181,15 @@
 .portfolio-modal-description {
   color: #666666;
 }
+
+@media (max-width: 1200px) {
+  .portfolio-container {
+    padding: var(--container-padding-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: var(--container-padding-mobile);
+  }
+}

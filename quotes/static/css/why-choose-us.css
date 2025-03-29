@@ -106,3 +106,15 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media (max-width: 1200px) {
+  .wcu-container {
+    padding: var(--container-padding-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .wcu-container {
+    padding: var(--container-padding-mobile);
+  }
+}

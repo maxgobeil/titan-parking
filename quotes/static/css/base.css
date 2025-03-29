@@ -8,10 +8,13 @@
   --stripe-darkgray: #2a2a2a;
   --dark-background: #2a2a2a;
   --light-text: #e6e6e6;
+  --dark-text: #252525;
 
   /* Container */
   --container-max-width: 1200px;
   --container-padding: 0 1rem;
+  --container-padding-tablet: 0 4rem;
+  --container-padding-mobile: 0 2rem;
 }
 
 * {
@@ -48,8 +51,14 @@ html {
   margin-bottom: 0.5rem;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 1200px) {
   .container {
-    padding: 0 1.5rem;
+    padding: var(--container-padding-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--container-padding-mobile);
   }
 }

@@ -1,6 +1,7 @@
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 830px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -57,7 +58,6 @@
   position: relative;
   width: 100%;
   max-width: var(--container-max-width);
-  margin: 0 auto;
   padding: var(--container-padding);
   z-index: 10;
 }
@@ -67,12 +67,7 @@
   display: grid;
   gap: 2rem;
   align-items: center;
-}
-
-@media (min-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+  grid-template-columns: 1fr 1fr;
 }
 
 /* Hero Content */
@@ -84,34 +79,16 @@
 
 .hero-title {
   color: var(--light-text);
-  font-size: 2.25rem;
+  font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-}
-
-@media (min-width: 640px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 3.75rem;
-  }
 }
 
 .hero-description {
   font-size: 1.125rem;
   opacity: 0.9;
   margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .hero-description {
-    font-size: 1.25rem;
-  }
 }
 
 .hero-buttons {
@@ -164,13 +141,7 @@
 .hero-diagram {
   position: relative;
   animation: fade-in-right 1.5s ease-out;
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .hero-diagram {
-    display: block;
-  }
+  display: block;
 }
 
 .diagram-container {
@@ -219,6 +190,46 @@
   height: 8rem;
   filter: blur(1rem);
   animation: floating 8s ease-in-out infinite;
+}
+
+@media (max-width: 1200px) {
+  .container-hero {
+    padding: var(--container-padding-tablet);
+  }
+  .yellow-line-animation {
+    top: 89%;
+  }
+}
+
+@media (max-width: 920px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+  .hero-diagram {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-hero {
+    padding: var(--container-padding-mobile);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  .hero-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .badge {
+    display: none;
+  }
 }
 
 /* Animations */

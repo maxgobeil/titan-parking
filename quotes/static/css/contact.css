@@ -63,6 +63,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 3rem;
+  align-items: start;
 }
 
 @media (min-width: 1024px) {
@@ -137,14 +138,14 @@ a.contact-value:hover {
   color: #f0c000;
 }
 
-.contact-emergency-heading {
+.contact-assessment-heading {
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #333333;
 }
 
-.contact-emergency-text {
+.contact-assessment-text {
   margin-bottom: 1rem;
   color: #666666;
 }
@@ -307,4 +308,16 @@ a.contact-value:hover {
 
 .contact-success-text {
   color: #276749;
+}
+
+@media (max-width: 1200px) {
+  .contact-container {
+    padding: var(--container-padding-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    padding: var(--container-padding-mobile);
+  }
 }
