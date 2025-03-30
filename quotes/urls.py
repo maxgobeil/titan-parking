@@ -9,4 +9,5 @@ urlpatterns = [
     path("privacy-policy/", views.privacy_view, name="privacy-policy"),
     path("sitemap.xml", views.sitemap_view, name="sitemap"),
     path("robots.txt", views.robots_view, name="robots"),
+    path("submit-contact/", views.submit_contact, name="submit_contact"),
 ]

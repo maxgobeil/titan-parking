@@ -254,6 +254,7 @@ a.contact-value:hover {
 .contact-button-primary:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+  background-color: #757575;
 }
 
 .contact-spinner {
@@ -264,6 +265,7 @@ a.contact-value:hover {
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-right: 0.5rem;
+  z-index: 1000;
 }
 
 @keyframes spin {
@@ -282,6 +284,7 @@ a.contact-value:hover {
   border-radius: 0.5rem;
   padding: 1.5rem;
   text-align: center;
+  margin-top: 1rem;
 }
 
 .contact-success-icon-container {
@@ -308,6 +311,34 @@ a.contact-value:hover {
 
 .contact-success-text {
   color: #276749;
+}
+
+.error-message {
+  background-color: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #c53030;
+  margin-top: 1rem;
+}
+
+.error-message p {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.error-message ul {
+  margin-left: 1.5rem;
+}
+
+.htmx-request .htmx-indicator {
+  display: inline-block !important;
+}
+
+.htmx-request .contact-button-primary {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 @media (max-width: 1200px) {

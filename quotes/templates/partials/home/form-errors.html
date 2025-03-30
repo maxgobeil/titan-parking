@@ -1,0 +1,9 @@
+{% load i18n %}
+<div class="error-message">
+  <p>Please fix the following errors:</p>
+  <ul>
+    {% for field, errors in form.errors.items %}
+      <li>{{ field }}: {{ errors.0 }}</li>
+    {% endfor %}
+  </ul>
+</div>
