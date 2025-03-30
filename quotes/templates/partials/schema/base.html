@@ -1,0 +1,46 @@
+<script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Titan Parking",
+    {% if LANGUAGE_CODE == 'fr' %}
+    "description": "Services professionnels de marquage de stationnement dans toute la province de Québec",
+    {% else %}
+    "description": "Professional parking lot striping services throughout Quebec province",
+    {% endif %}
+    "image": "https://titanparking.ca/static/images/logo.jpg",
+    "telephone": "+14189554461",
+    "email": "contact@titanparking.ca",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Drummondville",
+        "addressRegion": "Quebec",
+        "addressCountry": "CA"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 45.8864, 
+        "longitude": -72.4848
+    },
+    "url": "https://titanparking.ca",
+    "openingHoursSpecification": [
+        {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+        }
+    ],
+    "priceRange": "$$",
+    "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Quebec"
+    }
+    }
+</script>
