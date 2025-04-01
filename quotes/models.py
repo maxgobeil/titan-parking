@@ -194,3 +194,67 @@ class QuoteItem(models.Model):
         if not self.unit_price:
             self.unit_price = self.service.default_price
         super().save(*args, **kwargs)
+
+
+class Job(models.Model):
+    STATUS_CHOICES = [
+        ("scheduled", "Scheduled"),
+        ("in_progress", "In Progress"),
+        ("completed", "Completed"),
+        ("cancelled", "Cancelled"),
+    ]
+
+    quote = models.OneToOneField(Quote, on_delete=models.CASCADE, related_name="job")
+    scheduled_start = models.DateTimeField()
+    scheduled_end = models.DateTimeField()
+    actual_start = models.DateTimeField(null=True, blank=True)
+    actual_end = models.DateTimeField(null=True, blank=True)
+    status = models.CharField(
+        max_length=20, choices=STATUS_CHOICES, default="scheduled"
+    )
+    notes = models.TextField(blank=True)
+
+
+class MaterialUsage(models.Model):
+    job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name="materials")
+    material_type = models.CharField(
+        max_length=100
+    )  # e.g., "Yellow Paint", "White Paint"
+    quantity = models.DecimalField(max_digits=10, decimal_places=2)
+    unit = models.CharField(max_length=20)  # e.g., "gallon", "can"
+    cost = models.DecimalField(max_digits=10, decimal_places=2)
+    date_recorded = models.DateTimeField(auto_now_add=True)
+
+
+class TimeEntry(models.Model):
+    job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name="time_entries")
+    staff = models.ForeignKey(
+        "CustomUser", on_delete=models.CASCADE, related_name="time_entries"
+    )
+    start_time = models.DateTimeField()
+    end_time = models.DateTimeField(null=True, blank=True)
+    description = models.TextField(blank=True)
+
+    @property
+    def duration(self):
+        if self.end_time:
+            return self.end_time - self.start_time
+        return None
+
+
+class JobPhoto(models.Model):
+    job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name="photos")
+    image = models.ImageField(upload_to="job_photos/")
+    caption = models.CharField(max_length=200, blank=True)
+    photo_type = models.CharField(
+        max_length=20,
+        choices=[("before", "Before"), ("during", "During Work"), ("after", "After")],
+        default="during",
+    )
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+    uploaded_by = models.ForeignKey(
+        "CustomUser",
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name="uploaded_photos",
+    )
