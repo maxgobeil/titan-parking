@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Alegreya Sans';
+  src: url('/static/font/AlegreyaSansSC-Medium.ttf') format('truetype');
+  font-display: swap;
+}
+
 /* Header Styles */
 .header {
   position: fixed;
@@ -28,17 +34,36 @@
 
 .logo {
   position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   z-index: 100;
   text-decoration: none;
 }
 
+.logo-dark-bg {
+  display: block;
+}
+
+.logo-light-bg {
+  display: none;
+}
+
+.header.scrolled .logo-dark-bg {
+  display: none;
+}
+
+.header.scrolled .logo-light-bg {
+  display: block;
+}
+
 .logo-text {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-family: 'Alegreya Sans';
 }
 
 .logo-lightgray {
-  color: #c4c4c4;
+  color: #bdbdbd;
 }
 
 .logo-yellow {
@@ -207,5 +232,11 @@
   }
   .desktop-nav {
     display: flex;
+  }
+}
+
+@media (max-width: 525px) {
+  .logo-text {
+    font-size: 2rem;
   }
 }
