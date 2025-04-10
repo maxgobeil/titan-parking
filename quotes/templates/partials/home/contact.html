@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
 {% endblock %}
@@ -10,10 +11,10 @@
   
   <div class="contact-container">
     <div class="contact-header">
-      <div class="badge">Contact Us</div>
-      <h2 class="contact-title">Get Your Free Quote Today</h2>
+      <div class="badge">{% trans 'Contact Us' %}</div>
+      <h2 class="contact-title">{% trans 'Get Your Free Quote Today' %}</h2>
       <p class="contact-subtitle">
-        Ready to transform your parking lot? Contact us for a free, no-obligation quote.
+        {% trans 'Ready to transform your parking lot? Contact us for a free, no-obligation quote.' %}
       </p>
     </div>
 
@@ -21,7 +22,7 @@
       <!-- Contact Information -->
       <div class="contact-info">
         <div class="contact-glass-panel">
-          <h3 class="contact-heading">Contact Information</h3>
+          <h3 class="contact-heading">{% trans 'Contact Information' %}</h3>
           
           <div class="contact-details">
             <div class="contact-item">
@@ -31,7 +32,7 @@
                 </svg>
               </div>
               <div class="contact-text">
-                <h4 class="contact-label">Phone</h4>
+                <h4 class="contact-label">{% trans 'Phone' %}</h4>
                 <a href="tel:+14189554461" class="contact-value">
                   (418) 955-4461
                 </a>
@@ -46,7 +47,7 @@
                 </svg>
               </div>
               <div class="contact-text">
-                <h4 class="contact-label">Email</h4>
+                <h4 class="contact-label">{% trans 'Email' %}</h4>
                 <a href="mailto:contact@titanparking.ca" class="contact-value">
                   contact@titanparking.ca
                 </a>
@@ -61,8 +62,8 @@
                 </svg>
               </div>
               <div class="contact-text">
-                <h4 class="contact-label">Location</h4>
-                <p class="contact-value">Based in Drummondville, we serve the entire province of Quebec</p>
+                <h4 class="contact-label">{% trans 'Location' %}</h4>
+                <p class="contact-value">{% trans 'Based in Drummondville, we serve the entire province of Quebec' %}</p>
               </div>
             </div>
             
@@ -74,28 +75,28 @@
                 </svg>
               </div>
               <div class="contact-text">
-                <h4 class="contact-label">Business Hours</h4>
-                <p class="contact-value">Monday - Friday: 9am - 6pm</p>
+                <h4 class="contact-label">{% trans 'Business Hours' %}</h4>
+                <p class="contact-value">{% trans 'Monday - Friday: 9am - 6pm' %}</p>
               </div>
             </div>
           </div>
         </div>
         
         <div class="contact-glass-panel">
-          <h3 class="contact-job-heading">Looking for a job?</h3>
-          <p class="contact-job-text">We are always looking for new employees. Please contact us to discuss your needs.</p>
+          <h3 class="contact-job-heading">{% trans 'Looking for a job?' %}</h3>
+          <p class="contact-job-text">{% trans 'We are always looking for new employees. Please contact us to discuss your needs.' %}</p>
           <a href="tel:+14189554461" class="contact-button-secondary">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-button-icon">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
             </svg>
-            Call for More Information
+            {% trans 'Call for More Information' %}
           </a>
         </div>
       </div>
       
       <!-- Contact Form -->
       <div class="contact-glass-panel">
-        <h3 class="contact-heading">Request a Quote</h3>
+        <h3 class="contact-heading">{% trans 'Request a Quote' %}</h3>
         
         <div id="formSuccessMessage" class="contact-success-message" style="display: none;">
           <div class="contact-success-icon-container">
@@ -103,8 +104,8 @@
               <polyline points="20 6 9 17 4 12"></polyline>
             </svg>
           </div>
-          <h4 class="contact-success-heading">Thank You!</h4>
-          <p class="contact-success-text">Your message has been sent successfully. We'll get back to you as soon as possible.</p>
+          <h4 class="contact-success-heading">{% trans 'Thank You!' %}</h4>
+          <p class="contact-success-text">{% trans "Your message has been sent successfully. We\'ll get back to you as soon as possible." %}</p>
         </div>
         
         <form id="contactForm" class="contact-form" 
@@ -118,7 +119,7 @@
           <div class="contact-form-row">
             <div class="contact-form-group">
               <label for="{{ form.name.id_for_label }}" class="contact-form-label">
-                Full Name <span class="contact-required">*</span>
+                {% trans 'Full Name' %} <span class="contact-required">*</span>
               </label>
               {{ form.name }}
               {% if form.name.errors %}
@@ -127,7 +128,7 @@
             </div>
             <div class="contact-form-group">
               <label for="{{ form.email.id_for_label }}" class="contact-form-label">
-                Email <span class="contact-required">*</span>
+                {% trans 'Email' %} <span class="contact-required">*</span>
               </label>
               {{ form.email }}
               {% if form.email.errors %}
@@ -139,7 +140,7 @@
           <div class="contact-form-row">
             <div class="contact-form-group">
               <label for="{{ form.phone.id_for_label }}" class="contact-form-label">
-                Phone Number <span class="contact-required">*</span>
+                {% trans 'Phone Number' %} <span class="contact-required">*</span>
               </label>
               {{ form.phone }}
               {% if form.phone.errors %}
@@ -148,7 +149,7 @@
             </div>
             <div class="contact-form-group">
               <label for="{{ form.service.id_for_label }}" class="contact-form-label">
-                Service Needed <span class="contact-required">*</span>
+                {% trans 'Service Needed' %} <span class="contact-required">*</span>
               </label>
               {{ form.service }}
               {% if form.service.errors %}
@@ -159,7 +160,7 @@
           
           <div class="contact-form-group">
             <label for="{{ form.message.id_for_label }}" class="contact-form-label">
-              Project Details <span class="contact-required">*</span>
+              {% trans 'Project Details' %} <span class="contact-required">*</span>
             </label>
             {{ form.message }}
             {% if form.message.errors %}
@@ -177,7 +178,7 @@
               <line x1="22" y1="2" x2="11" y2="13"></line>
               <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
             </svg>
-            <span id="submitText">Send Message</span>
+            <span id="submitText">{% trans 'Send Message' %}</span>
           </button>
         </form>
         <div id="form-response"></div>

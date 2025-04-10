@@ -9,7 +9,7 @@
     {% block meta %}
     <meta 
       name="description" 
-      content="{% block meta_description %}Titan Parking - Professional line striping services in Quebec. We offer exceptional customer service.{% endblock %}" 
+      content="{% block meta_description %}{% trans 'Titan Parking - Professional line striping services in Quebec. We offer exceptional customer service.' %}{% endblock %}" 
     />
     <!-- Open Graph Meta Tags -->
     <!-- <meta property="og:title" content="{% block og_title %}Default Title{% endblock %}">
@@ -24,7 +24,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
 
-    <title>{% block title %}Home{% endblock %} | Titan Parking</title>
+    <title>{% block title %}{% trans 'Home' %} | Titan Parking{% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% block extra_css %}{% endblock %}

@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/hero.css' %}" />
 {% endblock %}
@@ -16,20 +17,20 @@
     <div class="hero-grid">
       <div class="hero-content">
         <div class="badge">
-          Professional Line Striping Services
+          {% trans 'Professional Line Striping Services' %}
         </div>
         <h1 class="hero-title">
-          Precision Line Striping for Your Parking Lot
+          {% trans 'Precision Line Striping for Your Parking Lot' %}
         </h1>
         <p class="hero-description">
-          Transform your parking area with clean, precise, and code-compliant line striping services from the industry experts.
+          {% trans 'Transform your parking area with clean, precise, and code-compliant line striping services from the industry experts.' %}
         </p>
         <div class="hero-buttons">
           <a href="#contact" class="button-secondary">
-            Get a Free Quote <span class="icon-arrow">→</span>
+            {% trans 'Get a Free Quote' %} <span class="icon-arrow">→</span>
           </a>
           <a href="#services" class="button-outline">
-            Our Services
+            {% trans 'Our Services' %}
           </a>
         </div>
       </div>

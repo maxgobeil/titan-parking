@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/portfolio.css' %}" />
 {% endblock %}
@@ -6,10 +7,10 @@
 <section id="gallery" class="portfolio-section">
   <div class="portfolio-container">
     <div class="portfolio-header">
-      <div class="badge">Our Portfolio</div>
-      <h2 class="portfolio-title">See Our Work in Action</h2>
+      <div class="badge">{% trans 'Our Portfolio' %}</div>
+      <h2 class="portfolio-title">{% trans 'See Our Work in Action' %}</h2>
       <p class="portfolio-subtitle">
-        Browse through our gallery to see examples of the quality and precision we deliver with our line striping services
+        {% trans 'Browse through our gallery to see examples of the quality and precision we deliver with our line striping services' %}
       </p>
     </div>
 
@@ -25,8 +26,8 @@
           />
         </div>
         <div class="portfolio-overlay">
-          <h3 class="portfolio-item-title">Commercial Parking Lot</h3>
-          <p class="portfolio-item-description">Complete restriping of a shopping center parking lot</p>
+          <h3 class="portfolio-item-title">{% trans 'Commercial Parking Lot' %}</h3>
+          <p class="portfolio-item-description">{% trans 'Complete restriping of a shopping center parking lot' %}</p>
         </div>
       </div>
       
@@ -41,8 +42,8 @@
           />
         </div>
         <div class="portfolio-overlay">
-          <h3 class="portfolio-item-title">Interior Parking Lot</h3>
-          <p class="portfolio-item-description">We use the best paint available for a nice, long lasting finish</p>
+          <h3 class="portfolio-item-title">{% trans 'Interior Parking Lot' %}</h3>
+          <p class="portfolio-item-description">{% trans 'We use the best paint available for a nice, long lasting finish' %}</p>
         </div>
       </div>
       
@@ -57,8 +58,8 @@
           />
         </div>
         <div class="portfolio-overlay">
-          <h3 class="portfolio-item-title">Best in Class Equipment</h3>
-          <p class="portfolio-item-description">We use the best equipment in the industry to ensure the highest quality results</p>
+          <h3 class="portfolio-item-title">{% trans 'Best in Class Equipment' %}</h3>
+          <p class="portfolio-item-description">{% trans 'We use the best equipment in the industry to ensure the highest quality results' %}</p>
         </div>
       </div>
       
@@ -73,8 +74,8 @@
           />
         </div>
         <div class="portfolio-overlay">
-          <h3 class="portfolio-item-title">Walkway</h3>
-          <p class="portfolio-item-description">We use the best paint available for a nice, long lasting finish</p>
+          <h3 class="portfolio-item-title">{% trans 'Walkway' %}</h3>
+          <p class="portfolio-item-description">{% trans 'We use the best paint available for a nice, long lasting finish' %}</p>
         </div>
       </div>
       
@@ -89,8 +90,8 @@
           />
         </div>
         <div class="portfolio-overlay">
-          <h3 class="portfolio-item-title">Stencils</h3>
-          <p class="portfolio-item-description">We have a wide range of stencils to choose from. Letters, numbers, arrows, and more.</p>
+          <h3 class="portfolio-item-title">{% trans 'Stencils' %}</h3>
+          <p class="portfolio-item-description">{% trans 'We have a wide range of stencils to choose from. Letters, numbers, arrows, and more.' %}</p>
         </div>
       </div>
       
@@ -105,8 +106,8 @@
           />
         </div>
         <div class="portfolio-overlay">
-          <h3 class="portfolio-item-title">Precision</h3>
-          <p class="portfolio-item-description">Our team is trained to the highest standards to ensure precision and accuracy</p>
+          <h3 class="portfolio-item-title">{% trans 'Precision' %}</h3>
+          <p class="portfolio-item-description">{% trans 'Our team is trained to the highest standards to ensure precision and accuracy' %}</p>
         </div>
       </div>
     </div>

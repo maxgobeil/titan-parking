@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/services.css' %}" />
 {% endblock %}
@@ -7,11 +8,11 @@
   <div class="container">
     <div class="services-header">
       <div class="badge">
-        Our Expert Services
+        {% trans 'Our Expert Services' %}
       </div>
-      <h2>Complete Line Striping Solutions</h2>
+      <h2>{% trans 'Complete Line Striping Solutions' %}</h2>
       <p>
-        We deliver high-quality line striping services for commercial, industrial, and public sector properties
+        {% trans 'We deliver high-quality line striping services for commercial, industrial, and public sector properties' %}
       </p>
     </div>
     <div class="services-grid">
@@ -22,8 +23,8 @@
             {% include 'icons/paint-bucket.svg' %}
           </span>
         </div>
-        <h3>Parking Lot Striping</h3>
-        <p>Clearly marked parking spaces, fire lanes, and directional arrows to optimize traffic flow and maximize parking capacity.</p>
+        <h3>{% trans 'Parking Lot Striping' %}</h3>
+        <p>{% trans 'Clearly marked parking spaces, fire lanes, and directional arrows to optimize traffic flow and maximize parking capacity.' %}</p>
       </div>
       
       <!-- Service 2 -->
@@ -33,8 +34,8 @@
             {% include 'icons/warehouse.svg' %}
           </span>
         </div>
-        <h3>Indoor Markings</h3>
-        <p>Professional installation of safety zones, aisle markers, equipment boundaries, and workflow indicators to improve efficiency and workplace safety.</p>
+        <h3>{% trans 'Indoor Markings' %}</h3>
+        <p>{% trans 'Professional installation of safety zones, aisle markers, equipment boundaries, and workflow indicators to improve efficiency and workplace safety.' %}</p>
       </div>
       
       <!-- Service 3 -->
@@ -44,8 +45,8 @@
             {% include 'icons/construction.svg' %}
           </span>
         </div>
-        <h3>Pavement Markings</h3>
-        <p>Professional application of crosswalks, stop bars, and other critical traffic safety markings.</p>
+        <h3>{% trans 'Pavement Markings' %}</h3>
+        <p>{% trans 'Professional application of crosswalks, stop bars, and other critical traffic safety markings.' %}</p>
       </div>
       
       <!-- Service 4 -->
@@ -55,8 +56,8 @@
             {% include 'icons/ruler.svg' %}
           </span>
         </div>
-        <h3>Custom Layout Design</h3>
-        <p>Optimized parking lot layouts designed to maximize your available space while ensuring safety and compliance.</p>
+        <h3>{% trans 'Custom Layout Design' %}</h3>
+        <p>{% trans 'Optimized parking lot layouts designed to maximize your available space while ensuring safety and compliance.' %}</p>
       </div>
       
       <!-- Service 5 -->
@@ -66,8 +67,8 @@
             {% include 'icons/refresh.svg' %}
           </span>
         </div>
-        <h3>Line Restoration</h3>
-        <p>Fresh reapplication of faded lines to maintain visibility and compliance with local regulations.</p>
+        <h3>{% trans 'Line Restoration' %}</h3>
+        <p>{% trans 'Fresh reapplication of faded lines to maintain visibility and compliance with local regulations.' %}</p>
       </div>
       
       <!-- Service 6 -->
@@ -77,8 +78,8 @@
             {% include 'icons/ferris-wheel.svg' %}
           </span>
         </div>
-        <h3>School Playground Markings</h3>
-        <p>Customized markings for safe and efficient play areas, including hopscotch, hopscotch numbers, and other fun designs.</p>
+        <h3>{% trans 'School Playground Markings' %}</h3>
+        <p>{% trans 'Customized markings for safe and efficient play areas, including hopscotch, hopscotch numbers, and other fun designs.' %}</p>
       </div>
     </div>
   </div>
