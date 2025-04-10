@@ -1746,7 +1746,7 @@ msgid ""
 "striping services from the industry experts."
 msgstr ""
 "Transformez votre espace de stationnement avec une ligne propre, précise et "
-"conforme aux normes, faits par des experts de l'industrie."
+"conforme aux normes, faite par des experts de l'industrie."
 
 #: quotes/templates/partials/home/hero.html:30
 msgid "Get a Free Quote"
