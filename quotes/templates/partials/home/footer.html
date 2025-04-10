@@ -57,12 +57,12 @@
       <div class="footer-column">
         <h3 class="footer-heading">{% trans 'Our Services' %}</h3>
         <ul class="footer-list">
-          <li><a href="/#services" class="footer-link">{% trans 'Parking Lot Striping' %}</a></li>
-          <li><a href="/#services" class="footer-link">{% trans 'Indoor Markings' %}</a></li>
-          <li><a href="/#services" class="footer-link">{% trans 'Pavement Markings' %}</a></li>
-          <li><a href="/#services" class="footer-link">{% trans 'Custom Layout Design' %}</a></li>
-          <li><a href="/#services" class="footer-link">{% trans 'Line Restoration' %}</a></li>
-          <li><a href="/#services" class="footer-link">{% trans 'Line Removal' %}</a></li>
+          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Parking Lot Striping' %}</a></li>
+          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Indoor Markings' %}</a></li>
+          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Pavement Markings' %}</a></li>
+          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Custom Layout Design' %}</a></li>
+          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Line Restoration' %}</a></li>
+          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Line Removal' %}</a></li>
         </ul>
       </div>
       
@@ -70,10 +70,10 @@
       <div class="footer-column">
         <h3 class="footer-heading">{% trans 'Quick Links' %}</h3>
         <ul class="footer-list">
-          <li><a href="/#services" class="footer-link">{% trans 'Services' %}</a></li>
-          <li><a href="/#gallery" class="footer-link">{% trans 'Gallery' %}</a></li>
-          <li><a href="/#why-choose-us" class="footer-link">{% trans 'Why Choose Us' %}</a></li>
-          <li><a href="/#contact" class="footer-link">{% trans 'Contact' %}</a></li>
+          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Services' %}</a></li>
+          <li><a href="{% url 'home' %}#gallery" class="footer-link">{% trans 'Gallery' %}</a></li>
+          <li><a href="{% url 'home' %}#why-choose-us" class="footer-link">{% trans 'Why Choose Us' %}</a></li>
+          <li><a href="{% url 'home' %}#contact" class="footer-link">{% trans 'Contact' %}</a></li>
           <li><a href="{% url 'privacy-policy' %}" class="footer-link">{% trans 'Privacy Policy' %}</a></li>
         </ul>
       </div>

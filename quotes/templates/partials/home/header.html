@@ -7,7 +7,7 @@
 <header id="main-header" class="header fixed">
   <div class="container">
     <div class="header-content">
-      <a href="/" class="logo">
+      <a href="{% url 'home' %}" class="logo">
         <img src="{% static 'images/logo-dark.png' %}" alt="Titan Parking Logo" class="logo-image logo-light-bg">
         <img src="{% static 'images/logo-white.png' %}" alt="Titan Parking Logo" class="logo-image logo-dark-bg">
         <h1 class="logo-text">
@@ -17,10 +17,10 @@
       
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
-        <a href="/#services" class="nav-link">{% trans 'Services' %}</a>
-        <a href="/#why-choose-us" class="nav-link">{% trans 'Why Choose Us' %}</a>
-        <a href="/#gallery" class="nav-link">{% trans 'Our Work' %}</a>
-        <a href="/#contact" class="nav-link">{% trans 'Contact' %}</a>
+        <a href="{% url 'home' %}#services" class="nav-link">{% trans 'Services' %}</a>
+        <a href="{% url 'home' %}#why-choose-us" class="nav-link">{% trans 'Why Choose Us' %}</a>
+        <a href="{% url 'home' %}#gallery" class="nav-link">{% trans 'Our Work' %}</a>
+        <a href="{% url 'home' %}#contact" class="nav-link">{% trans 'Contact' %}</a>
 
         <!-- Language Switcher -->
         <div class="language-switcher">
@@ -68,10 +68,10 @@
       </svg>
     </button>
     <div class="mobile-nav-content">
-      <a href="/#services" class="mobile-nav-link">{% trans 'Services' %}</a>
-      <a href="/#why-choose-us" class="mobile-nav-link">{% trans 'Why Choose Us' %}</a>
-      <a href="/#gallery" class="mobile-nav-link">{% trans 'Our Work' %}</a>
-      <a href="/#contact" class="mobile-nav-link">{% trans 'Contact' %}</a>
+      <a href="{% url 'home' %}#services" class="mobile-nav-link">{% trans 'Services' %}</a>
+      <a href="{% url 'home' %}#why-choose-us" class="mobile-nav-link">{% trans 'Why Choose Us' %}</a>
+      <a href="{% url 'home' %}#gallery" class="mobile-nav-link">{% trans 'Our Work' %}</a>
+      <a href="{% url 'home' %}#contact" class="mobile-nav-link">{% trans 'Contact' %}</a>
       <div class="mobile-lang-switcher">
         <form action="{% url 'set_language' %}" method="post">
           {% csrf_token %}
