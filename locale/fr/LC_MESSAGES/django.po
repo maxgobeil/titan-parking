@@ -1278,7 +1278,7 @@ msgstr "Marquage au sol personnalisé"
 #: quotes/forms.py:40 quotes/templates/partials/home/footer.html:64
 #: quotes/templates/partials/home/services.html:70
 msgid "Line Restoration"
-msgstr "Restoration de lignes"
+msgstr "Restauration de lignes"
 
 #: quotes/forms.py:41 quotes/templates/partials/home/footer.html:65
 msgid "Line Removal"
@@ -1904,12 +1904,11 @@ msgid "The Professional Advantage"
 msgstr "L'avantage professionnel"
 
 #: quotes/templates/partials/home/why-choose-us.html:17
-#, fuzzy
 #| msgid ""
 #| "When it comes to parking lot striping, precision matter. Here's why "
 #| "clients consistently choose our services"
 msgid ""
-"When it comes to parking lot striping, precision matter. Here\\'s why "
+"When it comes to parking lot striping, precision matter. Here's why "
 "clients consistently choose our services"
 msgstr ""
 "Lorsqu'il s'agit de traçage de lignes de stationnement, la précision est "
@@ -1947,7 +1946,7 @@ msgstr "Délai d'exécution rapide"
 #: quotes/templates/partials/home/why-choose-us.html:51
 msgid "We work efficiently to minimize disruption to your business operations."
 msgstr ""
-"Nous travaillonf efficacement pour éviter les perturbations pendant les "
+"Nous travaillons efficacement pour éviter les perturbations pendant les "
 "heures d'opération de votre entreprise."
 
 #: quotes/templates/partials/home/why-choose-us.html:61
@@ -1955,12 +1954,11 @@ msgid "Satisfaction Guaranteed"
 msgstr "Satisfaction garantie"
 
 #: quotes/templates/partials/home/why-choose-us.html:62
-#, fuzzy
 #| msgid ""
 #| "We're not satisfied until you are. Our work is backed by our commitment "
 #| "to excellence."
 msgid ""
-"We\\'re not satisfied until you are. Our work is backed by our commitment to "
+"We're not satisfied until you are. Our work is backed by our commitment to "
 "excellence."
 msgstr ""
 "Nous ne sommes satisfaits que lorsque vous l'êtes. Notre travail est soutenu "
