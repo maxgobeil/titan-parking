@@ -4,39 +4,20 @@
   
  <!-- Home Page -->
   <url>
-    <loc>https://titanparking.ca/fr/</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/" />
-  </url>
-
-<!-- French Home Page -->
-  <url>
     <loc>https://titanparking.ca/</loc>
     <lastmod>2025-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/fr/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/" />
   </url>
 
-  
-  <!-- Terms of Service Page -->
+<!-- English Home Page -->
   <url>
-    <loc>https://titanparking.ca/terms-of-service/</loc>
+    <loc>https://titanparking.ca/en/</loc>
     <lastmod>2025-03-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/fr/terms-of-service/" />
-  </url>
-  
-  <!-- English Terms of Service Page -->
-  <url>
-    <loc>https://titanparking.ca/terms-of-service/</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/terms-of-service/" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/" />
   </url>
   
   <!-- Privacy Policy Page -->
@@ -45,15 +26,15 @@
     <lastmod>2025-03-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/fr/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/privacy-policy/" />
   </url>
   
-  <!-- French Privacy Policy Page -->
+  <!-- English Privacy Policy Page -->
   <url>
-    <loc>https://titanparking.ca/fr/privacy-policy/</loc>
+    <loc>https://titanparking.ca/en/privacy-policy/</loc>
     <lastmod>2025-03-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/privacy-policy/" />
   </url>
 </urlset>

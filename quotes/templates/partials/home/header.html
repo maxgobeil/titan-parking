@@ -30,11 +30,11 @@
             
             {% if CURRENT_LANGUAGE == 'fr' %}
               <!-- If we're currently viewing a French page -->
-              <input name="next" type="hidden" value="{{ request.path|slice:'3:' }}">
+              <input name="next" type="hidden" value="/en{{ request.path }}">
               <button type="submit" name="language" value="en" class="lang-button">EN</button>
             {% else %}
               <!-- If we're currently viewing an English page -->
-              <input name="next" type="hidden" value="/fr{{ request.path }}">
+              <input name="next" type="hidden" value="{{ request.path|slice:'3:' }}">
               <button type="submit" name="language" value="fr" class="lang-button">FR</button>
             {% endif %}
           </form>
@@ -78,10 +78,10 @@
           {% get_current_language as CURRENT_LANGUAGE %}
           
           {% if CURRENT_LANGUAGE == 'fr' %}
-            <input name="next" type="hidden" value="{{ request.path|slice:'3:' }}">
+            <input name="next" type="hidden" value="/en{{ request.path }}">
             <button type="submit" name="language" value="en" class="lang-button">EN</button>
           {% else %}
-            <input name="next" type="hidden" value="/fr{{ request.path }}">
+            <input name="next" type="hidden" value="{{ request.path|slice:'3:' }}">
             <button type="submit" name="language" value="fr" class="lang-button">FR</button>
           {% endif %}
         </form>

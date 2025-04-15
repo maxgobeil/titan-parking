@@ -1,9 +1,38 @@
 document.addEventListener('DOMContentLoaded', function () {
+  const savedLanguage = localStorage.getItem('preferredLanguage');
+  if (savedLanguage) {
+    // If there's a saved preference, make sure URL matches it
+    const isEnglishPath = window.location.pathname.startsWith('/en/');
+
+    if (savedLanguage === 'en' && !isEnglishPath) {
+      // User prefers English but we're on French path
+      const newPath = '/en' + window.location.pathname + window.location.hash;
+      window.location.href = newPath;
+    } else if (savedLanguage === 'fr' && isEnglishPath) {
+      // User prefers French but we're on English path
+      const newPath = window.location.pathname.slice(3) + window.location.hash;
+      window.location.href = newPath;
+    }
+  } else {
+    // No saved preference, check browser language
+    const browserLang = navigator.language || navigator.userLanguage;
+    const isEnglish = browserLang.toLowerCase().startsWith('en');
+    if (isEnglish && !window.location.pathname.startsWith('/en/')) {
+      const newPath = '/en' + window.location.pathname + window.location.hash;
+      window.location.href = newPath;
+    }
+  }
+
+  const langButtons = document.querySelectorAll('.lang-button');
+  langButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      localStorage.setItem('preferredLanguage', button.value);
+    });
+  });
+
   const scrolledPages = ['/terms-of-service/', '/privacy-policy/'];
 
   const currentPath = window.location.pathname;
-
-  console.log(currentPath);
 
   const shouldBeScrolled = scrolledPages.some(
     (page) => currentPath.includes(page) || currentPath.endsWith(page.slice(0, -1)) // Handle with or without trailing slash
@@ -19,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const langButton = document.querySelector('.lang-button');
 
   if (shouldBeScrolled) {
-    console.log('shouldBeScrolled');
     if (header) header.classList.add('scrolled');
     navLinks.forEach((link) => {
       link.classList.add('scrolled');
@@ -42,22 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
       if (langButton) langButton.classList.remove('scrolled');
     }
   };
-  /*
-  const onScroll = () => {
-    if (document.body.scrollTop > 100) {
-      header.classList.add('scrolled');
-      navLinks.forEach((link) => {
-        link.classList.add('scrolled');
-      });
-      langButton.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-      navLinks.forEach((link) => {
-        link.classList.remove('scrolled');
-      });
-      langButton.classList.remove('scrolled');
-    }
-  };*/
 
   // Toggle mobile menu
   function toggleMenu() {
