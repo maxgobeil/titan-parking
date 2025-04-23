@@ -1,0 +1,195 @@
+:root {
+  --secondary-color: #a7a7a7;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  width: 1400px;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.header img {
+  width: 100%;
+}
+.content {
+  padding: 1rem 2.5rem;
+}
+
+/* Business info top right*/
+.business-info {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 4rem;
+  right: 2.5rem;
+  height: 9rem;
+  width: 46rem;
+  text-align: right;
+  padding: 0.5rem;
+}
+.business-info-status {
+  display: flex;
+  align-items: end;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.business-info-title {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.business-info-text {
+  font-size: 1rem;
+}
+
+/* Invoice info container */
+.invoice-info-container {
+  display: flex;
+  gap: 1rem;
+}
+.invoice-info-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.invoice-info-base {
+  background-color: #e4e4e4;
+  padding: 0.5rem;
+}
+.client-info {
+  flex: 1;
+}
+.invoice-job-info {
+  flex: 1;
+}
+
+/* Quote items */
+.quote-items-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: bold;
+  background-color: #ffcc01;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-bottom: 5px solid #645000;
+}
+.quote-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid #a7a7a7;
+}
+.quote-item.odd {
+  background-color: #ffffff;
+}
+.quote-item.even {
+  background-color: #eeeeee;
+}
+.quote-item-service-name {
+  font-weight: bold;
+}
+
+/* Services footer */
+.services-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+.footer-conditions-title {
+  font-weight: bold;
+  background-color: #ffcc01;
+  padding: 0.1rem 0.5rem;
+}
+.footer-conditions-description {
+  border: 1px solid #c5c5c5;
+  padding: 0.5rem;
+}
+
+/* Quote total container */
+.quote-total-container {
+  display: flex;
+  flex-direction: column;
+}
+.quote-total-item {
+  display: flex;
+  justify-content: space-between;
+  min-width: 13rem;
+}
+
+.footer {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  font-size: 0.8rem;
+}
+
+/* Styles for print (PDF version) */
+@media print {
+  @page {
+    size: letter;
+    margin: 0.5cm;
+  }
+
+  body {
+    width: 21.59cm;
+    height: 27.94cm;
+  }
+  .header img {
+    width: 20.59cm;
+  }
+  .content {
+    padding: 0.5rem 0rem;
+    width: 20.59cm;
+  }
+
+  .business-info {
+    width: 11.5cm;
+    height: 2.7cm;
+    top: 0.5cm;
+    right: 1cm;
+  }
+  .business-info-status {
+    font-size: 1.2rem;
+  }
+  .business-info-title {
+    font-size: 0.9rem;
+  }
+  .business-info-text {
+    font-size: 0.8rem;
+  }
+  .services-footer {
+    padding: 0;
+    margin-top: 0.5cm;
+  }
+  .quote-item-service-description {
+    font-size: 0.85rem;
+  }
+  .footer-conditions {
+    width: 11.5cm;
+  }
+  .footer-conditions-description {
+    font-size: 0.9rem;
+  }
+  .quote-total-container {
+    width: 6cm;
+  }
+  .quote-total-item {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0.5cm;
+    left: 0;
+    right: 0;
+    padding: 0.5cm;
+  }
+}

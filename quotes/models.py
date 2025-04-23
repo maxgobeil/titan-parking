@@ -1,3 +1,5 @@
+from decimal import Decimal
+
 from django.contrib.auth.models import (
     AbstractBaseUser,
     BaseUserManager,
@@ -96,7 +98,27 @@ class Service(models.Model):
     active = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"{self.name} (${self.unit_price}/{self.unit_type})"
+        return f"{self.name} (${self.default_price}/{self.unit_type})"
+
+    def get_name_en(self):
+        parts = self.name.split("|`", 1)
+        return parts[0].strip()
+
+    def get_name_fr(self):
+        parts = self.name.split("|`", 1)
+        if len(parts) <= 1 or not parts[1].strip():
+            return self.get_name_en()
+        return parts[1].strip()
+
+    def get_description_en(self):
+        parts = self.description.split("|`", 1)
+        return parts[0].strip()
+
+    def get_description_fr(self):
+        parts = self.description.split("|`", 1)
+        if len(parts) <= 1 or not parts[1].strip():
+            return self.get_description_en()
+        return parts[1].strip()
 
 
 class Quote(models.Model):
@@ -110,9 +132,10 @@ class Quote(models.Model):
     ]
 
     TIME_PERIOD_CHOICES = [
-        ("standard", "8am-5pm (Standard)"),
-        ("evening", "5pm-2am (Evening Rate, +$500)"),
-        ("weekend", "Weekend/Holiday (+$700)"),
+        ("standard", "8am-5pm"),
+        ("evening", "5pm-2am"),
+        ("night", "9pm-2am"),
+        ("weekend", "Weekend/Holiday"),
     ]
 
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name="quotes")
@@ -122,12 +145,13 @@ class Quote(models.Model):
         default=timezone.now() + timezone.timedelta(days=30)
     )
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="draft")
+    invoice_number = models.CharField(max_length=20, unique=True)
 
     time_period = models.CharField(
         max_length=20, choices=TIME_PERIOD_CHOICES, default="standard"
     )
-    evening_fee = models.DecimalField(max_digits=10, decimal_places=2, default=500.00)
-    weekend_fee = models.DecimalField(max_digits=10, decimal_places=2, default=700.00)
+    evening_fee = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    weekend_fee = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     number_of_days = models.IntegerField(default=1)
 
     discount_percentage = models.DecimalField(max_digits=5, decimal_places=2, default=0)
@@ -175,12 +199,26 @@ class Quote(models.Model):
     def total_amount(self):
         return self.subtotal + self.time_period_fee - self.discount_amount
 
+    @property
+    def tps_amount(self):
+        return round(self.total_amount * Decimal("0.05"), 2)
+
+    @property
+    def tvq_amount(self):
+        return round(self.total_amount * Decimal("0.09975"), 2)
+
+    @property
+    def final_total(self):
+        return round(self.total_amount + self.tps_amount + self.tvq_amount, 2)
+
 
 class QuoteItem(models.Model):
     quote = models.ForeignKey(Quote, on_delete=models.CASCADE, related_name="items")
     service = models.ForeignKey(Service, on_delete=models.PROTECT)
     quantity = models.DecimalField(max_digits=10, decimal_places=2)
-    unit_price = models.DecimalField(max_digits=10, decimal_places=2)
+    unit_price = models.DecimalField(
+        max_digits=10, decimal_places=2, null=True, blank=True
+    )
     total_price = models.GeneratedField(
         expression=models.F("quantity") * models.F("unit_price"),
         output_field=models.DecimalField(max_digits=10, decimal_places=2),
@@ -191,7 +229,7 @@ class QuoteItem(models.Model):
 
     def save(self, *args, **kwargs):
         # Set unit price from service if not specified
-        if not self.unit_price:
+        if self.unit_price is None:
             self.unit_price = self.service.default_price
         super().save(*args, **kwargs)
 

@@ -1,9 +1,15 @@
+import os
+
 from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.template.loader import render_to_string
+from weasyprint import HTML
 
 from .forms import ContactForm
+from .models import Quote
 
 
 def home_view(request):
@@ -76,3 +82,103 @@ def submit_contact(request):
 
     # If not a POST request, return an empty response
     return HttpResponse("")
+
+
+@login_required
+def invoice_view_pdf(request):
+    quote = (
+        Quote.objects.select_related("client")
+        .prefetch_related("items__service")
+        .get(id=1)
+    )
+
+    image_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "templates",
+        "quotes",
+        "pdf",
+        "assets",
+        "invoice-header.png",
+    )
+    # Read CSS
+    css_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "templates",
+        "quotes",
+        "pdf",
+        "assets",
+        "quote_template.css",
+    )
+
+    import base64
+
+    with open(image_path, "rb") as f:
+        image_data = base64.b64encode(f.read()).decode()
+
+    with open(css_path) as f:
+        css_data = f.read()
+
+    context = {
+        "image_data": image_data,
+        "css_data": css_data,
+        "quote": quote,
+    }
+
+    # Render HTML content
+    html_string = render_to_string("quotes/pdf/quote_template.html", context)
+
+    # Create PDF response
+    response = HttpResponse(content_type="application/pdf")
+    response["Content-Disposition"] = 'inline; filename="quote.pdf"'
+
+    # Generate PDF
+    HTML(string=html_string).write_pdf(response)
+
+    return response
+
+
+@login_required
+def invoice_view_html(request):
+    quote = (
+        Quote.objects.select_related("client")
+        .prefetch_related("items__service")
+        .get(id=1)
+    )
+
+    image_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "templates",
+        "quotes",
+        "pdf",
+        "assets",
+        "invoice-header.png",
+    )
+    # Read CSS
+    css_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "templates",
+        "quotes",
+        "pdf",
+        "assets",
+        "quote_template.css",
+    )
+
+    import base64
+
+    with open(image_path, "rb") as f:
+        image_data = base64.b64encode(f.read()).decode()
+
+    with open(css_path) as f:
+        css_data = f.read()
+
+    context = {
+        "image_data": image_data,
+        "css_data": css_data,
+        "quote": quote,
+    }
+
+    return render(request, "quotes/pdf/quote_template.html", context)

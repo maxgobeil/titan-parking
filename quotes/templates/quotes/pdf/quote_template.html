@@ -1,0 +1,123 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote Template</title>
+    <style>
+        {{ css_data|safe }}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="data:image/png;base64,{{ image_data }}" alt="Company Logo">
+        <div class="business-info">
+            <div class="business-info-status">Soumission</div>
+            <div>
+                <div class="business-info-title">Titan Parking | 16484557 Canada Inc.</div>
+                <div class="business-info-text">Office: 355 rue du Murier, Drummondville, QC, J2C 0N9</div>
+                <div class="business-info-text">contact@titanparking.ca</div>
+                <div class="business-info-text">418 955-4461</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content">
+        <div class="invoice-info-container">
+            <div class="invoice-info-base client-info">
+                <div class="invoice-info-title">Billed to:</div>
+                <div>{{ quote.client.company }}</div>
+                <div>{{ quote.client.address }}</div>
+                <div>Contact: {{ quote.client.name }}</div>
+                <div>{{ quote.client.email }}</div>
+            </div>
+            <div class="invoice-info-base invoice-job-info">
+                <div class="invoice-info-title">Invoice & Job Information</div>
+                <div>Invoice # {{ quote.invoice_number }}</div>
+                <div>Date: {{ quote.created_at|date:"M d, Y" }}</div>
+                <div>Due Date: {{ quote.due_date|date:"M d, Y" }}</div>
+                <div>Job Details: {{ quote.job_location }}</div>
+            </div>
+        </div>
+
+        <div class="quote-items">
+            <div class="quote-items-header">
+                <div>Services</div>
+                <div>Total</div>
+            </div>
+            {% for item in quote.items.all %}
+            <div class="quote-item {% cycle 'odd' 'even' %}">
+                <div>
+                    <div class="quote-item-service-name">
+                        {% if LANGUAGE_CODE == 'en' %}
+                            {{ item.service.get_name_en }}
+                        {% else %}
+                            {{ item.service.get_name_fr }}
+                        {% endif %}
+                    </div>
+                    <div class="quote-item-service-description">
+                        {% if item.notes %}
+                            {{ item.notes }}
+                        {% else %}
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% if LANGUAGE_CODE == 'en' %}
+                                {{ item.service.get_description_en }}
+                            {% else %}
+                                {{ item.service.get_description_fr }}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+                <div>{{ item.total_price }}$</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="services-footer">
+            <div class="footer-conditions">
+                <div class="footer-conditions-title">Other Conditions</div>
+                <div class="footer-conditions-description">
+                    <div>Net 30 jours when invoice</div>
+                    <div>You can find all the terms and conditions below</div>
+                    <div>Make a check for the amount due and send it to the address above. Please make the cheque payable to Titan Parking.</div>
+                    <div>Notes: {{ quote.notes }}</div>
+                </div>
+                
+            </div>
+            <div class="quote-total-container">
+                <div class="quote-total-item">
+                    <div>Sub-total</div>
+                    <div>{{ quote.subtotal }}$</div>
+                </div>
+                {% if quote.discount_percentage > 0 %}
+                <div class="quote-total-item">
+                    <div>Discount:</div>
+                    <div>{{ quote.discount_percentage }}%</div>
+                </div>
+                {% endif %}
+                <div class="quote-total-item">
+                    <div>TPS (5%):</div>
+                    <div>{{ quote.tps_amount }}$</div>
+                </div>
+                <div class="quote-total-item">
+                    <div>TVQ (9.975%):</div>
+                    <div>{{ quote.tvq_amount }}$</div>
+                </div>
+                <div class="quote-total-item">
+                    <div>Total:</div>
+                    <div>{{ quote.final_total }}$</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div>TPS: 73949 9028 RT0001</div>
+        <div>TVQ: 1232192824 TQ0001</div>
+        <!-- <div>RBQ:</div> -->
+    </div>
+</body>
+</html>
+

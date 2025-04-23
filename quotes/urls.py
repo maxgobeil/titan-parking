@@ -10,4 +10,7 @@ urlpatterns = [
     path("sitemap.xml", views.sitemap_view, name="sitemap"),
     path("robots.txt", views.robots_view, name="robots"),
     path("submit-contact/", views.submit_contact, name="submit_contact"),
+    # Temporary invoice url
+    path("invoice/", views.invoice_view_pdf, name="invoice_pdf"),
+    path("invoice-html/", views.invoice_view_html, name="invoice_html"),
 ]
