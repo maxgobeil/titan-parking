@@ -104,6 +104,10 @@
   line-height: 1.6;
 }
 
+.legal-section-content ol li {
+  margin-left: 1.5rem;
+}
+
 .legal-section-content a {
   color: var(--primary-color);
   transition: color 0.3s;
