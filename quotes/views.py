@@ -13,10 +13,14 @@ from .models import Quote
 
 
 def home_view(request):
-    # return render(request, "pages/index.html")
     return render(request, "pages/index.html", {"form": ContactForm()})
 
 
+def page_not_found_view(request, exception=None):
+    return render(request, "pages/404.html", status=404)
+
+
+@login_required
 def terms_view(request):
     return render(request, "pages/terms-of-service.html")
 

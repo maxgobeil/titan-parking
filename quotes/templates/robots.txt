@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
-
-# Allow all bots to access the entire site
-# Don't disallow anything
+Disallow: /terms-of-service/
+Disallow: /invoice/
+Disallow: /invoice-html/
 
 # Sitemap location
 Sitemap: https://titanparking.ca/sitemap.xml

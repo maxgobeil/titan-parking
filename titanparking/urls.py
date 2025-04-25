@@ -25,12 +25,12 @@ urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")),  # For language switching
 ]
 
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 # Localized URLs - these will have language prefix
 urlpatterns += i18n_patterns(
     path("admin/", admin.site.urls),
     path("", include("quotes.urls")),
     prefix_default_language=False,  # Set to True if you want /en/ prefix for English
 )
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

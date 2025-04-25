@@ -1,0 +1,286 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="{% get_current_language as LANGUAGE_CODE %}{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% trans '404 - Page Not Found | Titan Parking' %}</title>
+        <style>
+            :root{
+                --primary-color: #ffcc01;
+            }
+            body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.5;
+            color: #333333;
+            background-color: #f8f8f8;
+            }
+
+            .error-section {
+            padding: 9rem 0 6rem 0;
+            position: relative;
+            background-color: rgba(230, 230, 230, 0.3);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .error-gradient-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6rem;
+            background: linear-gradient(to bottom, #ffffff, transparent);
+            z-index: 1;
+            }
+
+            .error-gradient-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6rem;
+            background: linear-gradient(to top, #ffffff, transparent);
+            z-index: 1;
+            }
+
+            .error-container {
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            }
+
+            .error-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            }
+
+            .error-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            }
+
+            .error-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #333333;
+            }
+
+            .error-content {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            }
+
+            .error-illustration {
+            margin-bottom: 2.5rem;
+            }
+
+            .error-image {
+            max-width: 300px;
+            height: auto;
+            }
+
+            .error-intro {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            color: #444444;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            }
+
+            .error-details {
+            margin-bottom: 3rem;
+            }
+
+            .error-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333333;
+            position: relative;
+            padding-bottom: 0.75rem;
+            display: inline-block;
+            }
+
+            .error-subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            }
+
+            .error-details p {
+            color: #555555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            }
+
+            .error-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 auto;
+            max-width: 400px;
+            }
+
+            .error-list li {
+            margin-bottom: 0.75rem;
+            color: #555555;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 1.5rem;
+            }
+
+            .error-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0.5rem;
+            font-size: 1.2rem;
+            }
+
+            .error-actions {
+            margin-top: 2.5rem;
+            }
+
+            .error-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            }
+
+            .error-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            @media (max-width: 768px) {
+            .error-title {
+                font-size: 2.5rem;
+            }
+
+            .error-content {
+                padding: 2rem;
+            }
+
+            .error-image {
+                max-width: 200px;
+            }
+
+            .error-intro {
+                font-size: 1.1rem;
+            }
+            }
+
+            @media (max-width: 480px) {
+            .error-section {
+                padding: 7rem 0 4rem 0;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+
+            .error-content {
+                padding: 1.5rem;
+            }
+
+            .error-image {
+                max-width: 150px;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="error-section">
+            <div class="error-gradient-top"></div>
+            <div class="error-gradient-bottom"></div>
+            
+            <div class="error-container">
+                <div class="error-header">
+                    <div class="error-badge">{% trans 'Error 404' %}</div>
+                    <h1 class="error-title">{% trans 'Page Not Found' %}</h1>
+                </div>
+
+                <div class="error-content">
+                    <div class="error-illustration">
+                        <svg width="250" height="200" viewBox="0 0 250 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M50 130 H200 V140 H50 V130 Z" fill="#ffcc01" opacity="0.3" />
+                        <path d="M25 140 H225 V150 H25 V140 Z" fill="#ffcc01" opacity="0.5" />
+                        <path d="M10 150 H240 V160 H10 V150 Z" fill="#ffcc01" opacity="0.7" />
+                        <path d="M0 160 H250 V170 H0 V160 Z" fill="#ffcc01" />
+                        
+                        <path d="M70 40V55H85V60H70V90H60V60H45V55L60 40H70Z" fill="#222222" />
+                        
+                        <circle cx="125" cy="65" r="25" fill="#ffcc01" />
+                        <circle cx="125" cy="65" r="20" stroke="#222222" stroke-width="5" fill="none" />
+                        
+                        <path d="M190 40V55H205V60H190V90H180V60H165V55L180 40H190Z" fill="#222222" />
+                        
+                        <path d="M125 15L135 35H115L125 15Z" fill="#FF6B6B" />
+                        <path d="M125 20V28" stroke="#222222" stroke-width="2.5" stroke-linecap="round" />
+                        <circle cx="125" cy="32" r="1.5" fill="#222222" />
+                    </svg>
+                    </div>
+                    
+                    <p class="error-intro">
+                        {% trans 'The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.' %}
+                    </p>
+                    
+                    <div class="error-details">
+                        <h2 class="error-subtitle">{% trans 'What happened?' %}</h2>
+                        <p>
+                            {% trans 'We apologize for the inconvenience, but the page you requested could not be found. This could be due to:' %}
+                        </p>
+                        <ul class="error-list">
+                            <li>{% trans 'An incorrect URL' %}</li>
+                            <li>{% trans 'A page that has been moved or deleted' %}</li>
+                            <li>{% trans 'A temporary technical issue' %}</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="error-actions">
+                        <a href="/" class="error-button">
+                            {% trans 'Back to Homepage' %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
