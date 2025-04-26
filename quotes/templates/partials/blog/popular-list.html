@@ -9,12 +9,18 @@
             {% if post.featured_image_path %}
             <div class="popular-post-image">
               <a href="{% url 'blog_detail' post.slug %}">
-                <img src="{% static post.featured_image_path %}" alt="{{ post.title }}">
+                <img src="{% static post.featured_image_path %}" alt="{% if LANGUAGE_CODE == 'en' %}{{ post.get_title_en }}{% else %}{{ post.get_title_fr }}{% endif %}">
               </a>
             </div>
             {% endif %}
             <div class="popular-post-content">
-              <a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a>
+              <a href="{% url 'blog_detail' post.slug %}">
+                {% if LANGUAGE_CODE == 'en' %}
+                  {{ post.get_title_en }}
+                {% else %}
+                  {{ post.get_title_fr }}
+                {% endif %}
+              </a>
               <span class="post-date">{{ post.published_at|date:"M j, Y" }}</span>
             </div>
           </li>

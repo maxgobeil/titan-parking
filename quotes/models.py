@@ -335,3 +335,43 @@ class BlogPost(models.Model):
     @property
     def is_published(self):
         return self.status == "published" and self.published_at is not None
+
+    def get_title_en(self):
+        parts = self.title.split("|`", 1)
+        return parts[0].strip()
+
+    def get_title_fr(self):
+        parts = self.title.split("|`", 1)
+        if len(parts) <= 1 or not parts[1].strip():
+            return self.get_title_en()
+        return parts[1].strip()
+
+    def get_content_en(self):
+        parts = self.content.split("|`", 1)
+        return parts[0].strip()
+
+    def get_content_fr(self):
+        parts = self.content.split("|`", 1)
+        if len(parts) <= 1 or not parts[1].strip():
+            return self.get_content_en()
+        return parts[1].strip()
+
+    def get_summary_en(self):
+        parts = self.summary.split("|`", 1)
+        return parts[0].strip()
+
+    def get_summary_fr(self):
+        parts = self.summary.split("|`", 1)
+        if len(parts) <= 1 or not parts[1].strip():
+            return self.get_summary_en()
+        return parts[1].strip()
+
+    def get_meta_description_en(self):
+        parts = self.meta_description.split("|`", 1)
+        return parts[0].strip()
+
+    def get_meta_description_fr(self):
+        parts = self.meta_description.split("|`", 1)
+        if len(parts) <= 1 or not parts[1].strip():
+            return self.get_meta_description_en()
+        return parts[1].strip()

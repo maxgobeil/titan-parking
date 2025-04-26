@@ -7,17 +7,31 @@
           {% if featured_post.featured_image_path %}
           <div class="featured-image">
             <a href="{% url 'blog_detail' featured_post.slug %}">
-              <img src="{% static featured_post.featured_image_path %}" alt="{{ featured_post.title }}">
+              <img src="{% static featured_post.featured_image_path %}" alt="{% if LANGUAGE_CODE == 'en' %}{{ featured_post.get_title_en }}{% else %}{{ featured_post.get_title_fr }}{% endif %}">
             </a>
           </div>
           {% endif %}
           <div class="featured-content">
-            <h3><a href="{% url 'blog_detail' featured_post.slug %}">{{ featured_post.title }}</a></h3>
+            <h3>
+              <a href="{% url 'blog_detail' featured_post.slug %}">
+                {% if LANGUAGE_CODE == 'en' %}
+                  {{ featured_post.get_title_en }}
+                {% else %}
+                  {{ featured_post.get_title_fr }}
+                {% endif %}
+              </a>
+            </h3>
             <div class="post-meta">
               <span class="post-date">{{ featured_post.published_at|date:"F j, Y" }}</span>
               {% if featured_post.author_name %}<span class="post-author">{% trans 'by' %} {{ featured_post.author_name }}</span>{% endif %}
             </div>
-            <p class="post-summary">{{ featured_post.summary }}</p>
+            <p class="post-summary">
+              {% if LANGUAGE_CODE == 'en' %}
+                {{ featured_post.get_summary_en }}
+              {% else %}
+                {{ featured_post.get_summary_fr }}
+              {% endif %}
+            </p>
             <a href="{% url 'blog_detail' featured_post.slug %}" class="read-more-btn">{% trans 'Read More' %} →</a>
         </div>
     </div>

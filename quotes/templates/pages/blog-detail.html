@@ -4,7 +4,13 @@
 
 {% block title %}{{ post.title }} | {% trans 'Line Striping Blog' %}{% endblock %}
 
-{% block meta_description %}{{ post.meta_description }}{% endblock %} 
+{% block meta_description %}
+  {% if LANGUAGE_CODE == 'en' %}
+    {{ post.get_meta_description_en }}
+  {% else %}
+    {{ post.get_meta_description_fr }}
+  {% endif %}
+{% endblock %} 
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
@@ -18,9 +24,20 @@
     <div class="blog-main-content blog-post-content">
       <div class="post-header">
         <div class="post-breadcrumb">
-          <a href="{% url 'blog' %}">{% trans 'Blog' %}</a> / <span>{{ post.title }}</span>
+          <a href="{% url 'blog' %}">{% trans 'Blog' %}</a> / <span>
+            {% if LANGUAGE_CODE == 'en' %}
+              {{ post.get_title_en }}
+            {% else %}
+              {{ post.get_title_fr }}
+            {% endif %}</span>
         </div>
-        <h1>{{ post.title }}</h1>
+        <h1>
+          {% if LANGUAGE_CODE == 'en' %}
+            {{ post.get_title_en }}
+          {% else %}
+            {{ post.get_title_fr }}
+          {% endif %}
+        </h1>
         <div class="post-meta">
           <span class="post-date">{{ post.published_at|date:"F j, Y" }}</span>
           {% if post.author_name %}<span class="post-author">{% trans 'by' %} {{ post.author_name }}</span>{% endif %}
@@ -29,12 +46,16 @@
       
       {% if post.featured_image_path %}
       <div class="post-featured-image">
-        <img src="{% static post.featured_image_path %}" alt="{{ post.title }}">
+        <img src="{% static post.featured_image_path %}" alt="{% if LANGUAGE_CODE == 'en' %}{{ post.get_title_en }}{% else %}{{ post.get_title_fr }}{% endif %}">
       </div>
       {% endif %}
       
       <article class="post-body">
-        {{ post.content|safe }}
+        {% if LANGUAGE_CODE == 'en' %}
+          {{ post.get_content_en|safe }}
+        {% else %}
+          {{ post.get_content_fr|safe }}
+        {% endif %}
       </article>
       
       {% if prev_post or next_post %}
@@ -42,14 +63,26 @@
             {% if prev_post %}
             <a href="{% url 'blog_detail' prev_post.slug %}" class="prev-post">
             <span class="nav-label">{% trans 'Previous' %}</span>
-            <span class="nav-title">{{ prev_post.title }}</span>
+            <span class="nav-title">
+              {% if LANGUAGE_CODE == 'en' %}
+                {{ prev_post.get_title_en }}
+              {% else %}
+                {{ prev_post.get_title_fr }}
+              {% endif %}
+            </span>
             </a>
             {% endif %}
             
             {% if next_post %}
             <a href="{% url 'blog_detail' next_post.slug %}" class="next-post">
             <span class="nav-label">{% trans 'Next' %}</span>
-            <span class="nav-title">{{ next_post.title }}</span>
+            <span class="nav-title">
+              {% if LANGUAGE_CODE == 'en' %}
+                {{ next_post.get_title_en }}
+              {% else %}
+                {{ next_post.get_title_fr }}
+              {% endif %}
+            </span>
             </a>
             {% endif %}
         </div>
@@ -64,12 +97,18 @@
             {% if related.featured_image_path %}
             <div class="related-post-image">
               <a href="{% url 'blog_detail' related.slug %}">
-                <img src="{% static related.featured_image_path %}" alt="{{ related.title }}">
+                <img src="{% static related.featured_image_path %}" alt="{% if LANGUAGE_CODE == 'en' %}{{ related.get_title_en }}{% else %}{{ related.get_title_fr }}{% endif %}">
               </a>
             </div>
             {% endif %}
             <div class="related-post-content">
-              <h4><a href="{% url 'blog_detail' related.slug %}">{{ related.title }}</a></h4>
+              <h4><a href="{% url 'blog_detail' related.slug %}">
+                {% if LANGUAGE_CODE == 'en' %}
+                  {{ related.get_title_en }}
+                {% else %}
+                  {{ related.get_title_fr }}
+                {% endif %}
+              </a></h4>
               <span class="post-date">{{ related.published_at|date:"M j, Y" }}</span>
             </div>
           </div>
