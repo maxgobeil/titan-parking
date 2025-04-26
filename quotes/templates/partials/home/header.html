@@ -17,10 +17,31 @@
       
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
+      
+      <!--
         <a href="{% url 'home' %}#services" class="nav-link">{% trans 'Services' %}</a>
         <a href="{% url 'home' %}#why-choose-us" class="nav-link">{% trans 'Why Choose Us' %}</a>
         <a href="{% url 'home' %}#gallery" class="nav-link">{% trans 'Our Work' %}</a>
         <a href="{% url 'home' %}#contact" class="nav-link">{% trans 'Contact' %}</a>
+        -->
+        <a href="{% url 'home' %}#services" class="nav-link">{% trans 'Services' %}</a>
+        
+        <!-- Dropdown Menu -->
+        <div class="dropdown">
+          <button class="dropbtn">{% trans 'More' %} 
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-chevron-down">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-content">
+            <a href="{% url 'home' %}#why-choose-us">{% trans 'Why Choose Us' %}</a>
+            <a href="{% url 'home' %}#gallery">{% trans 'Our Work' %}</a>
+          </div>
+        </div>
+        
+        <a href="{% url 'blog' %}" class="nav-link">{% trans 'Blog' %}</a>
+        <a href="{% url 'home' %}#contact" class="nav-link">{% trans 'Contact' %}</a>
+        
 
         <!-- Language Switcher -->
         <div class="language-switcher">
@@ -68,10 +89,31 @@
       </svg>
     </button>
     <div class="mobile-nav-content">
+    <!--
       <a href="{% url 'home' %}#services" class="mobile-nav-link">{% trans 'Services' %}</a>
       <a href="{% url 'home' %}#why-choose-us" class="mobile-nav-link">{% trans 'Why Choose Us' %}</a>
       <a href="{% url 'home' %}#gallery" class="mobile-nav-link">{% trans 'Our Work' %}</a>
       <a href="{% url 'home' %}#contact" class="mobile-nav-link">{% trans 'Contact' %}</a>
+      -->
+      <a href="{% url 'home' %}#services" class="mobile-nav-link">{% trans 'Services' %}</a>
+      
+      <!-- Mobile Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropbtn">
+          {% trans 'More' %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-chevron-down">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-content">
+          <a href="{% url 'home' %}#why-choose-us" class="mobile-nav-link">{% trans 'Why Choose Us' %}</a>
+          <a href="{% url 'home' %}#gallery" class="mobile-nav-link">{% trans 'Our Work' %}</a>
+        </div>
+      </div>
+      
+      <a href="{% url 'blog' %}" class="mobile-nav-link">{% trans 'Blog' %}</a>
+      <a href="{% url 'home' %}#contact" class="mobile-nav-link">{% trans 'Contact' %}</a>
+
       <div class="mobile-lang-switcher">
         <form action="{% url 'set_language' %}" method="post">
           {% csrf_token %}

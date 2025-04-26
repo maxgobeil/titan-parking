@@ -226,6 +226,112 @@
   margin-top: 1.5rem;
 }
 
+/* Dropdown Button */
+.dropbtn {
+  background-color: transparent;
+  color: var(--light-text);
+  padding: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 2rem;
+}
+
+.header.scrolled .dropbtn {
+  color: var(--dark-text);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: calc(100% - 10px);
+}
+
+/* Pseudo-element to fill the gap making impossible to click the dropdown */
+.dropdown::after {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  bottom: -15px;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: var(--dark-text);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--stripe-lightgray);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .icon-chevron-down {
+  transform: rotate(180deg);
+}
+
+.icon-chevron-down {
+  transition: transform 0.2s ease;
+}
+
+/* Mobile dropdown styles */
+.mobile-dropdown {
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-dropbtn {
+  background-color: transparent;
+  color: var(--dark-text);
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.mobile-dropdown-content {
+  display: none;
+  margin-top: 1rem;
+}
+
+.mobile-dropdown-content.show {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 @media (min-width: 1200px) {
   .menu-toggle {
     display: none;
