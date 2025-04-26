@@ -296,3 +296,42 @@ class QuoteItem(models.Model):
 #         null=True,
 #         related_name="uploaded_photos",
 #     )
+
+
+class BlogPost(models.Model):
+    STATUS_CHOICES = [
+        ("draft", "Draft"),
+        ("published", "Published"),
+    ]
+
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=250, unique=True)
+    author_name = models.CharField(
+        max_length=100, default="Your Name", help_text="Name of the author to display"
+    )
+    content = models.TextField(help_text="HTML content with image references")
+    summary = models.TextField(
+        blank=True, help_text="Short description for meta tags and previews"
+    )
+    meta_description = models.CharField(
+        max_length=160, blank=True, help_text="SEO meta description"
+    )
+    featured_image_path = models.CharField(
+        max_length=200,
+        blank=True,
+        help_text="Path to featured image in static folder (e.g., 'blog/img1.jpg')",
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    published_at = models.DateTimeField(blank=True, null=True)
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default="draft")
+
+    class Meta:
+        ordering = ["-published_at"]
+
+    def __str__(self):
+        return self.title
+
+    @property
+    def is_published(self):
+        return self.status == "published" and self.published_at is not None

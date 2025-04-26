@@ -1,0 +1,44 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Line Striping Blog | Parking Lot Striping Tips & Insights' %} {% endblock %}
+
+{% block meta_description %}{% trans 'Discover expert articles on parking lot striping, line marking standards, and pavement maintenance. Professional insights to help property managers maintain safe, compliant parking areas.' %}{% endblock %} 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<div class="blog-container">
+  <div class="blog-header">
+    <h1>{% trans 'Line Striping Blog' %}</h1>
+    <p class="blog-intro">{% trans 'Expert tips, industry insights, and the latest trends in parking lot line striping and pavement marking.' %}</p>
+  </div>
+  
+  <div class="blog-content-wrapper">
+    <div class="blog-main-content">
+      {% if featured_post %}
+        {% include "partials/blog/featured-post.html" %}
+      {% endif %}
+      
+      <!-- Blog Posts List -->
+      {% include "partials/blog/blog-list.html" %}
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="blog-sidebar">
+      {% include "partials/blog/blog-search.html" %}
+      
+      {% if popular_posts %}
+        {% include "partials/blog/popular-list.html" %}
+      {% endif %}
+      
+      {% include "partials/blog/cta-widget.html" %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}

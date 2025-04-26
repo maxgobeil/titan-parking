@@ -1,0 +1,23 @@
+{% load i18n %}
+{% load static %}
+
+<div class="sidebar-widget popular-posts-widget">
+        <h3>{% trans 'Popular Articles' %}</h3>
+        <ul class="popular-posts-list">
+          {% for post in popular_posts %}
+          <li class="popular-post-item">
+            {% if post.featured_image_path %}
+            <div class="popular-post-image">
+              <a href="{% url 'blog_detail' post.slug %}">
+                <img src="{% static post.featured_image_path %}" alt="{{ post.title }}">
+              </a>
+            </div>
+            {% endif %}
+            <div class="popular-post-content">
+              <a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a>
+              <span class="post-date">{{ post.published_at|date:"M j, Y" }}</span>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+</div>

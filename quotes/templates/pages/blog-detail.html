@@ -1,0 +1,97 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ post.title }} | {% trans 'Line Striping Blog' %}{% endblock %}
+
+{% block meta_description %}{{ post.meta_description }}{% endblock %} 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+<link rel="stylesheet" href="{% static 'css/blog-detail.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+  <div class="blog-content-wrapper blog-detail-wrapper">
+    <!-- Main content area -->
+    <div class="blog-main-content blog-post-content">
+      <div class="post-header">
+        <div class="post-breadcrumb">
+          <a href="{% url 'blog' %}">{% trans 'Blog' %}</a> / <span>{{ post.title }}</span>
+        </div>
+        <h1>{{ post.title }}</h1>
+        <div class="post-meta">
+          <span class="post-date">{{ post.published_at|date:"F j, Y" }}</span>
+          {% if post.author_name %}<span class="post-author">{% trans 'by' %} {{ post.author_name }}</span>{% endif %}
+        </div>
+      </div>
+      
+      {% if post.featured_image_path %}
+      <div class="post-featured-image">
+        <img src="{% static post.featured_image_path %}" alt="{{ post.title }}">
+      </div>
+      {% endif %}
+      
+      <article class="post-body">
+        {{ post.content|safe }}
+      </article>
+      
+      {% if prev_post or next_post %}
+        <div class="post-navigation">
+            {% if prev_post %}
+            <a href="{% url 'blog_detail' prev_post.slug %}" class="prev-post">
+            <span class="nav-label">{% trans 'Previous' %}</span>
+            <span class="nav-title">{{ prev_post.title }}</span>
+            </a>
+            {% endif %}
+            
+            {% if next_post %}
+            <a href="{% url 'blog_detail' next_post.slug %}" class="next-post">
+            <span class="nav-label">{% trans 'Next' %}</span>
+            <span class="nav-title">{{ next_post.title }}</span>
+            </a>
+            {% endif %}
+        </div>
+      {% endif %}
+
+      {% if related_posts %}
+      <div class="related-posts">
+        <h3>{% trans 'Related Articles' %}</h3>
+        <div class="related-posts-grid">
+          {% for related in related_posts %}
+          <div class="related-post-card">
+            {% if related.featured_image_path %}
+            <div class="related-post-image">
+              <a href="{% url 'blog_detail' related.slug %}">
+                <img src="{% static related.featured_image_path %}" alt="{{ related.title }}">
+              </a>
+            </div>
+            {% endif %}
+            <div class="related-post-content">
+              <h4><a href="{% url 'blog_detail' related.slug %}">{{ related.title }}</a></h4>
+              <span class="post-date">{{ related.published_at|date:"M j, Y" }}</span>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="blog-sidebar">
+      <!-- Search Box -->
+      {% include "partials/blog/blog-search.html" %}
+      
+      <!-- Popular Posts -->
+      {% if popular_posts %}
+        {% include "partials/blog/popular-list.html" %}
+      {% endif %}
+      
+      <!-- CTA Widget -->
+      {% include "partials/blog/cta-widget.html" %}
+    </div>
+  </div>
+</div>
+{% endblock %}

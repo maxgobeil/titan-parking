@@ -1,0 +1,76 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Search Results' %} | {% trans 'Line Striping Blog' %}{% endblock %}
+
+{% block meta_description %}{% trans 'Search results for blog posts about parking lot striping, line marking standards, and pavement maintenance.' %}{% endblock %} 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+  <div class="blog-header">
+    <h1>{% trans 'Search Results' %}</h1>
+    <p class="blog-intro">
+      {% if query %}
+        {% blocktrans with query=query %}Showing results for "{{ query }}"{% endblocktrans %}
+      {% else %}
+        {% trans 'Search our blog for articles about line striping and pavement maintenance.' %}
+      {% endif %}
+    </p>
+  </div>
+  
+  <div class="blog-content-wrapper">
+    <div class="blog-main-content">
+      <!-- Search Results -->
+      {% if results %}
+        <div class="blog-posts-section search-results">
+          <div class="posts-grid">
+            {% for post in results %}
+              <div class="post-card">
+                {% if post.featured_image_path %}
+                <div class="post-image">
+                  <a href="{% url 'blog_detail' post.slug %}">
+                    <img src="{% static post.featured_image_path %}" alt="{{ post.title }}">
+                  </a>
+                </div>
+                {% endif %}
+                <div class="post-content">
+                  <h3><a href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a></h3>
+                  <div class="post-meta">
+                    <span class="post-date">{{ post.published_at|date:"F j, Y" }}</span>
+                  </div>
+                  <p class="post-excerpt">{{ post.summary|truncatewords:25 }}</p>
+                  <a href="{% url 'blog_detail' post.slug %}" class="read-more-link">{% trans 'Read More' %} →</a>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        <div class="no-posts-message">
+          {% if query %}
+            {% blocktrans with query=query %}No results found for "{{ query }}". Please try a different search term.{% endblocktrans %}
+          {% else %}
+            {% trans 'Please enter a search term to find blog posts.' %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+    
+    <!-- Sidebar -->
+    <div class="blog-sidebar">
+      {% include "partials/blog/blog-search.html" %}
+      
+      {% if popular_posts %}
+        {% include "partials/blog/popular-list.html" %}
+      {% endif %}
+      
+      {% include "partials/blog/cta-widget.html" %}
+    </div>
+  </div>
+</div>
+{% endblock %}

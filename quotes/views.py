@@ -3,13 +3,14 @@ import os
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.db.models import Q
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.template.loader import render_to_string
 from weasyprint import HTML
 
 from .forms import ContactForm
-from .models import Quote
+from .models import BlogPost, Quote
 
 
 def home_view(request):
@@ -186,3 +187,97 @@ def invoice_view_html(request):
     }
 
     return render(request, "quotes/pdf/quote_template.html", context)
+
+
+def blog_list(request):
+    posts = BlogPost.objects.filter(status="published").order_by("-published_at")
+
+    featured_post = None
+    other_posts = []
+
+    if posts.exists():
+        featured_post = posts.first()
+        other_posts = posts[1:]
+
+    popular_posts = BlogPost.objects.filter(status="published").order_by(
+        "-published_at"
+    )[:5]
+
+    return render(
+        request,
+        "pages/blog.html",
+        {
+            "featured_post": featured_post,
+            "other_posts": other_posts,
+            "popular_posts": popular_posts,
+        },
+    )
+
+
+def blog_search(request):
+    query = request.GET.get("q", "")
+
+    if query:
+        results = BlogPost.objects.filter(
+            Q(title__icontains=query)
+            | Q(content__icontains=query)
+            | Q(summary__icontains=query),
+            status="published",
+        ).order_by("-published_at")
+    else:
+        results = []
+
+    popular_posts = BlogPost.objects.filter(status="published").order_by(
+        "-published_at"
+    )[:5]
+
+    return render(
+        request,
+        "pages/blog-search.html",
+        {
+            "query": query,
+            "results": results,
+            "popular_posts": popular_posts,
+        },
+    )
+
+
+def blog_detail(request, slug):
+    post = get_object_or_404(BlogPost, slug=slug, status="published")
+
+    next_post = (
+        BlogPost.objects.filter(published_at__gt=post.published_at, status="published")
+        .order_by("published_at")
+        .first()
+    )
+
+    prev_post = (
+        BlogPost.objects.filter(published_at__lt=post.published_at, status="published")
+        .order_by("-published_at")
+        .first()
+    )
+
+    # Get related posts - for now, just get recent posts
+    related_posts = (
+        BlogPost.objects.filter(status="published")
+        .exclude(id=post.id)
+        .order_by("-published_at")[:2]
+    )
+
+    popular_posts = (
+        BlogPost.objects.filter(status="published")
+        .exclude(id=post.id)
+        .order_by("-published_at")[:5]
+    )
+
+    return render(
+        request,
+        "pages/blog-detail.html",
+        {
+            "post": post,
+            "next_post": next_post,
+            "prev_post": prev_post,
+            "related_posts": related_posts,
+            "popular_posts": popular_posts,
+        },
+    )

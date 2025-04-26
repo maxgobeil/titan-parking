@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import reverse
 from django.utils.html import format_html
 
-from .models import Client, Quote, QuoteItem, Service
+from .models import BlogPost, Client, Quote, QuoteItem, Service
 
 
 class QuoteItemInline(admin.TabularInline):
@@ -62,3 +62,12 @@ class ServiceAdmin(admin.ModelAdmin):
 class ClientAdmin(admin.ModelAdmin):
     list_display = ("name", "email", "company", "phone")
     search_fields = ("name", "email", "company")
+
+
+@admin.register(BlogPost)
+class BlogPostAdmin(admin.ModelAdmin):
+    list_display = ("title", "status", "published_at", "author_name")
+    list_filter = ("status", "author_name")
+    search_fields = ("title", "content", "summary")
+    list_editable = ("status",)
+    list_per_page = 20
