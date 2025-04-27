@@ -4,6 +4,12 @@
 
 {% block title %}{% trans 'Privacy Policy - Titan Parking' %} {% endblock %}
 
+{% block meta_description %}{% trans 'Privacy Policy for Titan Parking services' %}{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/privacy-policy.html" %}
+{% endblock %}
+
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/legal.css' %}" />
 {% endblock %}

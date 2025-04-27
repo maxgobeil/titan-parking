@@ -37,4 +37,79 @@
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/privacy-policy/" />
   </url>
+
+  <!-- About Us Page -->
+  <url>
+    <loc>https://titanparking.ca/about-us/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/about-us/" />
+  </url>
+
+  <!-- English About Us Page -->
+  <url>
+    <loc>https://titanparking.ca/en/about-us/</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/about-us/" />
+  </url>
+
+  <!-- Blog Index Page -->
+  <url>
+    <loc>https://titanparking.ca/blog/</loc>
+    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/blog/" />
+  </url>
+
+  <!-- Blog Search Page -->
+  <url>
+    <loc>https://titanparking.ca/blog/search/</loc>
+    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/blog/search/" />
+  </url>
+
+  <!-- English Blog Search Page -->
+  <url>
+    <loc>https://titanparking.ca/en/blog/search/</loc>
+    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/blog/search/" />
+  </url>
+  
+  <!-- English Blog Index Page -->
+  <url>
+    <loc>https://titanparking.ca/en/blog/</loc>
+    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/blog/" />
+  </url>
+  
+  <!-- Blog Posts -->
+  {% for post in blog_posts %}
+  <url>
+    <loc>https://titanparking.ca/blog/{{ post.slug }}/</loc>
+    <lastmod>{{ post.updated_at|date:"Y-m-d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/blog/{{ post.slug }}/" />
+  </url>
+  
+  <!-- English Blog Post -->
+  <url>
+    <loc>https://titanparking.ca/en/blog/{{ post.slug }}/</loc>
+    <lastmod>{{ post.updated_at|date:"Y-m-d" }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/blog/{{ post.slug }}/" />
+  </url>
+  {% endfor %}
+  
 </urlset>

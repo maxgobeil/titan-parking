@@ -1,0 +1,19 @@
+{% load i18n %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "headline": "{% trans 'Line Striping Blog | Parking Lot Striping Tips & Insights' %}",
+  "description": "{% trans 'Discover expert articles on parking lot striping, line marking standards, and pavement maintenance. Professional insights to help property managers maintain safe, compliant parking areas.' %}",
+  "url": "https://titanparking.ca{% if LANGUAGE_CODE == 'en' %}/en{% endif %}/blog/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://titanparking.ca/static/images/logo-dark.png"
+    }
+  }
+}
+</script>

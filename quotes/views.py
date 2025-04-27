@@ -35,7 +35,16 @@ def privacy_view(request):
 
 
 def sitemap_view(request):
-    return render(request, "sitemap.xml", content_type="application/xml")
+    blog_posts = BlogPost.objects.filter(status="published", published_at__isnull=False)
+
+    return render(
+        request,
+        "sitemap.xml",
+        {
+            "blog_posts": blog_posts,
+        },
+        content_type="application/xml",
+    )
 
 
 def robots_view(request):

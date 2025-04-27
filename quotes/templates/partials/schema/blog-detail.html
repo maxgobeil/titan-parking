@@ -1,0 +1,28 @@
+{% load i18n %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{% if LANGUAGE_CODE == 'en' %}{{ post.get_title_en }}{% else %}{{ post.get_title_fr }}{% endif %} | {% trans 'Line Striping Blog' %}",
+  "description": "{% if LANGUAGE_CODE == 'en' %}{{ post.get_meta_description_en }}{% else %}{{ post.get_meta_description_fr }}{% endif %}",
+  "image": "{% if post.featured_image_path %}https://titanparking.ca/static/{{ post.featured_image_path }}{% endif %}",
+  "datePublished": "{{ post.published_at|date:'c' }}",
+  "dateModified": "{{ post.updated_at|date:'c' }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ post.author_name }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://titanparking.ca/static/images/logo-dark.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://titanparking.ca{% if LANGUAGE_CODE == 'en' %}/en{% endif %}/blog/{{ post.slug }}/"
+  }
+}
+</script>

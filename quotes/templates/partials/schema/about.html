@@ -1,0 +1,15 @@
+{% load i18n %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "headline": "{% trans 'About Us - Titan Parking' %}",
+  "description": "{% if LANGUAGE_CODE == 'en' %}{% trans 'Professional line striping company with over 12 years of experience. Family-owned business dedicated to quality service and customer satisfaction.' %}{% else %}{% trans 'Entreprise professionnelle de marquage de lignes avec plus de 12 ans d\'expérience. Entreprise familiale dédiée à un service de qualité et à la satisfaction client.' %}{% endif %}",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "foundingDate": "2024",
+    "numberOfEmployees": "2-10",
+  }
+}
+</script>

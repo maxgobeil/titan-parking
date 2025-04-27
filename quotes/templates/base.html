@@ -11,11 +11,11 @@
       name="description" 
       content="{% block meta_description %}{% trans 'Titan Parking - Professional line striping services in Quebec. We offer exceptional customer service.' %}{% endblock %}" 
     />
-    <!-- Open Graph Meta Tags -->
-    <!-- <meta property="og:title" content="{% block og_title %}Default Title{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}Default description{% endblock %}">
-    <meta property="og:image" content="{% block og_image %}{% static 'default-image.jpg' %}{% endblock %}">
-    <meta property="og:url" content="{{ request.build_absolute_uri }}"> -->
+    <meta property="og:title" content="{% block og_title %}{% trans 'Transform Your Parking Lot with Professional Line Striping' %}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{% trans 'See how we help businesses improve safety and compliance with clean, precise parking lot striping. Free quotes available.' %}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{% static 'images/logo-dark.png' %}{% endblock %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="{% block og_type %}website{% endblock %}">
     <meta name="robots" content="index, follow" />
     {% endblock %}
 
@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% block extra_css %}{% endblock %}
     {% include 'partials/schema/base.html' %}
+    {% block schema %}{% endblock %}
     <script src="https://unpkg.com/htmx.org@1.9.5" integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
     {% if not debug %}
     <!-- Google tag (gtag.js) -->

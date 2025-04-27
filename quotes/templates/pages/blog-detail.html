@@ -3,15 +3,19 @@
 {% load i18n %}
 {% load blog_tags %}
 
-{% block title %}{{ post.title }} | {% trans 'Line Striping Blog' %}{% endblock %}
+{% block title %}
+{% if LANGUAGE_CODE == 'en' %}{{ post.get_title_en }}{% else %}{{ post.get_title_fr }}{% endif %} | {% trans 'Line Striping Blog' %}
+{% endblock %}
 
-{% block meta_description %}
-  {% if LANGUAGE_CODE == 'en' %}
-    {{ post.get_meta_description_en }}
-  {% else %}
-    {{ post.get_meta_description_fr }}
-  {% endif %}
-{% endblock %} 
+{% block meta_description %}{% if LANGUAGE_CODE == 'en' %}{{ post.get_meta_description_en }}{% else %}{{ post.get_meta_description_fr }}{% endif %}{% endblock %}
+{% block og_title %}{% if LANGUAGE_CODE == 'en' %}{{ post.get_title_en }}{% else %}{{ post.get_title_fr }}{% endif %}{% endblock %}
+{% block og_description %}{% if LANGUAGE_CODE == 'en' %}{{ post.get_og_description_en }}{% else %}{{ post.get_og_description_fr }}{% endif %}{% endblock %}
+{% block og_image %}{% if post.featured_image %}{{ post.featured_image.url }}{% else %}{% static 'images/logo-dark.png' %}{% endif %}{% endblock %}
+{% block og_type %}article{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/blog-detail.html" %}
+{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/blog.css' %}" />

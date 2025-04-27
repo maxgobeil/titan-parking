@@ -4,16 +4,16 @@
 
 {% block title %}{% trans 'About Us - Titan Parking' %}{% endblock %}
 
-{% block meta_description %}
-  {% if LANGUAGE_CODE == 'en' %}
-    Professional line striping company with over 12 years of experience. Family-owned business dedicated to quality service and customer satisfaction.
-  {% else %}
-    Entreprise professionnelle de marquage de lignes avec plus de 12 ans d'expérience. Entreprise familiale dédiée à un service de qualité et à la satisfaction client.
-  {% endif %}
-{% endblock %}
+{% block meta_description %}{% if LANGUAGE_CODE == 'en' %}{% trans 'Professional line striping company with over 12 years of experience. Family-owned business dedicated to quality service and customer satisfaction.' %}{% else %}{% trans 'Entreprise professionnelle de marquage de lignes avec plus de 12 ans d\'expérience. Entreprise familiale dédiée à un service de qualité et à la satisfaction client.' %}{% endif %}{% endblock %}
+{% block og_title %}{% trans "The Titan Parking Story: Quebec's Line Striping Specialists" %}{% endblock %}
+{% block og_description %}{% trans "Meet the team behind Quebec's premier parking lot striping service. Discover our commitment to quality, safety standards, and exceptional customer service." %}{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/about.html" %}
 {% endblock %}
 
 {% block content %}

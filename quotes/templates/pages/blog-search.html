@@ -4,7 +4,13 @@
 
 {% block title %}{% trans 'Search Results' %} | {% trans 'Line Striping Blog' %}{% endblock %}
 
-{% block meta_description %}{% trans 'Search results for blog posts about parking lot striping, line marking standards, and pavement maintenance.' %}{% endblock %} 
+{% block meta %}
+<meta 
+  name="description" 
+  content="{% trans 'Search results for blog posts about parking lot striping, line marking standards, and pavement maintenance.' %}" 
+/>
+<meta name="robots" content="noindex">
+{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/blog.css' %}" />
