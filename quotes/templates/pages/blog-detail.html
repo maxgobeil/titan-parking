@@ -1,6 +1,7 @@
 {% extends "base.html" %} 
 {% load static %}
 {% load i18n %}
+{% load blog_tags %}
 
 {% block title %}{{ post.title }} | {% trans 'Line Striping Blog' %}{% endblock %}
 
@@ -52,9 +53,9 @@
       
       <article class="post-body">
         {% if LANGUAGE_CODE == 'en' %}
-          {{ post.get_content_en|safe }}
+          {{ post.get_content_en|process_blog_images|safe }}
         {% else %}
-          {{ post.get_content_fr|safe }}
+          {{ post.get_content_fr|process_blog_images|safe }}
         {% endif %}
       </article>
       

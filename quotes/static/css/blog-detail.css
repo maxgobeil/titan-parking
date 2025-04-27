@@ -193,6 +193,12 @@
   color: var(--primary-color-dark);
 }
 
+.blog-content-image {
+  display: block;
+  margin: auto !important;
+  background-color: #572121;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .post-header h1 {

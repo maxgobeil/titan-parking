@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-09 20:34-0400\n"
+"POT-Creation-Date: 2025-04-27 14:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1292,51 +1292,51 @@ msgstr "Autre"
 msgid "Please describe your project needs"
 msgstr "Desccription de votre projet"
 
-#: quotes/models.py:14
+#: quotes/models.py:16
 msgid "The Email must be set"
 msgstr ""
 
-#: quotes/models.py:27
+#: quotes/models.py:29
 msgid "Superuser must have is_staff=True."
 msgstr ""
 
-#: quotes/models.py:29
+#: quotes/models.py:31
 msgid "Superuser must have is_superuser=True."
 msgstr ""
 
-#: quotes/models.py:34
+#: quotes/models.py:36
 msgid "email address"
 msgstr ""
 
-#: quotes/models.py:35
+#: quotes/models.py:37
 msgid "first name"
 msgstr ""
 
-#: quotes/models.py:36
+#: quotes/models.py:38
 msgid "last name"
 msgstr ""
 
-#: quotes/models.py:37
+#: quotes/models.py:39
 msgid "active"
 msgstr ""
 
-#: quotes/models.py:38
+#: quotes/models.py:40
 msgid "staff status"
 msgstr ""
 
-#: quotes/models.py:39
+#: quotes/models.py:41
 msgid "date joined"
 msgstr ""
 
-#: quotes/models.py:42
+#: quotes/models.py:44
 msgid "job title"
 msgstr ""
 
-#: quotes/models.py:57
+#: quotes/models.py:59
 msgid "user"
 msgstr ""
 
-#: quotes/models.py:58
+#: quotes/models.py:60
 msgid "users"
 msgstr ""
 
@@ -1351,6 +1351,132 @@ msgstr ""
 #: quotes/templates/base.html:27
 msgid "Home"
 msgstr "Accueil"
+
+#: quotes/templates/pages/404.html:8
+msgid "404 - Page Not Found | Titan Parking"
+msgstr "404 - Page introuvable | Titan Parking"
+
+#: quotes/templates/pages/404.html:236
+msgid "Error 404"
+msgstr "Erreur 404"
+
+#: quotes/templates/pages/404.html:237
+msgid "Page Not Found"
+msgstr "Page introuvable"
+
+#: quotes/templates/pages/404.html:262
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr "La page que vous recherchez a peut-être été supprimée, son nom a été modifié ou elle est temporairement indisponible."
+
+#: quotes/templates/pages/404.html:266
+msgid "What happened?"
+msgstr "Qu'est-ce qui s'est passé?"
+
+#: quotes/templates/pages/404.html:268
+msgid ""
+"We apologize for the inconvenience, but the page you requested could not be "
+"found. This could be due to:"
+msgstr "Nous nous excusons pour la gêne occasionnée, mais la page demandée est introuvable. Ceci peut être dû à :"
+
+#: quotes/templates/pages/404.html:271
+msgid "An incorrect URL"
+msgstr "Une URL incorrecte"
+
+#: quotes/templates/pages/404.html:272
+msgid "A page that has been moved or deleted"
+msgstr "Une page qui a été déplacée ou supprimée"
+
+#: quotes/templates/pages/404.html:273
+msgid "A temporary technical issue"
+msgstr "Un problème technique temporaire"
+
+#: quotes/templates/pages/404.html:279
+msgid "Back to Homepage"
+msgstr "Retour à la page d'accueil"
+
+#: quotes/templates/pages/blog-detail.html:6
+#: quotes/templates/pages/blog-search.html:5
+#: quotes/templates/pages/blog.html:17
+msgid "Line Striping Blog"
+msgstr "Blog sur le traçage de lignes de stationnement"
+
+#: quotes/templates/pages/blog-detail.html:28
+#: quotes/templates/partials/home/header.html:42
+#: quotes/templates/partials/home/header.html:114
+msgid "Blog"
+msgstr "Blog"
+
+#: quotes/templates/pages/blog-detail.html:44
+#: quotes/templates/partials/blog/featured-post.html:26
+msgid "by"
+msgstr "par"
+
+#: quotes/templates/pages/blog-detail.html:66
+msgid "Previous"
+msgstr "Précédent"
+
+#: quotes/templates/pages/blog-detail.html:79
+msgid "Next"
+msgstr "Suivant"
+
+#: quotes/templates/pages/blog-detail.html:94
+msgid "Related Articles"
+msgstr "Articles connexes"
+
+#: quotes/templates/pages/blog-search.html:5
+#: quotes/templates/pages/blog-search.html:16
+msgid "Search Results"
+msgstr "Résultats de la recherche"
+
+#: quotes/templates/pages/blog-search.html:7
+msgid ""
+"Search results for blog posts about parking lot striping, line marking "
+"standards, and pavement maintenance."
+msgstr "Résultats de recherche pour les articles de blog sur le marquage de lignes de stationnement, les normes de marquage au sol et l'entretien des chaussées."
+
+#: quotes/templates/pages/blog-search.html:19
+#, python-format
+msgid "Showing results for \"%(query)s\""
+msgstr "Affichage des résultats pour \"%(query)s\""
+
+#: quotes/templates/pages/blog-search.html:21
+msgid ""
+"Search our blog for articles about line striping and pavement maintenance."
+msgstr "Recherchez sur notre blog des articles sur le marquage au sol et l’entretien des chaussées."
+
+#: quotes/templates/pages/blog-search.html:47
+#: quotes/templates/partials/blog/blog-list.html:38
+#: quotes/templates/partials/blog/featured-post.html:35
+msgid "Read More"
+msgstr "En savoir plus"
+
+#: quotes/templates/pages/blog-search.html:56
+#, python-format
+msgid "No results found for \"%(query)s\". Please try a different search term."
+msgstr "Aucun résultat trouvé pour \"%(query)s\". Veuillez essayer un autre terme de recherche."
+
+#: quotes/templates/pages/blog-search.html:58
+msgid "Please enter a search term to find blog posts."
+msgstr "Veuillez saisir un terme de recherche pour trouver des articles de blog."
+
+#: quotes/templates/pages/blog.html:5
+msgid "Line Striping Blog | Parking Lot Striping Tips & Insights"
+msgstr "Blog sur le marquage au sol | Conseils et astuces pour le marquage au sol des stationnement"
+
+#: quotes/templates/pages/blog.html:7
+msgid ""
+"Discover expert articles on parking lot striping, line marking standards, "
+"and pavement maintenance. Professional insights to help property managers "
+"maintain safe, compliant parking areas."
+msgstr "Découvrez des articles d'experts sur le marquage des stationnement, les normes de marquage au sol et l'entretien des chaussées. Des conseils professionnels pour aider les gestionnaires immobiliers à maintenir des stationnement sûrs et conformes."
+
+#: quotes/templates/pages/blog.html:18
+msgid ""
+"Expert tips, industry insights, and the latest trends in parking lot line "
+"striping and pavement marking."
+msgstr "Conseils d'experts, informations sur le secteur et dernières tendances en matière de marquage des lignes de stationnement et de chaussée."
 
 #: quotes/templates/pages/index.html:5
 msgid "Professional Parking Lot Striping"
@@ -1451,16 +1577,10 @@ msgid "Information Sharing"
 msgstr "Partage d'information"
 
 #: quotes/templates/pages/privacy-policy.html:58
-#, fuzzy
-#| msgid ""
-#| "We do not sell, trade, or otherwise transfer your personal information to "
-#| "outside parties. Your information remains confidential and is only "
-#| "accessed by authorized personnel who need it to provide you with the "
-#| "services you've requested."
 msgid ""
 "We do not sell, trade, or otherwise transfer your personal information to "
 "outside parties. Your information remains confidential and is only accessed "
-"by authorized personnel who need it to provide you with the services you\\"
+"by authorized personnel who need it to provide you with the services you"
 msgstr ""
 "En aucun cas nous ne vendons, n'échangeons ni ne transférons vos données "
 "personnelles. Vos données restent confidentielles et l'accès est restreint "
@@ -1561,6 +1681,44 @@ msgstr ""
 msgid "Terms of Service - Titan Parking"
 msgstr "Conditions d'utilisation - Titan Parking"
 
+#: quotes/templates/partials/blog/blog-list.html:5
+msgid "All Articles"
+msgstr "Tous les articles"
+
+#: quotes/templates/partials/blog/blog-list.html:44
+msgid "More articles coming soon!"
+msgstr "D'autres articles à venir bientôt!"
+
+#: quotes/templates/partials/blog/blog-search.html:4
+#: quotes/templates/partials/blog/blog-search.html:7
+msgid "Search"
+msgstr "Rechercher"
+
+#: quotes/templates/partials/blog/blog-search.html:6
+msgid "Search articles..."
+msgstr "Rechercher..."
+
+#: quotes/templates/partials/blog/cta-widget.html:4
+msgid "Need Line Striping Services?"
+msgstr "Besoin de services de marquage de lignes?"
+
+#: quotes/templates/partials/blog/cta-widget.html:5
+msgid "Get professional parking lot striping for your property."
+msgstr "Obtenez un marquage professionnel du stationnement de votre propriété."
+
+#: quotes/templates/partials/blog/cta-widget.html:6
+#: quotes/templates/partials/home/hero.html:30
+msgid "Get a Free Quote"
+msgstr "Obtenez votre soumission gratuite"
+
+#: quotes/templates/partials/blog/featured-post.html:5
+msgid "Latest Article"
+msgstr "Dernier article"
+
+#: quotes/templates/partials/blog/popular-list.html:5
+msgid "Popular Articles"
+msgstr "Articles populaires"
+
 #: quotes/templates/partials/home/contact-success.html:4
 #: quotes/templates/partials/home/contact.html:107
 msgid "Thank You!"
@@ -1568,12 +1726,8 @@ msgstr "Merci!"
 
 #: quotes/templates/partials/home/contact-success.html:5
 #: quotes/templates/partials/home/contact.html:108
-#, fuzzy
-#| msgid ""
-#| "Your message has been sent successfully. We'll get back to you as soon as "
-#| "possible."
 msgid ""
-"Your message has been sent successfully. We\\'ll get back to you as soon as "
+"Your message has been sent successfully. We'll get back to you as soon as "
 "possible."
 msgstr ""
 "Votre message a été envoyé avec succès. Nous entrerons en contact avec vous "
@@ -1684,8 +1838,10 @@ msgid "Quick Links"
 msgstr "Raccourcis"
 
 #: quotes/templates/partials/home/footer.html:73
-#: quotes/templates/partials/home/header.html:20
-#: quotes/templates/partials/home/header.html:71
+#: quotes/templates/partials/home/header.html:22
+#: quotes/templates/partials/home/header.html:27
+#: quotes/templates/partials/home/header.html:93
+#: quotes/templates/partials/home/header.html:98
 msgid "Services"
 msgstr "Services"
 
@@ -1694,15 +1850,19 @@ msgid "Gallery"
 msgstr "Galerie"
 
 #: quotes/templates/partials/home/footer.html:75
-#: quotes/templates/partials/home/header.html:21
-#: quotes/templates/partials/home/header.html:72
+#: quotes/templates/partials/home/header.html:23
+#: quotes/templates/partials/home/header.html:37
+#: quotes/templates/partials/home/header.html:94
+#: quotes/templates/partials/home/header.html:109
 #: quotes/templates/partials/home/why-choose-us.html:13
 msgid "Why Choose Us"
 msgstr "Pourquoi nous?"
 
 #: quotes/templates/partials/home/footer.html:76
-#: quotes/templates/partials/home/header.html:23
-#: quotes/templates/partials/home/header.html:74
+#: quotes/templates/partials/home/header.html:25
+#: quotes/templates/partials/home/header.html:43
+#: quotes/templates/partials/home/header.html:96
+#: quotes/templates/partials/home/header.html:115
 msgid "Contact"
 msgstr "Contact"
 
@@ -1722,13 +1882,20 @@ msgstr "Plan du site"
 msgid "Please fix the following errors:"
 msgstr "S'il vous plaît, réparer les erreurs suivantes:"
 
-#: quotes/templates/partials/home/header.html:22
-#: quotes/templates/partials/home/header.html:73
+#: quotes/templates/partials/home/header.html:24
+#: quotes/templates/partials/home/header.html:38
+#: quotes/templates/partials/home/header.html:95
+#: quotes/templates/partials/home/header.html:110
 msgid "Our Work"
 msgstr "Réalisations"
 
-#: quotes/templates/partials/home/header.html:47
-#: quotes/templates/partials/home/header.html:93
+#: quotes/templates/partials/home/header.html:31
+#: quotes/templates/partials/home/header.html:103
+msgid "More"
+msgstr "Plus"
+
+#: quotes/templates/partials/home/header.html:68
+#: quotes/templates/partials/home/header.html:135
 msgid "Call Now"
 msgstr "Appeler"
 
@@ -1747,10 +1914,6 @@ msgid ""
 msgstr ""
 "Transformez votre espace de stationnement avec une ligne propre, précise et "
 "conforme aux normes, faite par des experts de l'industrie."
-
-#: quotes/templates/partials/home/hero.html:30
-msgid "Get a Free Quote"
-msgstr "Obtenez votre soumission gratuite"
 
 #: quotes/templates/partials/home/portfolio.html:10
 msgid "Our Portfolio"
@@ -1904,9 +2067,6 @@ msgid "The Professional Advantage"
 msgstr "L'avantage professionnel"
 
 #: quotes/templates/partials/home/why-choose-us.html:17
-#| msgid ""
-#| "When it comes to parking lot striping, precision matter. Here's why "
-#| "clients consistently choose our services"
 msgid ""
 "When it comes to parking lot striping, precision matter. Here's why "
 "clients consistently choose our services"
@@ -1954,9 +2114,6 @@ msgid "Satisfaction Guaranteed"
 msgstr "Satisfaction garantie"
 
 #: quotes/templates/partials/home/why-choose-us.html:62
-#| msgid ""
-#| "We're not satisfied until you are. Our work is backed by our commitment "
-#| "to excellence."
 msgid ""
 "We're not satisfied until you are. Our work is backed by our commitment to "
 "excellence."
@@ -1988,13 +2145,13 @@ msgstr ""
 "Notre soucis du détail et notre service client nous ont constamment valu des "
 "avis 5 étoiles."
 
-#: titanparking/settings.py:118
-msgid "French"
-msgstr "Français"
-
-#: titanparking/settings.py:119
+#: titanparking/settings.py:121
 msgid "English"
 msgstr "Anglais"
+
+#: titanparking/settings.py:122
+msgid "French"
+msgstr "Français"
 
 #~ msgid "Professional line striping services"
 #~ msgstr "Traçage de lignes de stationnement professionnel"
