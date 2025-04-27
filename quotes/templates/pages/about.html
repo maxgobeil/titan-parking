@@ -1,0 +1,95 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'About Us - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}
+  {% if LANGUAGE_CODE == 'en' %}
+    Professional line striping company with over 12 years of experience. Family-owned business dedicated to quality service and customer satisfaction.
+  {% else %}
+    Entreprise professionnelle de marquage de lignes avec plus de 12 ans d'expérience. Entreprise familiale dédiée à un service de qualité et à la satisfaction client.
+  {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="about-section">
+  
+  <div class="about-container">
+    <div class="about-header">
+      <div class="badge">{% trans 'Our Story' %}</div>
+      <h1 class="about-title">{% trans 'About Titan Parking' %}</h1>
+    </div>
+
+    <div class="about-content">
+      <div class="about-intro">
+        <p>
+          {% trans 'Titan Parking is a family-owned line striping company serving businesses throughout Quebec. With over 12 years of experience in finishing work and painting, our team brings technical expertise and a systematic approach to every project, regardless of size or complexity.' %}
+        </p>
+      </div>
+      
+      <div class="about-section-content">
+        <h2>{% trans 'Our Mission' %}</h2>
+        <p>
+          {% trans 'Our mission is simple: to provide superior quality service based on complete customer satisfaction. Each project is carried out with care, precision, and constant attention to detail.' %}
+        </p>
+      </div>
+
+      <div class="about-section-content">
+        <h2>{% trans 'Our Services' %}</h2>
+        <p>
+            {% trans 'We offer a comprehensive range of line striping services including parking lot layout and striping, accessibility markings, warehouse floor marking, crosswalks, loading zones, fire lanes, and custom stenciling. Whether you need a complete new layout or maintenance of existing markings, our team delivers precise, durable results using high-quality materials.' %}
+        </p>
+        </div>
+
+        <div class="about-section-content">
+        <h2>{% trans 'Who We Serve' %}</h2>
+        <p>
+            {% trans 'Titan Parking proudly serves a diverse clientele including shopping centers, office complexes, industrial facilities, hospitals, schools, municipalities, and residential communities. No project is too large or too small—we apply the same level of professionalism and attention to detail to every job.' %}
+        </p>
+        </div>
+
+      <div class="about-section-content">
+        <h2>{% trans 'Our Location' %}</h2>
+        <p>
+            {% trans 'Based in Drummondville, Titan Parking is strategically positioned to serve clients throughout the entire province of Quebec. Our central location allows us to efficiently mobilize our team and equipment to projects across the region, from Montreal and Quebec City to Sherbrooke, Trois-Rivières, and beyond.' %}
+        </p>
+      </div>
+      
+      <div class="about-image-container">
+        <!-- Placeholder for future image -->
+        <div class="image-placeholder">
+          <span>{% trans 'Team image will be added here' %}</span>
+        </div>
+      </div>
+
+      <div class="about-section-content">
+        <h2>{% trans 'What Sets Us Apart' %}</h2>
+        <p>
+            {% trans 'We distinguish ourselves through our commitment to precision, durability, and timely completion. Using professional-grade equipment and premium materials, we ensure lasting results that maintain their appearance and functionality for years to come. Our flexible scheduling accommodates your business operations, minimizing disruption while maximizing quality.' %}
+        </p>
+      </div>
+
+      <div class="about-section-content">
+        <h2>{% trans 'Our Approach & Commitment' %}</h2>
+        <p>
+            {% trans "As a family owned business, we understand the importance of building strong relationships based on trust. That's why we are committed to meeting the specific needs of each of our clients, offering personalized solutions and service that meets their expectations." %}
+        </p>
+        <br>
+        <p>
+            {% trans "With Titan Parking, you can expect reliable scheduling, professional execution, and results that enhance both the functionality and appearance of your property. Our team is passionate about excellence and committed to maintaining the highest standards in the industry." %}
+        </p>
+      </div>
+      
+      <div class="about-cta">
+        <h3>{% trans 'Ready to start your project?' %}</h3>
+        <a href="/#contact" class="about-button">{% trans 'Request a Quote' %}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

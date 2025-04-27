@@ -17,6 +17,10 @@ def home_view(request):
     return render(request, "pages/index.html", {"form": ContactForm()})
 
 
+def about_view(request):
+    return render(request, "pages/about.html")
+
+
 def page_not_found_view(request, exception=None):
     return render(request, "pages/404.html", status=404)
 

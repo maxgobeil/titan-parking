@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const scrolledPages = ['/terms-of-service/', '/privacy-policy/', '/blog/'];
+  const scrolledPages = ['/terms-of-service/', '/privacy-policy/', '/blog/', '/about/'];
 
   const currentPath = window.location.pathname;
 
