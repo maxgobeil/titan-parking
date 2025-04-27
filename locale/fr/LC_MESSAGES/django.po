@@ -1713,7 +1713,7 @@ msgstr "Obtenez votre soumission gratuite"
 
 #: quotes/templates/partials/blog/featured-post.html:5
 msgid "Latest Article"
-msgstr "Dernier article"
+msgstr "Plus récent"
 
 #: quotes/templates/partials/blog/popular-list.html:5
 msgid "Popular Articles"
