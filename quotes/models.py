@@ -304,8 +304,8 @@ class BlogPost(models.Model):
         ("published", "Published"),
     ]
 
-    title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=250, unique=True)
+    title = models.CharField(max_length=500)
+    slug = models.SlugField(max_length=200, unique=True)
     author_name = models.CharField(
         max_length=100, default="Your Name", help_text="Name of the author to display"
     )
@@ -314,7 +314,7 @@ class BlogPost(models.Model):
         blank=True, help_text="Short description for meta tags and previews"
     )
     meta_description = models.CharField(
-        max_length=160, blank=True, help_text="SEO meta description"
+        max_length=800, blank=True, help_text="SEO meta description"
     )
     featured_image_path = models.CharField(
         max_length=200,
