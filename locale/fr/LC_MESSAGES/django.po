@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-27 16:50+0000\n"
+"POT-Creation-Date: 2025-04-28 02:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -330,7 +330,7 @@ msgid "Duration"
 msgstr ""
 
 #: env/lib/python3.13/site-packages/django/db/models/fields/__init__.py:1915
-#: quotes/templates/pages/privacy-policy.html:35
+#: quotes/templates/pages/privacy-policy.html:41
 msgid "Email address"
 msgstr "Adresse courriel"
 
@@ -1348,6 +1348,19 @@ msgstr ""
 "Titan Parking - Traçage de lignes de stationnement au Québec. Nous offrons "
 "un service exceptionnel."
 
+#: quotes/templates/base.html:14
+msgid "Transform Your Parking Lot with Professional Line Striping"
+msgstr "Transformez votre stationnement grâce à un marquage professionnel"
+
+#: quotes/templates/base.html:15
+msgid ""
+"See how we help businesses improve safety and compliance with clean, precise "
+"parking lot striping. Free quotes available."
+msgstr ""
+"Découvrez comment nous aidons les entreprises à améliorer leur sécurité et "
+"leur conformité grâce à un marquage de lignes de stationnement propre et "
+"précis. Soumission gratuits disponibles."
+
 #: quotes/templates/base.html:27
 msgid "Home"
 msgstr "Accueil"
@@ -1401,8 +1414,34 @@ msgid "Back to Homepage"
 msgstr "Retour à la page d'accueil"
 
 #: quotes/templates/pages/about.html:5
+#: quotes/templates/partials/schema/about.html:6
 msgid "About Us - Titan Parking"
 msgstr "À propos - Titan Parking"
+
+#: quotes/templates/pages/about.html:7
+#: quotes/templates/partials/schema/about.html:7
+msgid ""
+"Professional line striping company with over 12 years of experience. Family-"
+"owned business dedicated to quality service and customer satisfaction."
+msgstr ""
+"Entreprise professionnelle de marquage routier avec plus de 12 ans "
+"d'expérience. Entreprise familiale dédiée à la qualité du service et à la "
+"satisfaction client."
+
+#: quotes/templates/pages/about.html:8
+msgid "The Titan Parking Story: Quebec's Line Striping Specialists"
+msgstr ""
+"À propos de Titan Parking: les spécialistes du marquage au sol au Québec"
+
+#: quotes/templates/pages/about.html:9
+msgid ""
+"Meet the team behind Quebec's premier parking lot striping service. Discover "
+"our commitment to quality, safety standards, and exceptional customer "
+"service."
+msgstr ""
+"Rencontrez l'équipe derrière le service de marquage de stationnement par "
+"excellence au Québec. Découvrez notre engagement envers la qualité, les "
+"normes de sécurité et un service client exceptionnel."
 
 #: quotes/templates/pages/about.html:24
 msgid "Our Story"
@@ -1454,12 +1493,12 @@ msgid ""
 "delivers precise, durable results using high-quality materials."
 msgstr ""
 "Nous proposons une gamme complète de services de marquage au sol, incluant "
-"l'aménagement et le marquage de stationnement, le marquage d'accessibilité, le "
-"marquage au sol pour les entrepôts, les passages piétons, les zones de chargement, "
-"les voies d'incendie et les stencils personnalisés. Qu'il s'agisse "
-"d'un nouvel aménagement ou de l'entretien de marquages ​​existants, notre "
-"équipe garantit des résultats précis et durables grâce à des matériaux de "
-"haute qualité."
+"l'aménagement et le marquage de stationnement, le marquage d'accessibilité, "
+"le marquage au sol pour les entrepôts, les passages piétons, les zones de "
+"chargement, les voies d'incendie et les stencils personnalisés. Qu'il "
+"s'agisse d'un nouvel aménagement ou de l'entretien de marquages ​​existants, "
+"notre équipe garantit des résultats précis et durables grâce à des matériaux "
+"de haute qualité."
 
 #: quotes/templates/pages/about.html:50
 msgid "Who We Serve"
@@ -1473,10 +1512,10 @@ msgid ""
 "the same level of professionalism and attention to detail to every job."
 msgstr ""
 "Titan Parking est fier de servir une clientèle diversifiée, notamment des "
-"centres commerciaux, des complexes de bureaux, des entrepôts "
-"industriels, des hôpitaux, des écoles, des municipalités et des "
-"résidences. Aucun projet n'est trop grand ou trop petit ; nous appliquons le "
-"même niveau de professionnalisme et de souci du détail à chaque projet."
+"centres commerciaux, des complexes de bureaux, des entrepôts industriels, "
+"des hôpitaux, des écoles, des municipalités et des résidences. Aucun projet "
+"n'est trop grand ou trop petit ; nous appliquons le même niveau de "
+"professionnalisme et de souci du détail à chaque projet."
 
 #: quotes/templates/pages/about.html:57
 msgid "Our Location"
@@ -1493,8 +1532,8 @@ msgstr ""
 "Implantée à Drummondville, Titan Parking est stratégiquement positionnée "
 "pour servir des clients partout au Québec. Notre emplacement central nous "
 "permet de mobiliser efficacement notre équipe et notre équipement pour des "
-"projets dans toute la province. De Montréal à Québec, mais aussi Sherbrooke, Trois-"
-"Rivières et au-delà."
+"projets dans toute la province. De Montréal à Québec, mais aussi Sherbrooke, "
+"Trois-Rivières et au-delà."
 
 #: quotes/templates/pages/about.html:66
 msgid "Team image will be added here"
@@ -1512,10 +1551,10 @@ msgid ""
 "functionality for years to come. Our flexible scheduling accommodates your "
 "business operations, minimizing disruption while maximizing quality."
 msgstr ""
-"Nous nous distinguons par notre engagement envers les délais à respecter, la précision et la "
-"durabilité. Grâce à des équipements professionnels "
-"et des matériaux haut de gamme, nous garantissons des résultats durables, "
-"qui conservent leur aspect et leur fonctionnalité pendant des années. Notre "
+"Nous nous distinguons par notre engagement envers les délais à respecter, la "
+"précision et la durabilité. Grâce à des équipements professionnels et des "
+"matériaux haut de gamme, nous garantissons des résultats durables, qui "
+"conservent leur aspect et leur fonctionnalité pendant des années. Notre "
 "planification flexible s'adapte à vos activités, minimisant les "
 "perturbations et maximisant la rentabilité."
 
@@ -1557,41 +1596,42 @@ msgstr "Prêt à démarrer votre projet?"
 msgid "Request a Quote"
 msgstr "Obtenir une soumission"
 
-#: quotes/templates/pages/blog-detail.html:6
+#: quotes/templates/pages/blog-detail.html:7
 #: quotes/templates/pages/blog-search.html:5
-#: quotes/templates/pages/blog.html:17
+#: quotes/templates/pages/blog.html:23
+#: quotes/templates/partials/schema/blog-detail.html:6
 msgid "Line Striping Blog"
 msgstr "Blog sur le traçage de lignes de stationnement"
 
-#: quotes/templates/pages/blog-detail.html:28
+#: quotes/templates/pages/blog-detail.html:32
 #: quotes/templates/partials/home/header.html:36
 #: quotes/templates/partials/home/header.html:103
 msgid "Blog"
 msgstr "Blog"
 
-#: quotes/templates/pages/blog-detail.html:44
+#: quotes/templates/pages/blog-detail.html:48
 #: quotes/templates/partials/blog/featured-post.html:26
 msgid "by"
 msgstr "par"
 
-#: quotes/templates/pages/blog-detail.html:66
+#: quotes/templates/pages/blog-detail.html:70
 msgid "Previous"
 msgstr "Précédent"
 
-#: quotes/templates/pages/blog-detail.html:79
+#: quotes/templates/pages/blog-detail.html:83
 msgid "Next"
 msgstr "Suivant"
 
-#: quotes/templates/pages/blog-detail.html:94
+#: quotes/templates/pages/blog-detail.html:98
 msgid "Related Articles"
 msgstr "Articles connexes"
 
 #: quotes/templates/pages/blog-search.html:5
-#: quotes/templates/pages/blog-search.html:16
+#: quotes/templates/pages/blog-search.html:22
 msgid "Search Results"
 msgstr "Résultats de la recherche"
 
-#: quotes/templates/pages/blog-search.html:7
+#: quotes/templates/pages/blog-search.html:10
 msgid ""
 "Search results for blog posts about parking lot striping, line marking "
 "standards, and pavement maintenance."
@@ -1599,43 +1639,45 @@ msgstr ""
 "Résultats de recherche pour les articles de blog sur le marquage de lignes "
 "de stationnement, les normes de marquage au sol et l'entretien des chaussées."
 
-#: quotes/templates/pages/blog-search.html:19
+#: quotes/templates/pages/blog-search.html:25
 #, python-format
 msgid "Showing results for \"%(query)s\""
 msgstr "Affichage des résultats pour \"%(query)s\""
 
-#: quotes/templates/pages/blog-search.html:21
+#: quotes/templates/pages/blog-search.html:27
 msgid ""
 "Search our blog for articles about line striping and pavement maintenance."
 msgstr ""
 "Recherchez sur notre blog des articles sur le marquage au sol et l’entretien "
 "des chaussées."
 
-#: quotes/templates/pages/blog-search.html:47
+#: quotes/templates/pages/blog-search.html:53
 #: quotes/templates/partials/blog/blog-list.html:38
 #: quotes/templates/partials/blog/featured-post.html:35
 msgid "Read More"
 msgstr "En savoir plus"
 
-#: quotes/templates/pages/blog-search.html:56
+#: quotes/templates/pages/blog-search.html:62
 #, python-format
 msgid "No results found for \"%(query)s\". Please try a different search term."
 msgstr ""
 "Aucun résultat trouvé pour \"%(query)s\". Veuillez essayer un autre terme de "
 "recherche."
 
-#: quotes/templates/pages/blog-search.html:58
+#: quotes/templates/pages/blog-search.html:64
 msgid "Please enter a search term to find blog posts."
 msgstr ""
 "Veuillez saisir un terme de recherche pour trouver des articles de blog."
 
 #: quotes/templates/pages/blog.html:5
+#: quotes/templates/partials/schema/blog.html:7
 msgid "Line Striping Blog | Parking Lot Striping Tips & Insights"
 msgstr ""
 "Blog sur le marquage au sol | Conseils et astuces pour le marquage au sol "
 "des stationnement"
 
 #: quotes/templates/pages/blog.html:7
+#: quotes/templates/partials/schema/blog.html:8
 msgid ""
 "Discover expert articles on parking lot striping, line marking standards, "
 "and pavement maintenance. Professional insights to help property managers "
@@ -1646,7 +1688,18 @@ msgstr ""
 "professionnels pour aider les gestionnaires immobiliers à maintenir des "
 "stationnement sûrs et conformes."
 
-#: quotes/templates/pages/blog.html:18
+#: quotes/templates/pages/blog.html:8
+msgid "Line Striping Tips & Insights | Titan Parking Blog"
+msgstr "Conseils et informations sur le marquage au sol | Blog Titan Parking"
+
+#: quotes/templates/pages/blog.html:9
+msgid ""
+"Explore expert advice on parking lot maintenance, line striping best "
+"practices, and industry standards from Quebec's trusted pavement marking "
+"specialists."
+msgstr "Découvrez les conseils d'experts sur l'entretien des stationnements, les meilleures pratiques en matière de marquage au sol et les normes de l'industrie auprès des spécialistes de confiance du marquage de lignes de staionnement du Québec."
+
+#: quotes/templates/pages/blog.html:24
 msgid ""
 "Expert tips, industry insights, and the latest trends in parking lot line "
 "striping and pavement marking."
@@ -1659,28 +1712,34 @@ msgid "Professional Parking Lot Striping"
 msgstr "Traçage de lignes de stationnement"
 
 #: quotes/templates/pages/privacy-policy.html:5
+#: quotes/templates/partials/schema/privacy-policy.html:6
 msgid "Privacy Policy - Titan Parking"
 msgstr "Politique de confidentialité - Titan Parking"
 
-#: quotes/templates/pages/privacy-policy.html:18
+#: quotes/templates/pages/privacy-policy.html:7
+#: quotes/templates/partials/schema/privacy-policy.html:7
+msgid "Privacy Policy for Titan Parking services"
+msgstr "Politique de confidentialité - Titan Parking"
+
+#: quotes/templates/pages/privacy-policy.html:24
 msgid "Legal"
 msgstr "Légal"
 
-#: quotes/templates/pages/privacy-policy.html:19
+#: quotes/templates/pages/privacy-policy.html:25
 #: quotes/templates/partials/home/footer.html:77
 #: quotes/templates/partials/home/footer.html:107
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
-#: quotes/templates/pages/privacy-policy.html:20
+#: quotes/templates/pages/privacy-policy.html:26
 msgid "Last Updated:"
 msgstr "Dernière modification:"
 
-#: quotes/templates/pages/privacy-policy.html:20
+#: quotes/templates/pages/privacy-policy.html:26
 msgid "March 29, 2025"
 msgstr "29 mars 2025"
 
-#: quotes/templates/pages/privacy-policy.html:25
+#: quotes/templates/pages/privacy-policy.html:31
 msgid ""
 "Thank you for choosing Titan Parking. We are committed to protecting your "
 "personal information and your right to privacy. This Privacy Policy explains "
@@ -1693,72 +1752,66 @@ msgstr ""
 "les informations que vous nous transmettez lorsque vous utilisez notre site "
 "internet."
 
-#: quotes/templates/pages/privacy-policy.html:29
+#: quotes/templates/pages/privacy-policy.html:35
 msgid "What Information We Collect"
 msgstr "Quelles informations collectons-nous?"
 
-#: quotes/templates/pages/privacy-policy.html:31
+#: quotes/templates/pages/privacy-policy.html:37
 msgid ""
 "When you submit a request for quote through our contact form, we collect:"
 msgstr ""
 "Quand vous faites une demande de soumission à partir de notre formulaire de "
 "contact, nous collectons:"
 
-#: quotes/templates/pages/privacy-policy.html:34
+#: quotes/templates/pages/privacy-policy.html:40
 msgid "Full name"
 msgstr "Nom complet"
 
-#: quotes/templates/pages/privacy-policy.html:36
+#: quotes/templates/pages/privacy-policy.html:42
 msgid "Phone number"
 msgstr "Numéro de téléphone"
 
-#: quotes/templates/pages/privacy-policy.html:37
+#: quotes/templates/pages/privacy-policy.html:43
 msgid "Service needed"
 msgstr "Services demandés"
 
-#: quotes/templates/pages/privacy-policy.html:38
+#: quotes/templates/pages/privacy-policy.html:44
 msgid "Project details"
 msgstr "Détails du projet"
 
-#: quotes/templates/pages/privacy-policy.html:43
+#: quotes/templates/pages/privacy-policy.html:49
 msgid "How We Use Your Information"
 msgstr "Comment utilisons-nous vos informations?"
 
-#: quotes/templates/pages/privacy-policy.html:45
+#: quotes/templates/pages/privacy-policy.html:51
 msgid "We use the information you provide solely for the following purposes:"
 msgstr ""
 "Nous utilisons les informations que vous nous transmettez seulement pour les "
 "raisons suivantes:"
 
-#: quotes/templates/pages/privacy-policy.html:48
+#: quotes/templates/pages/privacy-policy.html:54
 msgid "To respond to your service inquiries"
 msgstr "Pour répondre à vos demandes de services"
 
-#: quotes/templates/pages/privacy-policy.html:49
+#: quotes/templates/pages/privacy-policy.html:55
 msgid "To prepare and send you quotes for line striping services"
 msgstr ""
 "Pour préparer et vous envoyer votre soumission de traçage de lignes de "
 "stationnement"
 
-#: quotes/templates/pages/privacy-policy.html:50
+#: quotes/templates/pages/privacy-policy.html:56
 msgid "To communicate with you about your project needs"
 msgstr "Pour communiquer avec vous à propos de vos besoins liés au projet"
 
-#: quotes/templates/pages/privacy-policy.html:51
+#: quotes/templates/pages/privacy-policy.html:57
 msgid "To maintain records of our communications"
 msgstr "Pour conserver les preuves de nos communications"
 
-#: quotes/templates/pages/privacy-policy.html:56
+#: quotes/templates/pages/privacy-policy.html:62
 msgid "Information Sharing"
 msgstr "Partage d'information"
 
-#: quotes/templates/pages/privacy-policy.html:58
-#, fuzzy
-#| msgid ""
-#| "We do not sell, trade, or otherwise transfer your personal information to "
-#| "outside parties. Your information remains confidential and is only "
-#| "accessed by authorized personnel who need it to provide you with the "
-#| "services you"
+#: quotes/templates/pages/privacy-policy.html:64
 msgid ""
 "We do not sell, trade, or otherwise transfer your personal information to "
 "outside parties. Your information remains confidential and is only accessed "
@@ -1769,11 +1822,11 @@ msgstr ""
 "personnelles. Vos données restent confidentielles et l'accès est restreint "
 "au personnel autorisé."
 
-#: quotes/templates/pages/privacy-policy.html:63
+#: quotes/templates/pages/privacy-policy.html:69
 msgid "Data Storage and Security"
 msgstr "Stockage de données et sécurité"
 
-#: quotes/templates/pages/privacy-policy.html:65
+#: quotes/templates/pages/privacy-policy.html:71
 msgid ""
 "We implement security measures to protect your personal information. Your "
 "data is stored securely and is only retained for as long as necessary to "
@@ -1784,53 +1837,53 @@ msgstr ""
 "conservées que le temps nécessaire à la réalisation des objectifs décrits "
 "dans cette politique de confidentialité ou tel que requis par la loi."
 
-#: quotes/templates/pages/privacy-policy.html:67
+#: quotes/templates/pages/privacy-policy.html:73
 msgid "We typically retain your information for:"
 msgstr "Nous conservons généralement vos informations pour:"
 
-#: quotes/templates/pages/privacy-policy.html:69
+#: quotes/templates/pages/privacy-policy.html:75
 msgid "Active inquiries: Until project completion"
 msgstr "Demandes actives: Jusqu'à l'achèvement du projet"
 
-#: quotes/templates/pages/privacy-policy.html:70
+#: quotes/templates/pages/privacy-policy.html:76
 msgid "Past client information: Up to 3 years"
 msgstr "Informations des anciens clients: Jusqu'à 3 ans"
 
-#: quotes/templates/pages/privacy-policy.html:71
+#: quotes/templates/pages/privacy-policy.html:77
 msgid "Information needed for tax or legal purposes: Up to 7 years"
 msgstr ""
 "Informations nécessaires à des fins fiscales ou juridiques: Jusqu'à 7 ans"
 
-#: quotes/templates/pages/privacy-policy.html:76
+#: quotes/templates/pages/privacy-policy.html:82
 msgid "Your Rights"
 msgstr "Vos droits"
 
-#: quotes/templates/pages/privacy-policy.html:77
+#: quotes/templates/pages/privacy-policy.html:83
 msgid "You have the right to:"
 msgstr "Vous avez le droit de:"
 
-#: quotes/templates/pages/privacy-policy.html:79
+#: quotes/templates/pages/privacy-policy.html:85
 msgid "Access your personal information that we hold"
 msgstr "Accéder à vos informations personnelles que nous détenons"
 
-#: quotes/templates/pages/privacy-policy.html:80
+#: quotes/templates/pages/privacy-policy.html:86
 msgid "Request correction of your personal information"
 msgstr "Demander la correction de vos informations personnelles"
 
-#: quotes/templates/pages/privacy-policy.html:81
+#: quotes/templates/pages/privacy-policy.html:87
 msgid "Request deletion of your personal information"
 msgstr "Demander la suppression de vos informations personnelles"
 
-#: quotes/templates/pages/privacy-policy.html:82
+#: quotes/templates/pages/privacy-policy.html:88
 msgid "Opt-out of future communications from us"
 msgstr "Vous désinscrire des communications futures de notre part"
 
-#: quotes/templates/pages/privacy-policy.html:87
+#: quotes/templates/pages/privacy-policy.html:93
 #: quotes/templates/partials/home/contact.html:14
 msgid "Contact Us"
 msgstr "Nous contacter"
 
-#: quotes/templates/pages/privacy-policy.html:89
+#: quotes/templates/pages/privacy-policy.html:95
 msgid ""
 "If you have any questions about this Privacy Policy or wish to exercise any "
 "of your rights regarding your personal information, please contact us at:"
@@ -1839,19 +1892,19 @@ msgstr ""
 "vous souhaitez exercer l'un de vos droits en lien avec vos informations "
 "personnelles, s'il vous plaît contactez-nous à:"
 
-#: quotes/templates/pages/privacy-policy.html:92
+#: quotes/templates/pages/privacy-policy.html:98
 msgid "Phone:"
 msgstr "Téléphone:"
 
-#: quotes/templates/pages/privacy-policy.html:93
+#: quotes/templates/pages/privacy-policy.html:99
 msgid "Email:"
 msgstr "Courriel:"
 
-#: quotes/templates/pages/privacy-policy.html:98
+#: quotes/templates/pages/privacy-policy.html:104
 msgid "Changes to This Policy"
 msgstr "Mise à jour de cette politique"
 
-#: quotes/templates/pages/privacy-policy.html:100
+#: quotes/templates/pages/privacy-policy.html:106
 msgid ""
 "We may update this Privacy Policy from time to time. Any changes will be "
 "posted on this page with an updated revision date."
@@ -1872,14 +1925,13 @@ msgstr "Tous les articles"
 msgid "More articles coming soon!"
 msgstr "D'autres articles à venir bientôt!"
 
-#: quotes/templates/partials/blog/blog-search.html:4
-#: quotes/templates/partials/blog/blog-search.html:7
-msgid "Search"
-msgstr "Rechercher"
-
-#: quotes/templates/partials/blog/blog-search.html:6
+#: quotes/templates/partials/blog/blog-search.html:5
 msgid "Search articles..."
 msgstr "Rechercher..."
+
+#: quotes/templates/partials/blog/blog-search.html:6
+msgid "Search"
+msgstr "Rechercher"
 
 #: quotes/templates/partials/blog/cta-widget.html:4
 msgid "Need Line Striping Services?"

@@ -1,7 +1,6 @@
 {% load i18n %}
 
 <div class="sidebar-widget search-widget">
-        <h3>{% trans 'Search' %}</h3>
         <form class="search-form" action="{% url 'blog_search' %}" method="get">
           <input type="text" name="q" placeholder="{% trans 'Search articles...' %}">
           <button type="submit" class="search-button">{% trans 'Search' %}</button>
