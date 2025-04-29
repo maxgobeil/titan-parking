@@ -3,8 +3,6 @@ from django.urls import path
 
 from . import views  # Import views from the main project
 
-handler404 = "quotes.views.page_not_found_view"
-
 urlpatterns = [
     path("", views.home_view, name="home"),
     path("terms-of-service/", views.terms_view, name="terms-of-service"),

@@ -21,7 +21,7 @@
             }
 
             .error-section {
-            padding: 9rem 0 6rem 0;
+            padding: 2rem 0 3rem 0;
             position: relative;
             background-color: rgba(230, 230, 230, 0.3);
             min-height: 100vh;
@@ -239,23 +239,11 @@
 
                 <div class="error-content">
                     <div class="error-illustration">
-                        <svg width="250" height="200" viewBox="0 0 250 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M50 130 H200 V140 H50 V130 Z" fill="#ffcc01" opacity="0.3" />
-                        <path d="M25 140 H225 V150 H25 V140 Z" fill="#ffcc01" opacity="0.5" />
-                        <path d="M10 150 H240 V160 H10 V150 Z" fill="#ffcc01" opacity="0.7" />
-                        <path d="M0 160 H250 V170 H0 V160 Z" fill="#ffcc01" />
-                        
-                        <path d="M70 40V55H85V60H70V90H60V60H45V55L60 40H70Z" fill="#222222" />
-                        
-                        <circle cx="125" cy="65" r="25" fill="#ffcc01" />
-                        <circle cx="125" cy="65" r="20" stroke="#222222" stroke-width="5" fill="none" />
-                        
-                        <path d="M190 40V55H205V60H190V90H180V60H165V55L180 40H190Z" fill="#222222" />
-                        
-                        <path d="M125 15L135 35H115L125 15Z" fill="#FF6B6B" />
-                        <path d="M125 20V28" stroke="#222222" stroke-width="2.5" stroke-linecap="round" />
-                        <circle cx="125" cy="32" r="1.5" fill="#222222" />
-                    </svg>
+                        {% if LANGUAGE_CODE == 'fr' %}
+                            <img src="{% static 'images/404-fr.svg' %}" alt="404 Error Illustration" class="error-image">
+                        {% else %}
+                            <img src="{% static 'images/404-en.svg' %}" alt="404 Error Illustration" class="error-image">
+                        {% endif %}
                     </div>
                     
                     <p class="error-intro">
