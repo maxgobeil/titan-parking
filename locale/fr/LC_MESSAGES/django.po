@@ -2115,7 +2115,7 @@ msgstr "Réalisations"
 #: quotes/templates/partials/home/header.html:32
 #: quotes/templates/partials/home/header.html:99
 msgid "About Us"
-msgstr ""
+msgstr "À propos"
 
 #: quotes/templates/partials/home/header.html:62
 #: quotes/templates/partials/home/header.html:124
