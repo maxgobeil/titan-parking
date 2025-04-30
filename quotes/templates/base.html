@@ -19,7 +19,17 @@
     <meta name="robots" content="index, follow" />
     {% endblock %}
 
-    <link rel="canonical" href="{% block canonical_url %}{{ request.build_absolute_uri }}{% endblock %}" />
+    {% if LANGUAGE_CODE == 'fr' %}
+      <link rel="canonical" href="https://titanparking.ca{{ request.path }}" />
+      <link rel="alternate" hreflang="fr" href="https://titanparking.ca{{ request.path }}" />
+      <link rel="alternate" hreflang="en" href="https://titanparking.ca/en{{ request.path }}" />
+    {% else %}
+      <link rel="canonical" href="https://titanparking.ca{{ request.path }}" />
+      <link rel="alternate" hreflang="en" href="https://titanparking.ca{{ request.path }}" />
+      <link rel="alternate" hreflang="fr" href="https://titanparking.ca{{ request.path|slice:'3:' }}" />
+    {% endif %}
+    
+    <link rel="alternate" hreflang="x-default" href="https://titanparking.ca/" />
 
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">

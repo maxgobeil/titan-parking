@@ -59,7 +59,7 @@
   <!-- Blog Index Page -->
   <url>
     <loc>https://titanparking.ca/blog/</loc>
-    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <lastmod>2025-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/blog/" />
@@ -68,7 +68,7 @@
   <!-- Blog Search Page -->
   <url>
     <loc>https://titanparking.ca/blog/search/</loc>
-    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <lastmod>2025-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/blog/search/" />
@@ -77,7 +77,7 @@
   <!-- English Blog Search Page -->
   <url>
     <loc>https://titanparking.ca/en/blog/search/</loc>
-    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <lastmod>2025-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/blog/search/" />
@@ -86,7 +86,7 @@
   <!-- English Blog Index Page -->
   <url>
     <loc>https://titanparking.ca/en/blog/</loc>
-    <lastmod>{% now "Y-m-d" %}</lastmod>
+    <lastmod>2025-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/blog/" />

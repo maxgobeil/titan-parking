@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
       const newPath = window.location.pathname.slice(3) + window.location.hash;
       window.location.href = newPath;
     }
-  } else {
+  } /*
+  trying to remove it for SEO. Might switch back if too anoying for users
+  else {
     // No saved preference, check browser language
     const browserLang = navigator.language || navigator.userLanguage;
     const isEnglish = browserLang.toLowerCase().startsWith('en');
@@ -21,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const newPath = '/en' + window.location.pathname + window.location.hash;
       window.location.href = newPath;
     }
-  }
+  }*/
 
   const langButtons = document.querySelectorAll('.lang-button');
   langButtons.forEach((button) => {
