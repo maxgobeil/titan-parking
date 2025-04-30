@@ -13,7 +13,7 @@ urlpatterns = [
     path("blog/", views.blog_list, name="blog"),
     path("blog/search/", views.blog_search, name="blog_search"),
     path("blog/<slug:slug>/", views.blog_detail, name="blog_detail"),
-    path("about/", views.about_view, name="about"),
+    path("about-us/", views.about_view, name="about-us"),
     # Temporary invoice url
     path("invoice/", views.invoice_view_pdf, name="invoice_pdf"),
     path("invoice-html/", views.invoice_view_html, name="invoice_html"),

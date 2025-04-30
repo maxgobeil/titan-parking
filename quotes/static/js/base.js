@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const scrolledPages = ['/terms-of-service/', '/privacy-policy/', '/blog/', '/about/'];
+  const scrolledPages = ['/terms-of-service/', '/privacy-policy/', '/blog/', '/about-us/'];
 
   const currentPath = window.location.pathname;
 

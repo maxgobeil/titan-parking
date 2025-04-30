@@ -297,6 +297,13 @@ class QuoteItem(models.Model):
 #         related_name="uploaded_photos",
 #     )
 
+# class JobWeather(models.Model):
+#     job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name="weather")
+#     weather_conditions = models.TextField(blank=True)
+#     temperature = models.DecimalField(max_digits=5, decimal_places=2)
+#     wind_speed = models.DecimalField(max_digits=5, decimal_places=2)
+#     precipitation = models.DecimalField(max_digits=5, decimal_places=2)
+
 
 class BlogPost(models.Model):
     STATUS_CHOICES = [
