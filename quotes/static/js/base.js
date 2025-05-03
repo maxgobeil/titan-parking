@@ -13,17 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const newPath = window.location.pathname.slice(3) + window.location.hash;
       window.location.href = newPath;
     }
-  } /*
-  trying to remove it for SEO. Might switch back if too anoying for users
-  else {
-    // No saved preference, check browser language
-    const browserLang = navigator.language || navigator.userLanguage;
-    const isEnglish = browserLang.toLowerCase().startsWith('en');
-    if (isEnglish && !window.location.pathname.startsWith('/en/')) {
-      const newPath = '/en' + window.location.pathname + window.location.hash;
-      window.location.href = newPath;
-    }
-  }*/
+  }
 
   const langButtons = document.querySelectorAll('.lang-button');
   langButtons.forEach((button) => {
@@ -33,9 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   const scrolledPages = ['/terms-of-service/', '/privacy-policy/', '/blog/', '/about-us/'];
-
   const currentPath = window.location.pathname;
-
   const shouldBeScrolled = scrolledPages.some(
     (page) => currentPath.includes(page) || currentPath.endsWith(page.slice(0, -1)) // Handle with or without trailing slash
   );
@@ -56,6 +44,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     if (langButton) langButton.classList.add('scrolled');
   }
+
+  const debouncedScroll = debounce(function () {
+    if (document.body.scrollTop > 100) {
+      header.classList.add('scrolled');
+      navLinks.forEach((link) => {
+        link.classList.add('scrolled');
+      });
+      if (langButton) langButton.classList.add('scrolled');
+    } else if (!shouldBeScrolled) {
+      header.classList.remove('scrolled');
+      navLinks.forEach((link) => {
+        link.classList.remove('scrolled');
+      });
+      if (langButton) langButton.classList.remove('scrolled');
+    }
+  }, 10);
+
+  /*
   const onScroll = () => {
     if (document.body.scrollTop > 100) {
       header.classList.add('scrolled');
@@ -71,7 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       if (langButton) langButton.classList.remove('scrolled');
     }
-  };
+  };*/
+
+  document.body.addEventListener('scroll', debouncedScroll);
+  if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+  if (menuClose) menuClose.addEventListener('click', toggleMenu);
 
   // Toggle mobile menu
   function toggleMenu() {
@@ -80,22 +90,30 @@ document.addEventListener('DOMContentLoaded', function () {
     menuToggle.style.display = mobileNav.classList.contains('open') ? 'none' : 'block';
   }
 
-  // Event listeners for menu
-  document.body.addEventListener('scroll', onScroll);
-  if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-  if (menuClose) menuClose.addEventListener('click', toggleMenu);
+  function debounce(func, wait) {
+    let timeout;
+    return function () {
+      const context = this;
+      const args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
 
   // Close menu when clicking on mobile nav links
   mobileNavLinks.forEach((link) => {
     link.addEventListener('click', toggleMenu);
   });
+
+  function scrollToTop() {
+    document.body.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+
+  const scrollTopButton = document.getElementById('scroll-top-button');
+  if (scrollTopButton) {
+    scrollTopButton.addEventListener('click', scrollToTop);
+  }
 });
-
-function scrollToTop() {
-  document.body.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-}
-
-document.getElementById('scroll-top-button').addEventListener('click', scrollToTop);

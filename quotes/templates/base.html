@@ -28,7 +28,7 @@
       <link rel="alternate" hreflang="en" href="https://titanparking.ca{{ request.path }}" />
       <link rel="alternate" hreflang="fr" href="https://titanparking.ca{{ request.path|slice:'3:' }}" />
     {% endif %}
-    
+
     <link rel="alternate" hreflang="x-default" href="https://titanparking.ca/" />
 
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
@@ -65,6 +65,6 @@
     {% endblock %}
 
     {% block extra_js %}{% endblock %}
-    <script src="{% static 'js/base.js' %}"></script>
+    <script src="{% static 'js/base.js' %}" defer></script>
   </body>
 </html>
