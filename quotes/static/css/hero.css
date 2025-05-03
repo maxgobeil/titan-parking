@@ -30,7 +30,7 @@
   z-index: 0;
 }
 
-/* Yellow Line Animation */
+/* Yellow Line Animation - Desktop */
 .yellow-line-animation {
   position: absolute;
   left: 0;
@@ -222,6 +222,10 @@
 @media (max-width: 768px) {
   .container-hero {
     padding: var(--container-padding-mobile);
+  }
+  .yellow-line-animation {
+    width: 105%;
+    animation: none;
   }
 }
 
