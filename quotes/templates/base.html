@@ -29,6 +29,9 @@
       <link rel="alternate" hreflang="fr" href="https://titanparking.ca{{ request.path|slice:'3:' }}" />
     {% endif %}
 
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
     <link rel="alternate" hreflang="x-default" href="https://titanparking.ca/" />
 
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
@@ -40,7 +43,7 @@
     {% block extra_css %}{% endblock %}
     {% include 'partials/schema/base.html' %}
     {% block schema %}{% endblock %}
-    <script src="https://unpkg.com/htmx.org@1.9.5" integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.5" defer integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
     {% if not debug %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBMTRQWR3K"></script>

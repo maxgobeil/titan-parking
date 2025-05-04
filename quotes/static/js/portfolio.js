@@ -9,13 +9,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.querySelector('.portfolio-modal-close');
 
     // Function to open modal
-    function openModal(image, title, description) {
-      modalImage.src = image;
-      modalImage.alt = title;
+    function openModal(item) {
+      const thumbnail = item.querySelector('.portfolio-image');
+      const fullSizeUrl = thumbnail.dataset.fullSrc;
+      const title = item.querySelector('.portfolio-item-title').textContent;
+      const description = item.querySelector('.portfolio-item-description').textContent;
+
+      // Show loading state
+      modalImage.src = thumbnail.src; // Show thumbnail first
       modalTitle.textContent = title;
       modalDescription.textContent = description;
       modal.classList.add('portfolio-modal-active');
       document.body.style.overflow = 'hidden';
+
+      // Load full-size image
+      const fullSizeImage = new Image();
+      fullSizeImage.onload = function () {
+        modalImage.src = fullSizeUrl;
+      };
+      fullSizeImage.src = fullSizeUrl;
     }
 
     // Function to close modal
@@ -27,10 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Add event listeners to gallery items
     portfolioItems.forEach((item) => {
       item.addEventListener('click', function () {
-        const image = this.querySelector('.portfolio-image').src;
-        const title = this.querySelector('.portfolio-item-title').textContent;
-        const description = this.querySelector('.portfolio-item-description').textContent;
-        openModal(image, title, description);
+        openModal(this);
       });
     });
 
