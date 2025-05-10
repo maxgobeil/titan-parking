@@ -21,12 +21,12 @@
 
     {% if LANGUAGE_CODE == 'fr' %}
       <link rel="canonical" href="https://titanparking.ca{{ request.path }}" />
-      <link rel="alternate" hreflang="fr" href="https://titanparking.ca{{ request.path }}" />
-      <link rel="alternate" hreflang="en" href="https://titanparking.ca/en{{ request.path }}" />
+      <link rel="alternate" hreflang="fr-CA" href="https://titanparking.ca{{ request.path }}" />
+      <link rel="alternate" hreflang="en-CA" href="https://titanparking.ca/en{{ request.path }}" />
     {% else %}
       <link rel="canonical" href="https://titanparking.ca{{ request.path }}" />
-      <link rel="alternate" hreflang="en" href="https://titanparking.ca{{ request.path }}" />
-      <link rel="alternate" hreflang="fr" href="https://titanparking.ca{{ request.path|slice:'3:' }}" />
+      <link rel="alternate" hreflang="en-CA" href="https://titanparking.ca{{ request.path }}" />
+      <link rel="alternate" hreflang="fr-CA" href="https://titanparking.ca{{ request.path|slice:'3:' }}" />
     {% endif %}
 
     <link rel="preconnect" href="https://www.googletagmanager.com">
