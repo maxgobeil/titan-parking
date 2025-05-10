@@ -15,7 +15,7 @@
             <div class="business-info-status">SOUMISSION</div>
             <div>
                 <div class="business-info-title">Titan Parking | 16484557 Canada Inc.</div>
-                <div class="business-info-text">Office: 355 rue du Murier, Drummondville, QC, J2C 0N9</div>
+                <div class="business-info-text">Bureau: 355 rue du Murier, Drummond, QC, J2C 0N9</div>
                 <div class="business-info-text">contact@titanparking.ca</div>
                 <div class="business-info-text">418 955-4461</div>
             </div>
@@ -26,18 +26,20 @@
     <div class="content">
         <div class="invoice-info-container">
             <div class="invoice-info-base client-info">
-                <div class="invoice-info-title">Billed to:</div>
+                <div class="invoice-info-title">Facturé à :</div>
                 <div>{{ quote.client.company }}</div>
                 <div>{{ quote.client.address }}</div>
                 <div>Contact: {{ quote.client.name }}</div>
                 <div>{{ quote.client.email }}</div>
             </div>
             <div class="invoice-info-base invoice-job-info">
-                <div class="invoice-info-title">Invoice & Job Information</div>
-                <div>Invoice # {{ quote.invoice_number }}</div>
-                <div>Date: {{ quote.created_at|date:"M d, Y" }}</div>
-                <div>Due Date: {{ quote.due_date|date:"M d, Y" }}</div>
-                <div>Job Details: {{ quote.job_location }}</div>
+                <div class="invoice-info-title">Information</div>
+                <div>Numéro de facture: {{ quote.invoice_number }}</div>
+                <!--<div>Date: {{ quote.created_at|date:"M d, Y" }}</div>-->
+                <div>Date: Mai 01 2025</div>
+                <!--<div>Date d'échéance: {{ quote.due_date|date:"M d, Y" }}</div>-->
+                <div>Date d'échéance: Mai 31 2025</div>
+                <!--<div>Détails du travail: {{ quote.job_location }}</div>-->
             </div>
         </div>
 
@@ -76,11 +78,10 @@
 
         <div class="services-footer">
             <div class="footer-conditions">
-                <div class="footer-conditions-title">Other Conditions</div>
+                <div class="footer-conditions-title">Autres conditions</div>
                 <div class="footer-conditions-description">
-                    <div>Net 30 jours when invoice Valide 30days when quote</div>
-                    <div>You can find all the terms and conditions below</div>
-                    <div>Make a check for the amount due and send it to the address above. Please make the cheque payable to Titan Parking.</div>
+                    <div>Vous pouvez trouver toutes les conditions ci-dessous</div>
+                    <div>Faites un chèque pour le montant dû et envoyez-le à l'adresse ci-dessus. Veuillez faire le chèque payable à Titan Parking.</div>
                     <div>Notes: {{ quote.notes }}</div>
                 </div>
                 

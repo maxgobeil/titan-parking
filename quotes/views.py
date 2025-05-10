@@ -107,7 +107,7 @@ def invoice_view_pdf(request):
     quote = (
         Quote.objects.select_related("client")
         .prefetch_related("items__service")
-        .get(id=1)
+        .get(id=2)
     )
 
     image_path = os.path.join(
@@ -200,6 +200,49 @@ def invoice_view_html(request):
     }
 
     return render(request, "quotes/pdf/quote_template.html", context)
+
+
+@login_required
+def terms_view_pdf(request):
+    # Read CSS
+    css_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "templates",
+        "quotes",
+        "pdf",
+        "assets",
+        "legal.css",
+    )
+    base_css_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "static",
+        "css",
+        "base.css",
+    )
+
+    with open(css_path) as f:
+        css_data = f.read()
+
+    with open(base_css_path) as f:
+        base_css_data = f.read()
+
+    context = {
+        "css_data": f"{base_css_data}\n{css_data}",
+    }
+
+    # Render HTML content
+    html_string = render_to_string("partials/terms/terms-pdf.html", context)
+
+    # Create PDF response
+    response = HttpResponse(content_type="application/pdf")
+    response["Content-Disposition"] = 'inline; filename="terms.pdf"'
+
+    # Generate PDF
+    HTML(string=html_string).write_pdf(response)
+
+    return response
 
 
 def blog_list(request):

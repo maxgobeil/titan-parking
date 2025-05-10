@@ -1,0 +1,297 @@
+{% load i18n %}
+
+<section class="legal-section">
+  
+  <div class="legal-container">
+    <div class="legal-header">
+      <div class="badge">{% trans "Legal" %}</div>
+      <h1 class="legal-title">{% trans "Terms of Service" %}</h1>
+      <p class="legal-subtitle">{% trans "Last Updated:" %} <span id="current-date">April 23, 2025</span></p>
+    </div>
+
+    <div class="legal-content">
+      <p class="legal-intro">
+        These Terms of Service ("Terms") govern your use of services provided by Titan Parking, 
+        operating name of 16484557 Canada Inc. ("Company", "we", "our", or "us"), 
+        including line striping, parking lot marking, and related services. 
+      </p>
+      
+      <div class="legal-section-content">
+        <h2>1. {% trans "Services" %}</h2>
+        <p>
+           {% trans "Titan Parking provides line striping and pavement marking services for parking lots, warehouses, and other commercial properties throughout Quebec. Our services may include, but are not limited to:" %}
+        </p>
+        <ul>
+          <li>{% trans "Parking lot striping and restriping" %}</li>
+          <li>{% trans "Accessibility parking" %}</li>
+          <li>{% trans "Parallel lines and no parking zones" %}</li>
+          <li>{% trans "Linear lines" %}</li>
+          <li>{% trans "Warehouse floor marking" %}</li>
+          <li>{% trans "Walkways" %}</li>
+          <li>{% trans "Speed bumps" %}</li>
+          <li>{% trans "Curb & concrete base painting" %}</li>
+          <li>{% trans "Custom stenciling" %}</li>
+          <li>{% trans "Lot preparation services" %}</li>
+          <li>{% trans "Mobilization services" %}</li>
+        </ul>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>2. {% trans "Quotes and Acceptance" %}</h2>
+        <p>
+          {% trans "All quotes provided by us are valid for 30 days from the date of issue, unless otherwise specified. Acceptance of a quote requires a formal digital signature through our electronic signature platform. A simple email confirmation is not sufficient for acceptance. Upon receiving the quote, you will be directed to our secure signature platform to review and formally accept both the quote and these Terms of Service. Work will only be scheduled after receiving your properly executed digital signature." %}
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>3. {% trans "Payment Terms" %}</h2>
+        <p>{% trans "Payment terms are as follows:" %}</p>
+        <ul>
+          <li>{% trans "For projects under $1,000: Payment in full is due upon completion of the work." %}</li>
+          <li>{% trans "For projects over $1,000: A 30% deposit may be required before work begins, with the balance due upon completion." %}</li>
+          <li>{% trans "Payment methods accepted: Cash, Check, e-Transfer" %}</li>
+          <li>{% trans "Invoices are due within 30 days of issuance. Late payments may incur a fee of 1.5% per month." %}</li>
+          <li>{% trans "Returned or bounced checks will incur a $35 administrative fee in addition to any bank charges we may incur." %}</li>
+          <li>{% trans "All prices quoted are subject to change at any time prior to formal acceptance. Once a quote has been accepted, the price is locked for 30 days. Projects scheduled beyond 30 days from acceptance may be subject to material cost adjustments with proper notification." %}</li>
+        </ul>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>4. {% trans "Mobilization and Site Access" %}</h2>
+        <p>{% trans "Mobilization fees cover the transportation of equipment, materials, and crew to your location for a single scheduled visit. If our crew is unable to complete the work due to circumstances beyond our control (including but not limited to: vehicles parked in work areas, site not being ready as agreed, or client's failure to provide access), a second mobilization fee will be charged for any return visits required to complete the work." %}</p>
+        <p>{% trans "The client is responsible for ensuring that the work area is completely clear of vehicles during the scheduled service time. Any vehicles remaining in the designated work area will prevent us from completing that portion of the work. If the presence of vehicles prevents the completion of essential parts of the project, we may need to reschedule, resulting in additional mobilization charges." %}</p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>5. {% trans "Weather Conditions and Scheduling" %}</h2>
+        <p>
+          {% trans "Line striping and pavement marking are weather-dependent services. We reserve the right to reschedule work due to unsuitable weather conditions (rain, snow, temperatures below 10°C (50°F), or excessively high humidity). We will make reasonable efforts to accommodate your schedule when rescheduling is necessary." %}
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>6. {% trans "Surface Preparation" %}</h2>
+        <p>
+        {% trans "The client is responsible for ensuring that the surface is clean, dry, and in suitable condition for line striping at the time of our scheduled arrival. Any cleaning services agreed upon will be specified in the original quote." %}
+        </p>
+        <p>
+        {% trans "If surface conditions deteriorate between quote acceptance and service date (including but not limited to: new debris, dirt accumulation, or construction residue), additional cleaning may be required. Our crew will assess the surface condition upon arrival and make reasonable attempts to contact the client's designated representative regarding additional preparation needed." %}
+        </p>
+        <p>
+        {% trans "If we are unable to reach the client's representative at the time of service, and the condition of the surface would compromise the quality of our work, we reserve the right to either:" %}
+        </p>
+        <ol>
+          <li>{% trans "Proceed with necessary cleaning at the rates listed below, which will be added to the final invoice, or" %}</li>
+          <li>{% trans "Reschedule the service, which may result in additional mobilization fees as outlined in Section 4." %}</li>
+        </ol>
+        <p>
+        {% trans "Additional surface preparation services will be charged at the following rates:" %}
+        </p>
+        <ul>
+          <li>{% trans "Debris removal or additional sweeping: $125/hour" %}</li>
+          <li>{% trans "Spot cleaning of stains or spills: $75 per area" %}</li>
+          <li>{% trans "Construction debris removal: $150/hour" %}</li>
+        </ul>
+        <p>
+        {% trans "A minimum one-hour charge applies to all additional services. These rates are subject to change and may vary based on specific site conditions." %}
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>7. {% trans "Cancellation Policy" %}</h2>
+        <p>
+        {% trans "If you need to cancel scheduled services:" %}
+        </p>
+        <ul>
+          <li>{% trans "Cancellations made more than 48 hours before the scheduled start time: No cancellation fee" %}</li>
+          <li>{% trans "Cancellations made less than 48 hours before the scheduled start time: 25% of the quoted price may be charged to cover preparation costs." %}</li>
+          <li>{% trans "If our crew arrives on site and cannot perform the scheduled work due to site conditions, vehicle obstruction, or lack of access, a full mobilization fee will be charged, and an additional mobilization fee will apply for any return visit to complete the work, as outlined in Section 4." %}</li>
+        </ul>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>8. {% trans "Warranty" %}</h2>
+        <p>
+        {% trans "We warrant our workmanship for a period of 90 days from the date of completion, under normal use conditions. This warranty is limited to the reapplication of markings that show premature wear or failure." %}
+        </p>
+        <p>
+        {% trans "This warranty does not cover:" %}
+        </p>
+        <ul>
+          <li>{% trans "Damage from snow plowing, chemical spills, or abrasive materials" %}</li>
+          <li>{% trans "Normal wear and tear from vehicle traffic" %}</li>
+          <li>{% trans "Damage from improper surface preparation if not performed by us" %}</li>
+          <li>{% trans "Fading due to UV exposure or harsh weather conditions" %}</li>
+        </ul>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>9. {% trans "Liability Limitation and Property Indemnification" %}</h2>
+        <p>
+        {% trans "Our maximum liability for any claim arising out of our services shall be limited to the amount paid for the services. We are not liable for any indirect, consequential, or incidental damages, including but not limited to loss of use or business interruption." %}
+        </p>
+        <p>
+        {% trans "While Titan Parking takes all reasonable precautions to prevent damage, we cannot be held responsible for damage to vehicles that remain in the work area after the client has been notified to clear the area. Similarly, we are not responsible for tracking of wet paint by pedestrians or vehicles that enter marked work areas despite caution signs and barriers. The client acknowledges responsibility for securing the work area against unauthorized entry during the paint curing period as instructed by our crew." %}
+        </p>
+      </div>
+      
+      <div class="legal-section-content">
+        <h2>10. {% trans "Permits and Regulatory Compliance" %}</h2>
+        <p>
+        {% trans "The client is ultimately responsible for ensuring their property complies with all applicable regulations and standards, including but not limited to:" %}
+        </p>
+        <ul>
+          <li>{% trans "Local municipal codes and bylaws" %}</li>
+          <li>{% trans "Provincial regulations (including Quebec's Act to secure handicapped persons in the exercise of their rights)" %}</li>
+          <li>{% trans "Federal requirements (such as the Accessible Canada Act)" %}</li>
+          <li>{% trans "CSA B651 accessibility standards" %}</li>
+        </ul>
+        <p>
+        {% trans "While Titan Parking strives to provide services that comply with industry standards and can offer guidance on regulatory requirements, we cannot guarantee or assume liability for compliance issues. The client is responsible for obtaining any necessary permits or approvals from authorities before work begins and assumes final responsibility for ensuring that their requested layout complies with all applicable regulations. Titan Parking cannot be held liable for non-compliance issues resulting from client-approved designs or layouts." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>11. {% trans "Minimum Service Requirements" %}</h2>
+        <p>
+        {% trans "Titan Parking maintains a minimum job size requirement of $850 per service call. Projects quoted below this amount will be subject to additional fees to meet this minimum threshold. This minimum reflects the cost of mobilization, equipment setup, and efficient resource allocation required to provide our professional services." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>12. {% trans "Materials and Quality Assurance" %}</h2>
+        <p>
+        {% trans "Titan Parking selects the most appropriate high-quality marking materials based on the specific requirements of each project. Our options include:" %}
+        </p>
+        <ul>
+          <li>{% trans "Water-based traffic paint (more environmentally friendly)" %}</li>
+          <li>{% trans "Oil-based traffic paint (recommended for high-traffic areas)" %}</li>
+          <li>{% trans "Epoxy coatings (recommended for interior applications such as warehouses and garages)" %}</li>
+          <li>{% trans "Specialized materials for custom requirements" %}</li>
+        </ul>
+        <p>
+        {% trans "The selection of materials will be determined based on factors including surface type, location (interior/exterior), expected traffic volume, weather exposure, and desired longevity. We will recommend the optimal solution for your specific situation, and material specifications will be detailed in your quote. Premium options or specialized applications may be available at additional cost for projects requiring extended durability or specific performance characteristics." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>13. {% trans "Photography and Marketing" %}</h2>
+        <p>
+        {% trans "Titan Parking may document completed work through photography for quality assurance purposes. Unless otherwise specified by the client, we reserve the right to use these images for marketing and portfolio purposes. Client identification information will not be shared without permission. Upon request, these photos can be provided to the client for their records." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>14. {% trans "Insurance Coverage" %}</h2>
+        <p>
+        {% trans "Titan Parking maintains comprehensive commercial general liability insurance to protect both our business and our clients. Upon request, we can provide a Certificate of Insurance prior to commencing work. Our insurance covers potential property damage that may occur during the execution of our services, but does not extend to pre-existing property conditions or damage caused by third parties after completion of our work." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>15. {% trans "Completed Work Acceptance" %}</h2>
+        <p>
+        {% trans "Upon completion of the work, the client will be given the opportunity to inspect the work performed. Unless the client notifies Titan Parking of any deficiencies within 48 hours of job completion, the work shall be deemed accepted. For jobs completed during non-business hours, photos of completed work will be provided, and the same 48-hour inspection period applies from the time the photos are delivered." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>16. {% trans "Documentation and Records" %}</h2>
+        <p>
+        {% trans "Upon request, we will provide clients with documentation regarding work performed, including before and after photos, materials used, and appropriate maintenance recommendations. Clients should maintain these records for warranty purposes and future reference. For commercial properties subject to accessibility audits or insurance inspections, this documentation may serve as proof of compliance with current standards at the time of service." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>17. {% trans "Equipment Failure and Technical Issues" %}</h2>
+        <p>
+        {% trans "In the rare event that Titan Parking experiences equipment failure or technical issues during service that prevent us from completing the scheduled work, we will take the following steps:" %}
+        </p>
+        <ol>
+          <li>{% trans "Immediately notify the client's designated representative about the issue" %}</li>
+          <li>{% trans "Complete as much of the work as possible with functioning equipment, if applicable" %}</li>
+          <li>{% trans "Reschedule the remaining work for the earliest available date" %}</li>
+          <li>{% trans "No additional mobilization fee will be charged for the return visit to complete work that could not be completed due to our equipment failure" %}</li>
+        </ol>
+        <p>
+        {% trans "If equipment failure occurs before arriving at the job site and causes us to cancel the scheduled service, we will notify the client as soon as possible and reschedule the work at no additional charge. If the delay caused by equipment failure significantly impacts the client's operations or schedule, we will talk with the client to discuss a mutually agreeable solution." %}
+        </p>
+        <p>
+        {% trans "Titan Parking maintains all equipment according to manufacturer specifications and carries backup equipment for critical components to minimize the possibility of service interruptions. However, we acknowledge that mechanical issues may occasionally arise despite our best preventative efforts." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>18. {% trans "Equipment and Property Protection" %}</h2>
+        <p>
+        {% trans "The client agrees to take reasonable precautions to protect Titan Parking's equipment and personnel while on the client's property. This includes ensuring safe access to work areas, providing notice of any known hazards, and preventing unauthorized persons from interfering with our work. Clients are responsible for communicating with their tenants, employees, or customers regarding the scheduled work to minimize disruptions and potential conflicts." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>19. {% trans "Communication and Project Management" %}</h2>
+        <p>
+        {% trans "The client agrees to designate a primary contact person who has authority to make decisions regarding the project. This person should be available during the scheduled work period either on-site or by phone. Titan Parking will provide updates on project status, any issues encountered, and expected completion times. We request that any changes to project scope or specifications be made in writing to avoid misunderstandings." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>20. {% trans "Dispute Resolution" %}</h2>
+        <p>
+        {% trans "In the event of any dispute or complaint regarding our services, the client agrees to notify Titan Parking in writing within 5 business days of service completion. We will respond within 48 hours and make reasonable efforts to address valid concerns. Before initiating any legal action, both parties agree to attempt resolution through direct negotiation and, if necessary, mediation through a mutually agreed-upon third party in Quebec." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>21. {% trans "Quebec Civil Code Compliance" %}</h2>
+        <p>
+        {% trans "This agreement is governed by the laws of Quebec, including the Quebec Civil Code. In accordance with Quebec law, our services aim to comply with all applicable provincial regulations, including those related to accessibility and safety markings. While we strive to provide services that meet all regulatory requirements, the client acknowledges their ultimate responsibility for ensuring their property complies with current Quebec regulations." %}
+        </p>
+      </div>
+
+
+      <div class="legal-section-content">
+        <h2>22. {% trans "Force Majeure" %}</h2>
+        <p>
+        {% trans "Neither party shall be liable for any failure or delay in performing their obligations where such failure or delay results from any cause beyond the reasonable control of the party. Such causes include, but are not limited to: power failure, internet service provider failure, industrial action, civil unrest, fire, flood, storms, earthquakes, acts of terrorism, acts of war, governmental action, pandemic, or any other event beyond the control of the party in question. If affected by such an event, the affected party shall inform the other party as soon as reasonably possible and propose alternative dates for service." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>23. {% trans "Quality Commitment" %}</h2>
+        <p>
+        {% trans "Titan Parking is committed to providing the highest quality line striping services using professional equipment, premium materials, and experienced technicians. We stand behind our workmanship and aim to develop long-term relationships with our clients through superior service, reliability, and attention to detail. We recommend regular maintenance schedules to maximize the lifespan and appearance of your pavement markings." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>24. {% trans "Changes to These Terms" %}</h2>
+        <p>
+        {% trans "We reserve the right to modify these Terms at any time. Changes will be effective upon posting to our website. Your continued use of our services constitutes agreement to the modified Terms." %}
+        </p>
+      </div>
+
+      <div class="legal-section-content">
+        <h2>25. {% trans "Contact Information" %}</h2>
+        <p>
+        {% trans "If you have any questions about these Terms, please contact us at:" %}
+        </p>
+        <p>
+        {% trans "Phone: " %}<a href="tel:+14189554461">(418) 955-4461</a><br>
+        {% trans "Email: " %}<a href="mailto:contact@titanparking.ca">contact@titanparking.ca</a><br>
+        {% trans "Based in Drummondville, serving the entire province of Quebec" %}
+        </p>
+      </div>
+        <div>
+            <div class="terms-acceptance">{% trans "By signing below, you accept the terms of service and the quote #INV25-201" %}</div>
+            <div class="signature-container">
+                <div class="signature-title">{% trans "Signature" %}</div>
+                <div class="signature-date">{% trans "Date" %}</div>
+            </div>
+
+        </div>
+
+    </div>
+
+  </div>
+</section>

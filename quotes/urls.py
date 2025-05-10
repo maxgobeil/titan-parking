@@ -17,4 +17,5 @@ urlpatterns = [
     # Temporary invoice url
     path("invoice/", views.invoice_view_pdf, name="invoice_pdf"),
     path("invoice-html/", views.invoice_view_html, name="invoice_html"),
+    path("terms-pdf/", views.terms_view_pdf, name="terms_pdf"),
 ]
