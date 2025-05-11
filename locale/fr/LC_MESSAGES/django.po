@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-10 01:49+0000\n"
+"POT-Creation-Date: 2025-05-10 15:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1987,7 +1987,7 @@ msgstr ""
 "gratuite, sans obligation."
 
 #: quotes/templates/partials/home/contact.html:25
-#: quotes/templates/partials/terms/terms.html:275
+#: quotes/templates/partials/terms/terms.html:273
 msgid "Contact Information"
 msgstr "Coordonnées"
 
@@ -2073,7 +2073,7 @@ msgstr "Raccourcis"
 #: quotes/templates/partials/home/footer.html:73
 #: quotes/templates/partials/home/header.html:20
 #: quotes/templates/partials/home/header.html:86
-#: quotes/templates/partials/terms/terms.html:20
+#: quotes/templates/partials/terms/terms.html:18
 msgid "Services"
 msgstr "Services"
 
@@ -2381,70 +2381,78 @@ msgstr ""
 msgid "Terms of Service"
 msgstr "Conditions d'utilisation - Titan Parking"
 
-#: quotes/templates/partials/terms/terms.html:22
-#, fuzzy
-#| msgid ""
-#| "Titan Parking offre les services de traçage de lignes de stationnement et "
-#| "de marquage de chaussée pour les espaces de stationnement, les entrepôts "
-#| "et autres propriétés commerciales partout à travers la procince de Québec."
-#| "Titan Parking provides line striping and pavement marking services for "
-#| "parking lots, warehouses, and other commercial properties throughout "
-#| "Quebec. Our services may include, but are not limited to:"
+#: quotes/templates/partials/terms/terms.html:14
+msgid ""
+"These Terms of Service ('Terms') govern your use of services provided by "
+"Titan Parking, operating name of 16484557 Canada Inc. ('Company', 'we', "
+"'our', or 'us'), including line striping, parking lot marking, and related "
+"services."
+msgstr ""
+"Ces conditions d'utilisation (« Conditions ») régissent votre utilisation des "
+"services fournis par Titan Parking, nom commercial de 16484557 Canada Inc. "
+"(« Entreprise », « nous », « notre » ou « nos »), y compris le traçage de "
+"lignes, le marquage de stationnement et les services connexes."
+
+#: quotes/templates/partials/terms/terms.html:20
 msgid ""
 "Titan Parking provides line striping and pavement marking services for "
 "parking lots, warehouses, and other commercial properties throughout Quebec. "
 "Our services may include, but are not limited to:"
-msgstr "Nos services inclus, mais ne sont pas limités à:"
+msgstr ""
+"Titan Parking offre les services de traçage de lignes de stationnement et de "
+"marquage de chaussée pour les espaces de stationnement, les entrepôts et "
+"autres propriétés commerciales partout à travers la province de Québec. Nos "
+"services incluent, sans s'y limiter :"
+
+#: quotes/templates/partials/terms/terms.html:23
+msgid "Parking lot striping and restriping"
+msgstr "Traçage de lignes de stationnement;"
+
+#: quotes/templates/partials/terms/terms.html:24
+msgid "Accessibility parking"
+msgstr "Stationnement pour personnes handicapées;"
 
 #: quotes/templates/partials/terms/terms.html:25
-msgid "Parking lot striping and restriping"
-msgstr "Traçage de lignes de stationnement"
+msgid "Parallel lines and no parking zones"
+msgstr "Lignes parallèles et zones de stationnement interdit;"
 
 #: quotes/templates/partials/terms/terms.html:26
-msgid "Accessibility parking"
-msgstr "Stationnement pour personnes handicapées"
+msgid "Linear lines"
+msgstr "Lignes linéaires;"
 
 #: quotes/templates/partials/terms/terms.html:27
-msgid "Parallel lines and no parking zones"
-msgstr "Lignes parallèles et zones de stationnement interdit"
+msgid "Warehouse floor marking"
+msgstr "Marquage au sol pour entrepôt;"
 
 #: quotes/templates/partials/terms/terms.html:28
-msgid "Linear lines"
-msgstr "Lignes linéaires"
+msgid "Walkways"
+msgstr "Passage piéton;"
 
 #: quotes/templates/partials/terms/terms.html:29
-msgid "Warehouse floor marking"
-msgstr "Marquage de sol pour entrepôt"
+msgid "Speed bumps"
+msgstr "Dos d'âne;"
 
 #: quotes/templates/partials/terms/terms.html:30
-msgid "Walkways"
-msgstr "Passage piéton"
+msgid "Curb & concrete base painting"
+msgstr "Chaînes de trottoir et base de béton;"
 
 #: quotes/templates/partials/terms/terms.html:31
-msgid "Speed bumps"
-msgstr "Dos d'âne"
+msgid "Custom stenciling"
+msgstr "Marquage personnalisé;"
 
 #: quotes/templates/partials/terms/terms.html:32
-msgid "Curb & concrete base painting"
-msgstr "Chaînes de trottoir et base de béton"
+msgid "Lot preparation services"
+msgstr "Services de préparation de stationnement;"
 
 #: quotes/templates/partials/terms/terms.html:33
-msgid "Custom stenciling"
-msgstr "Marquage personnalisé"
-
-#: quotes/templates/partials/terms/terms.html:34
-msgid "Lot preparation services"
-msgstr "Services de préparation de stationnement"
-
-#: quotes/templates/partials/terms/terms.html:35
 msgid "Mobilization services"
-msgstr "Services de déplacement"
+msgstr "Services de déplacement."
 
-#: quotes/templates/partials/terms/terms.html:40
+#: quotes/templates/partials/terms/terms.html:38
 msgid "Quotes and Acceptance"
 msgstr "Soumissions et acceptation"
 
-#: quotes/templates/partials/terms/terms.html:42
+#: quotes/templates/partials/terms/terms.html:40
 msgid ""
 "All quotes provided by us are valid for 30 days from the date of issue, "
 "unless otherwise specified. Acceptance of a quote requires a formal digital "
@@ -2455,23 +2463,23 @@ msgid ""
 "scheduled after receiving your properly executed digital signature."
 msgstr ""
 "Toutes nos soumissions sont valides pour 30 jours à partir de la date de "
-"création de celle-ci, sauf si autrement spécifié. L'acceptation de la "
+"création de celles-ci, sauf si autrement spécifié. L'acceptation de la "
 "soumission nécessite une signature digitale officielle via notre plateforme "
 "de signature électronique. Une simple courriel de confirmation n'est pas "
 "suffisant pour l'acceptation. Dès réception de la soumission, vous serez "
 "dirigé vers notre plateforme de signature sécurisée pour passer en revue et "
 "formellement accepter la soumission et ces Conditions d'utilisation. Le "
-"travail sera uniquement planifier après avoir votre signature digitale."
+"travail sera uniquement planifier après avoir reçu votre signature digitale."
 
-#: quotes/templates/partials/terms/terms.html:47
+#: quotes/templates/partials/terms/terms.html:45
 msgid "Payment Terms"
 msgstr "Conditions de paiement"
 
-#: quotes/templates/partials/terms/terms.html:48
+#: quotes/templates/partials/terms/terms.html:46
 msgid "Payment terms are as follows:"
 msgstr "Les conditions de paiement sont les suivantes:"
 
-#: quotes/templates/partials/terms/terms.html:50
+#: quotes/templates/partials/terms/terms.html:48
 msgid ""
 "For projects under $1,000: Payment in full is due upon completion of the "
 "work."
@@ -2479,7 +2487,7 @@ msgstr ""
 "Pour les projets totalisant un montant inférieur à 1000$: Le paiement "
 "complet est exigé dès l'achèvement des travaux."
 
-#: quotes/templates/partials/terms/terms.html:51
+#: quotes/templates/partials/terms/terms.html:49
 #, python-format
 msgid ""
 "For projects over $1,000: A 30%% deposit may be required before work begins, "
@@ -2489,14 +2497,12 @@ msgstr ""
 "30% est exigé avant le début des travaux, et le reste du paiement est exigé "
 "dès l'achèvement des travaux."
 
-#: quotes/templates/partials/terms/terms.html:52
-#, fuzzy
-#| msgid "Payment methods accepted: Cash, Check, e-Transfer."
+#: quotes/templates/partials/terms/terms.html:50
 msgid "Payment methods accepted: Cash, Check, e-Transfer"
 msgstr ""
 "Méthodes de paiement acceptées: Argent comptant, chèque, Interac e-Transfer."
 
-#: quotes/templates/partials/terms/terms.html:53
+#: quotes/templates/partials/terms/terms.html:51
 #, python-format
 msgid ""
 "Invoices are due within 30 days of issuance. Late payments may incur a fee "
@@ -2505,15 +2511,15 @@ msgstr ""
 "Les factures sont dues dans les 30 jours suivant leur émission. Les retards "
 "de paiement peuvent entraîner des frais de 1,5% par mois. "
 
-#: quotes/templates/partials/terms/terms.html:54
+#: quotes/templates/partials/terms/terms.html:52
 msgid ""
 "Returned or bounced checks will incur a $35 administrative fee in addition "
 "to any bank charges we may incur."
 msgstr ""
-"Les chèques retournés ou sans provision entraîneront des frais administratif "
+"Les chèques retournés ou sans provision entraîneront des frais administratifs "
 "de 35$."
 
-#: quotes/templates/partials/terms/terms.html:55
+#: quotes/templates/partials/terms/terms.html:53
 msgid ""
 "All prices quoted are subject to change at any time prior to formal "
 "acceptance. Once a quote has been accepted, the price is locked for 30 days. "
@@ -2522,15 +2528,15 @@ msgid ""
 msgstr ""
 "Les prix inclus dans la soumission sont susceptibles d'être modifiés à tout "
 "moment avant l'acceptation formelle. Une fois la soumission acceptée, le "
-"prix est gelé pendant 30 jours.Les projets planifiés au-delà de 30 jours à "
+"prix est gelé pendant 30 jours. Les projets planifiés au-delà de 30 jours à "
 "compter de la date d'acceptation peuvent être soumis à des ajustements du "
 "coût matériel, avec notification appropriée. "
 
-#: quotes/templates/partials/terms/terms.html:60
+#: quotes/templates/partials/terms/terms.html:58
 msgid "Mobilization and Site Access"
 msgstr "Déplacement et accès au site"
 
-#: quotes/templates/partials/terms/terms.html:61
+#: quotes/templates/partials/terms/terms.html:59
 msgid ""
 "Mobilization fees cover the transportation of equipment, materials, and crew "
 "to your location for a single scheduled visit. If our crew is unable to "
@@ -2548,7 +2554,7 @@ msgstr ""
 "déplacement supplémentaires seront facturés pour chaque visite nécessaire à "
 "l'achèvement des travaux."
 
-#: quotes/templates/partials/terms/terms.html:62
+#: quotes/templates/partials/terms/terms.html:60
 msgid ""
 "The client is responsible for ensuring that the work area is completely "
 "clear of vehicles during the scheduled service time. Any vehicles remaining "
@@ -2565,11 +2571,11 @@ msgstr ""
 "être reporter les travaux, ce qui entraînera des frais de déplacement "
 "supplémentaires."
 
-#: quotes/templates/partials/terms/terms.html:66
+#: quotes/templates/partials/terms/terms.html:64
 msgid "Weather Conditions and Scheduling"
 msgstr "Conditions météorologiques et planification"
 
-#: quotes/templates/partials/terms/terms.html:68
+#: quotes/templates/partials/terms/terms.html:66
 msgid ""
 "Line striping and pavement marking are weather-dependent services. We "
 "reserve the right to reschedule work due to unsuitable weather conditions "
@@ -2584,11 +2590,11 @@ msgstr ""
 "excessive). Nous ferons des efforts considérables pour accommoder votre "
 "horaire lorsqu'une reprogrammation est nécessaire."
 
-#: quotes/templates/partials/terms/terms.html:73
+#: quotes/templates/partials/terms/terms.html:71
 msgid "Surface Preparation"
 msgstr "Préparation de la surface"
 
-#: quotes/templates/partials/terms/terms.html:75
+#: quotes/templates/partials/terms/terms.html:73
 msgid ""
 "The client is responsible for ensuring that the surface is clean, dry, and "
 "in suitable condition for line striping at the time of our scheduled "
@@ -2600,7 +2606,7 @@ msgstr ""
 "prévue. Tout service de nettoyage convenu sera spécifié dans la soumission "
 "initiale."
 
-#: quotes/templates/partials/terms/terms.html:78
+#: quotes/templates/partials/terms/terms.html:76
 msgid ""
 "If surface conditions deteriorate between quote acceptance and service date "
 "(including but not limited to: new debris, dirt accumulation, or "
@@ -2617,7 +2623,7 @@ msgstr ""
 "représentant désigné du client concernant toute préparation supplémentaire "
 "nécessaire."
 
-#: quotes/templates/partials/terms/terms.html:81
+#: quotes/templates/partials/terms/terms.html:79
 msgid ""
 "If we are unable to reach the client's representative at the time of "
 "service, and the condition of the surface would compromise the quality of "
@@ -2627,7 +2633,7 @@ msgstr ""
 "service, et que l'état de la surface compromettrait la qualité de notre "
 "travail, nous nous réservons le droit soit de :"
 
-#: quotes/templates/partials/terms/terms.html:84
+#: quotes/templates/partials/terms/terms.html:82
 msgid ""
 "Proceed with necessary cleaning at the rates listed below, which will be "
 "added to the final invoice, or"
@@ -2635,7 +2641,7 @@ msgstr ""
 "Procéder au nettoyage nécessaire aux tarifs indiqués ci-dessous, qui seront "
 "ajoutés à la facture finale, ou"
 
-#: quotes/templates/partials/terms/terms.html:85
+#: quotes/templates/partials/terms/terms.html:83
 msgid ""
 "Reschedule the service, which may result in additional mobilization fees as "
 "outlined in Section 4."
@@ -2643,7 +2649,7 @@ msgstr ""
 "Reporter le service, ce qui peut entraîner des frais de déplacement "
 "supplémentaires comme indiqué dans la Section 4."
 
-#: quotes/templates/partials/terms/terms.html:88
+#: quotes/templates/partials/terms/terms.html:86
 msgid ""
 "Additional surface preparation services will be charged at the following "
 "rates:"
@@ -2651,25 +2657,19 @@ msgstr ""
 "Les services de préparation de surface supplémentaires seront facturés aux "
 "tarifs suivants :"
 
-#: quotes/templates/partials/terms/terms.html:91
-#, fuzzy
-#| msgid "Debris removal or additional sweeping: $125/hour."
+#: quotes/templates/partials/terms/terms.html:89
 msgid "Debris removal or additional sweeping: $125/hour"
 msgstr "Enlèvement des débris ou balayage supplémentaire : 125$/heure."
 
-#: quotes/templates/partials/terms/terms.html:92
-#, fuzzy
-#| msgid "Spot cleaning of stains or spills: $75 per area."
+#: quotes/templates/partials/terms/terms.html:90
 msgid "Spot cleaning of stains or spills: $75 per area"
 msgstr "Nettoyage ponctuel des taches ou déversements : 75$ par zone."
 
-#: quotes/templates/partials/terms/terms.html:93
-#, fuzzy
-#| msgid "Construction debris removal: $150/hour."
+#: quotes/templates/partials/terms/terms.html:91
 msgid "Construction debris removal: $150/hour"
 msgstr "Enlèvement des débris de construction : 150$/heure."
 
-#: quotes/templates/partials/terms/terms.html:96
+#: quotes/templates/partials/terms/terms.html:94
 msgid ""
 "A minimum one-hour charge applies to all additional services. These rates "
 "are subject to change and may vary based on specific site conditions."
@@ -2678,15 +2678,15 @@ msgstr ""
 "Ces tarifs sont sujets à changement et peuvent varier selon les conditions "
 "spécifiques du site."
 
-#: quotes/templates/partials/terms/terms.html:101
+#: quotes/templates/partials/terms/terms.html:99
 msgid "Cancellation Policy"
 msgstr "Politique d'annulation"
 
-#: quotes/templates/partials/terms/terms.html:103
+#: quotes/templates/partials/terms/terms.html:101
 msgid "If you need to cancel scheduled services:"
 msgstr "Si vous devez annuler des services programmés :"
 
-#: quotes/templates/partials/terms/terms.html:106
+#: quotes/templates/partials/terms/terms.html:104
 msgid ""
 "Cancellations made more than 48 hours before the scheduled start time: No "
 "cancellation fee"
@@ -2694,7 +2694,7 @@ msgstr ""
 "Annulations effectuées plus de 48 heures avant l'heure de début prévue : "
 "Aucuns frais d'annulation."
 
-#: quotes/templates/partials/terms/terms.html:107
+#: quotes/templates/partials/terms/terms.html:105
 #, python-format
 msgid ""
 "Cancellations made less than 48 hours before the scheduled start time: 25%% "
@@ -2704,7 +2704,7 @@ msgstr ""
 "25%% du prix soumissionné pourrait être facturé pour couvrir les frais de "
 "préparation."
 
-#: quotes/templates/partials/terms/terms.html:108
+#: quotes/templates/partials/terms/terms.html:106
 msgid ""
 "If our crew arrives on site and cannot perform the scheduled work due to "
 "site conditions, vehicle obstruction, or lack of access, a full mobilization "
@@ -2718,60 +2718,52 @@ msgstr ""
 "retour nécessaire pour compléter les travaux, comme indiqué dans la Section "
 "4."
 
-#: quotes/templates/partials/terms/terms.html:113
+#: quotes/templates/partials/terms/terms.html:111
 msgid "Warranty"
 msgstr "Garantie"
 
-#: quotes/templates/partials/terms/terms.html:115
+#: quotes/templates/partials/terms/terms.html:113
 msgid ""
 "We warrant our workmanship for a period of 90 days from the date of "
 "completion, under normal use conditions. This warranty is limited to the "
 "reapplication of markings that show premature wear or failure."
 msgstr ""
 "Nous garantissons notre travail pour une période de 90 jours à compter de la "
-"date d'achèvement, dans des conditions d'utilisation normales. Cette garantie "
-"se limite à la réapplication des marquages qui montrent une usure ou une "
-"défaillance prématurée."
+"date d'achèvement, dans des conditions d'utilisation normales. Cette "
+"garantie se limite à la réapplication des marquages qui montrent une usure "
+"ou une défaillance prématurée."
 
-#: quotes/templates/partials/terms/terms.html:118
+#: quotes/templates/partials/terms/terms.html:116
 msgid "This warranty does not cover:"
 msgstr "Cette garantie ne couvre pas :"
 
-#: quotes/templates/partials/terms/terms.html:121
-#, fuzzy
-#| msgid "Damage from snow plowing, chemical spills, or abrasive materials."
+#: quotes/templates/partials/terms/terms.html:119
 msgid "Damage from snow plowing, chemical spills, or abrasive materials"
 msgstr ""
 "Les dommages causés par le déneigement, les déversements chimiques ou les "
 "matériaux abrasifs."
 
-#: quotes/templates/partials/terms/terms.html:122
-#, fuzzy
-#| msgid "Normal wear and tear from vehicle traffic."
+#: quotes/templates/partials/terms/terms.html:120
 msgid "Normal wear and tear from vehicle traffic"
 msgstr "L'usure normale due à la circulation des véhicules."
 
-#: quotes/templates/partials/terms/terms.html:123
-#, fuzzy
-#| msgid "Damage from improper surface preparation if not performed by us."
+#: quotes/templates/partials/terms/terms.html:121
 msgid "Damage from improper surface preparation if not performed by us"
 msgstr ""
 "Les dommages causés par une mauvaise préparation de la surface si elle n'est "
 "pas effectuée par nous."
 
-#: quotes/templates/partials/terms/terms.html:124
-#, fuzzy
-#| msgid "Fading due to UV exposure or harsh weather conditions."
+#: quotes/templates/partials/terms/terms.html:122
 msgid "Fading due to UV exposure or harsh weather conditions"
 msgstr ""
 "La décoloration due à l'exposition aux UV ou aux conditions météorologiques "
 "extrêmes."
 
-#: quotes/templates/partials/terms/terms.html:129
+#: quotes/templates/partials/terms/terms.html:127
 msgid "Liability Limitation and Property Indemnification"
 msgstr "Limitation de responsabilité et indemnisation des biens"
 
-#: quotes/templates/partials/terms/terms.html:131
+#: quotes/templates/partials/terms/terms.html:129
 msgid ""
 "Our maximum liability for any claim arising out of our services shall be "
 "limited to the amount paid for the services. We are not liable for any "
@@ -2784,7 +2776,7 @@ msgstr ""
 "mais sans s'y limiter, la perte d'usage ou l'interruption des activités "
 "commerciales."
 
-#: quotes/templates/partials/terms/terms.html:134
+#: quotes/templates/partials/terms/terms.html:132
 msgid ""
 "While Titan Parking takes all reasonable precautions to prevent damage, we "
 "cannot be held responsible for damage to vehicles that remain in the work "
@@ -2804,11 +2796,11 @@ msgstr ""
 "sécuriser la zone de travail contre toute entrée non autorisée pendant la "
 "période de séchage de la peinture, selon les instructions de notre équipe."
 
-#: quotes/templates/partials/terms/terms.html:139
+#: quotes/templates/partials/terms/terms.html:137
 msgid "Permits and Regulatory Compliance"
 msgstr "Permis et conformité réglementaire"
 
-#: quotes/templates/partials/terms/terms.html:141
+#: quotes/templates/partials/terms/terms.html:139
 msgid ""
 "The client is ultimately responsible for ensuring their property complies "
 "with all applicable regulations and standards, including but not limited to:"
@@ -2817,17 +2809,11 @@ msgstr ""
 "conforme à tous les règlements et normes applicables, incluant, mais sans "
 "s'y limiter :"
 
-#: quotes/templates/partials/terms/terms.html:144
-#, fuzzy
-#| msgid "Local municipal codes and bylaws."
+#: quotes/templates/partials/terms/terms.html:142
 msgid "Local municipal codes and bylaws"
 msgstr "Les codes et règlements municipaux locaux."
 
-#: quotes/templates/partials/terms/terms.html:145
-#, fuzzy
-#| msgid ""
-#| "Provincial regulations (including Quebec's Act to secure handicapped "
-#| "persons in the exercise of their rights)."
+#: quotes/templates/partials/terms/terms.html:143
 msgid ""
 "Provincial regulations (including Quebec's Act to secure handicapped persons "
 "in the exercise of their rights)"
@@ -2835,17 +2821,15 @@ msgstr ""
 "Les règlements provinciaux (incluant la Loi assurant l'exercice des droits "
 "des personnes handicapées du Québec)."
 
-#: quotes/templates/partials/terms/terms.html:146
-#, fuzzy
-#| msgid "Federal requirements (such as the Accessible Canada Act)."
+#: quotes/templates/partials/terms/terms.html:144
 msgid "Federal requirements (such as the Accessible Canada Act)"
 msgstr "Les exigences fédérales (comme la Loi canadienne sur l'accessibilité)."
 
-#: quotes/templates/partials/terms/terms.html:147
+#: quotes/templates/partials/terms/terms.html:145
 msgid "CSA B651 accessibility standards"
 msgstr "Les normes d'accessibilité CSA B651."
 
-#: quotes/templates/partials/terms/terms.html:150
+#: quotes/templates/partials/terms/terms.html:148
 msgid ""
 "While Titan Parking strives to provide services that comply with industry "
 "standards and can offer guidance on regulatory requirements, we cannot "
@@ -2866,11 +2850,11 @@ msgstr ""
 "tenu responsable des problèmes de non-conformité résultant de conceptions ou "
 "d'aménagements approuvés par le client."
 
-#: quotes/templates/partials/terms/terms.html:155
+#: quotes/templates/partials/terms/terms.html:153
 msgid "Minimum Service Requirements"
 msgstr "Exigences minimales de service"
 
-#: quotes/templates/partials/terms/terms.html:157
+#: quotes/templates/partials/terms/terms.html:155
 msgid ""
 "Titan Parking maintains a minimum job size requirement of $850 per service "
 "call. Projects quoted below this amount will be subject to additional fees "
@@ -2885,11 +2869,11 @@ msgstr ""
 "l'équipement et de l'allocation efficace des ressources nécessaires pour "
 "fournir nos services professionnels."
 
-#: quotes/templates/partials/terms/terms.html:162
+#: quotes/templates/partials/terms/terms.html:160
 msgid "Materials and Quality Assurance"
 msgstr "Matériaux et assurance qualité"
 
-#: quotes/templates/partials/terms/terms.html:164
+#: quotes/templates/partials/terms/terms.html:162
 msgid ""
 "Titan Parking selects the most appropriate high-quality marking materials "
 "based on the specific requirements of each project. Our options include:"
@@ -2898,25 +2882,17 @@ msgstr ""
 "appropriés en fonction des exigences spécifiques de chaque projet. Nos "
 "options incluent :"
 
-#: quotes/templates/partials/terms/terms.html:167
-#, fuzzy
-#| msgid "Water-based traffic paint (more environmentally friendly)."
+#: quotes/templates/partials/terms/terms.html:165
 msgid "Water-based traffic paint (more environmentally friendly)"
 msgstr "Peinture de signalisation à base d'eau (plus écologique)."
 
-#: quotes/templates/partials/terms/terms.html:168
-#, fuzzy
-#| msgid "Oil-based traffic paint (recommended for high-traffic areas)."
+#: quotes/templates/partials/terms/terms.html:166
 msgid "Oil-based traffic paint (recommended for high-traffic areas)"
 msgstr ""
 "Peinture de signalisation à base d'huile (recommandée pour les zones à forte "
 "circulation)."
 
-#: quotes/templates/partials/terms/terms.html:169
-#, fuzzy
-#| msgid ""
-#| "Epoxy coatings (recommended for interior applications such as warehouses "
-#| "and garages)."
+#: quotes/templates/partials/terms/terms.html:167
 msgid ""
 "Epoxy coatings (recommended for interior applications such as warehouses and "
 "garages)"
@@ -2924,13 +2900,11 @@ msgstr ""
 "Revêtements époxy (recommandés pour les applications intérieures comme les "
 "entrepôts et les garages)."
 
-#: quotes/templates/partials/terms/terms.html:170
-#, fuzzy
-#| msgid "Specialized materials for custom requirements."
+#: quotes/templates/partials/terms/terms.html:168
 msgid "Specialized materials for custom requirements"
 msgstr "Matériaux spécialisés pour les projets personnalisés."
 
-#: quotes/templates/partials/terms/terms.html:173
+#: quotes/templates/partials/terms/terms.html:171
 msgid ""
 "The selection of materials will be determined based on factors including "
 "surface type, location (interior/exterior), expected traffic volume, weather "
@@ -2949,11 +2923,11 @@ msgstr ""
 "disponibles moyennant un coût supplémentaire pour les projets nécessitant "
 "une durabilité prolongée ou des caractéristiques de performance spécifiques."
 
-#: quotes/templates/partials/terms/terms.html:178
+#: quotes/templates/partials/terms/terms.html:176
 msgid "Photography and Marketing"
 msgstr "Photographie et marketing"
 
-#: quotes/templates/partials/terms/terms.html:180
+#: quotes/templates/partials/terms/terms.html:178
 msgid ""
 "Titan Parking may document completed work through photography for quality "
 "assurance purposes. Unless otherwise specified by the client, we reserve the "
@@ -2968,11 +2942,11 @@ msgstr ""
 "partagées sans permission. Sur demande, ces photos peuvent être fournies au "
 "client pour ses dossiers."
 
-#: quotes/templates/partials/terms/terms.html:185
+#: quotes/templates/partials/terms/terms.html:183
 msgid "Insurance Coverage"
 msgstr "Couverture d'assurance"
 
-#: quotes/templates/partials/terms/terms.html:187
+#: quotes/templates/partials/terms/terms.html:185
 msgid ""
 "Titan Parking maintains comprehensive commercial general liability insurance "
 "to protect both our business and our clients. Upon request, we can provide a "
@@ -2989,11 +2963,11 @@ msgstr ""
 "conditions préexistantes des biens ou aux dommages causés par des tiers "
 "après l'achèvement de nos travaux."
 
-#: quotes/templates/partials/terms/terms.html:192
+#: quotes/templates/partials/terms/terms.html:190
 msgid "Completed Work Acceptance"
 msgstr "Acceptation des travaux terminés"
 
-#: quotes/templates/partials/terms/terms.html:194
+#: quotes/templates/partials/terms/terms.html:192
 msgid ""
 "Upon completion of the work, the client will be given the opportunity to "
 "inspect the work performed. Unless the client notifies Titan Parking of any "
@@ -3010,11 +2984,11 @@ msgstr ""
 "période d'inspection de 48 heures s'appliquera à partir du moment où les "
 "photos seront envoyées."
 
-#: quotes/templates/partials/terms/terms.html:199
+#: quotes/templates/partials/terms/terms.html:197
 msgid "Documentation and Records"
 msgstr "Documentation et registres"
 
-#: quotes/templates/partials/terms/terms.html:201
+#: quotes/templates/partials/terms/terms.html:199
 msgid ""
 "Upon request, we will provide clients with documentation regarding work "
 "performed, including before and after photos, materials used, and "
@@ -3032,11 +3006,11 @@ msgstr ""
 "inspections d'assurance, cette documentation peut servir de preuve de "
 "conformité aux normes en vigueur au moment du service."
 
-#: quotes/templates/partials/terms/terms.html:206
+#: quotes/templates/partials/terms/terms.html:204
 msgid "Equipment Failure and Technical Issues"
 msgstr "PBris d'équipement et problèmes techniques"
 
-#: quotes/templates/partials/terms/terms.html:208
+#: quotes/templates/partials/terms/terms.html:206
 msgid ""
 "In the rare event that Titan Parking experiences equipment failure or "
 "technical issues during service that prevent us from completing the "
@@ -3046,19 +3020,12 @@ msgstr ""
 "problèmes techniques pendant le service qui nous empêchent de terminer les "
 "travaux prévus, nous prendrons les mesures suivantes :"
 
-#: quotes/templates/partials/terms/terms.html:211
-#, fuzzy
-#| msgid ""
-#| "Immediately notify the client's designated representative about the issue."
+#: quotes/templates/partials/terms/terms.html:209
 msgid ""
 "Immediately notify the client's designated representative about the issue"
 msgstr "Aviser immédiatement le représentant désigné du client du problème."
 
-#: quotes/templates/partials/terms/terms.html:212
-#, fuzzy
-#| msgid ""
-#| "Complete as much of the work as possible with functioning equipment, if "
-#| "applicable."
+#: quotes/templates/partials/terms/terms.html:210
 msgid ""
 "Complete as much of the work as possible with functioning equipment, if "
 "applicable"
@@ -3066,18 +3033,11 @@ msgstr ""
 "Compléter autant de travail que possible avec l'équipement fonctionnel, si "
 "applicable."
 
-#: quotes/templates/partials/terms/terms.html:213
-#, fuzzy
-#| msgid "Reschedule the remaining work for the earliest available date."
+#: quotes/templates/partials/terms/terms.html:211
 msgid "Reschedule the remaining work for the earliest available date"
 msgstr "Reprogrammer les travaux restants à la première date disponible."
 
-#: quotes/templates/partials/terms/terms.html:214
-#, fuzzy
-#| msgid ""
-#| "No additional mobilization fee will be charged for the return visit to "
-#| "complete work that could not be completed due to our equipment failure or "
-#| "technical issues"
+#: quotes/templates/partials/terms/terms.html:212
 msgid ""
 "No additional mobilization fee will be charged for the return visit to "
 "complete work that could not be completed due to our equipment failure"
@@ -3086,7 +3046,7 @@ msgstr ""
 "retour pour compléter les travaux qui n'ont pu être terminés en raison de "
 "notre bris d'équipement ou problèmes techniques."
 
-#: quotes/templates/partials/terms/terms.html:217
+#: quotes/templates/partials/terms/terms.html:215
 msgid ""
 "If equipment failure occurs before arriving at the job site and causes us to "
 "cancel the scheduled service, we will notify the client as soon as possible "
@@ -3101,7 +3061,7 @@ msgstr ""
 "opérations ou l'horaire du client, nous discuterons avec le client pour "
 "trouver une solution mutuellement acceptable."
 
-#: quotes/templates/partials/terms/terms.html:220
+#: quotes/templates/partials/terms/terms.html:218
 msgid ""
 "Titan Parking maintains all equipment according to manufacturer "
 "specifications and carries backup equipment for critical components to "
@@ -3115,11 +3075,11 @@ msgstr ""
 "reconnaissons que des problèmes mécaniques peuvent occasionnellement "
 "survenir malgré nos meilleurs efforts préventifs."
 
-#: quotes/templates/partials/terms/terms.html:225
+#: quotes/templates/partials/terms/terms.html:223
 msgid "Equipment and Property Protection"
 msgstr "Protection de l'équipement et de la propriété"
 
-#: quotes/templates/partials/terms/terms.html:227
+#: quotes/templates/partials/terms/terms.html:225
 msgid ""
 "The client agrees to take reasonable precautions to protect Titan Parking's "
 "equipment and personnel while on the client's property. This includes "
@@ -3137,11 +3097,11 @@ msgstr ""
 "communiquer avec leurs locataires, employés ou clients concernant les "
 "travaux prévus pour minimiser les perturbations et les conflits potentiels."
 
-#: quotes/templates/partials/terms/terms.html:232
+#: quotes/templates/partials/terms/terms.html:230
 msgid "Communication and Project Management"
 msgstr "Communication et gestion de projet"
 
-#: quotes/templates/partials/terms/terms.html:234
+#: quotes/templates/partials/terms/terms.html:232
 msgid ""
 "The client agrees to designate a primary contact person who has authority to "
 "make decisions regarding the project. This person should be available during "
@@ -3158,11 +3118,11 @@ msgstr ""
 "demandons que tout changement à la portée ou aux spécifications du projet "
 "soit fait par écrit pour éviter les malentendus."
 
-#: quotes/templates/partials/terms/terms.html:239
+#: quotes/templates/partials/terms/terms.html:237
 msgid "Dispute Resolution"
 msgstr "Résolution des différends"
 
-#: quotes/templates/partials/terms/terms.html:241
+#: quotes/templates/partials/terms/terms.html:239
 msgid ""
 "In the event of any dispute or complaint regarding our services, the client "
 "agrees to notify Titan Parking in writing within 5 business days of service "
@@ -3179,11 +3139,11 @@ msgstr ""
 "par négociation directe et, si nécessaire, par médiation via un tiers "
 "(mutuellement accepté) au Québec."
 
-#: quotes/templates/partials/terms/terms.html:246
+#: quotes/templates/partials/terms/terms.html:244
 msgid "Quebec Civil Code Compliance"
 msgstr "Conformité au Code civil du Québec"
 
-#: quotes/templates/partials/terms/terms.html:248
+#: quotes/templates/partials/terms/terms.html:246
 msgid ""
 "This agreement is governed by the laws of Quebec, including the Quebec Civil "
 "Code. In accordance with Quebec law, our services aim to comply with all "
@@ -3201,11 +3161,11 @@ msgstr ""
 "le client reconnaît sa responsabilité ultime de s'assurer que sa propriété "
 "est conforme aux règlements québécois en vigueur."
 
-#: quotes/templates/partials/terms/terms.html:254
+#: quotes/templates/partials/terms/terms.html:252
 msgid "Force Majeure"
 msgstr "Force majeure"
 
-#: quotes/templates/partials/terms/terms.html:256
+#: quotes/templates/partials/terms/terms.html:254
 msgid ""
 "Neither party shall be liable for any failure or delay in performing their "
 "obligations where such failure or delay results from any cause beyond the "
@@ -3228,11 +3188,11 @@ msgstr ""
 "partie touchée doit en informer l'autre partie dès que possible et proposer "
 "des dates alternatives pour le service."
 
-#: quotes/templates/partials/terms/terms.html:261
+#: quotes/templates/partials/terms/terms.html:259
 msgid "Quality Commitment"
 msgstr "Engagement envers la qualité"
 
-#: quotes/templates/partials/terms/terms.html:263
+#: quotes/templates/partials/terms/terms.html:261
 msgid ""
 "Titan Parking is committed to providing the highest quality line striping "
 "services using professional equipment, premium materials, and experienced "
@@ -3249,11 +3209,11 @@ msgstr ""
 "recommandons des programmes d'entretien réguliers pour maximiser la durée de "
 "vie et l'apparence de vos marquages au sol."
 
-#: quotes/templates/partials/terms/terms.html:268
+#: quotes/templates/partials/terms/terms.html:266
 msgid "Changes to These Terms"
 msgstr "Modifications de ces conditions"
 
-#: quotes/templates/partials/terms/terms.html:270
+#: quotes/templates/partials/terms/terms.html:268
 msgid ""
 "We reserve the right to modify these Terms at any time. Changes will be "
 "effective upon posting to our website. Your continued use of our services "
@@ -3264,40 +3224,36 @@ msgstr ""
 "Votre utilisation continue de nos services constitue une acceptation des "
 "conditions modifiées."
 
-#: quotes/templates/partials/terms/terms.html:277
+#: quotes/templates/partials/terms/terms.html:275
 msgid "If you have any questions about these Terms, please contact us at:"
 msgstr ""
 "Si vous avez des questions concernant ces conditions, veuillez nous "
 "contacter à :"
 
-#: quotes/templates/partials/terms/terms.html:280
+#: quotes/templates/partials/terms/terms.html:278
 msgid "Phone: "
 msgstr "Téléphone :"
 
-#: quotes/templates/partials/terms/terms.html:281
+#: quotes/templates/partials/terms/terms.html:279
 msgid "Email: "
 msgstr "Courriel :"
 
-#: quotes/templates/partials/terms/terms.html:282
+#: quotes/templates/partials/terms/terms.html:280
 msgid "Based in Drummondville, serving the entire province of Quebec"
 msgstr "Basés à Drummondville, nous desservons toute la province de Québec"
 
-#: quotes/templates/partials/terms/terms.html:286
-#, fuzzy
-#| msgid ""
-#| "By signing below, you accept the terms of service and the quote "
-#| "#INV25-201."
+#: quotes/templates/partials/terms/terms.html:284
 msgid ""
 "By signing below, you accept the terms of service and the quote #INV25-201"
 msgstr ""
-"En signant ci-dessous, vous acceptez les conditions de service et la "
+"En signant ci-dessous, vous acceptez ces conditions d'utilisation et la "
 "soumission #INV25-201."
 
-#: quotes/templates/partials/terms/terms.html:288
+#: quotes/templates/partials/terms/terms.html:286
 msgid "Signature"
 msgstr "Signature"
 
-#: quotes/templates/partials/terms/terms.html:289
+#: quotes/templates/partials/terms/terms.html:287
 msgid "Date"
 msgstr "Date"
 
@@ -3308,6 +3264,3 @@ msgstr "Anglais"
 #: titanparking/settings.py:122
 msgid "French"
 msgstr "Français"
-
-#~ msgid "Professional line striping services"
-#~ msgstr "Traçage de lignes de stationnement professionnel"

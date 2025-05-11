@@ -119,6 +119,7 @@
 }
 
 .terms-acceptance {
+  margin-top: 25rem;
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -177,5 +178,19 @@
 
   .legal-section-content h2 {
     font-size: 1.25rem;
+  }
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0.9cm 0.5cm;
+  }
+
+  body {
+    width: 20.59cm;
+  }
+  .header img {
+    width: 20.59cm;
   }
 }
