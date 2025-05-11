@@ -38,7 +38,11 @@
       <div class="hero-diagram">
         <div class="diagram-container">
           <div class="diagram-inner">
-            <img src="{% static 'images/parking-hero.webp' %}" alt="Hero Diagram" />
+            <picture>
+              <source media="(min-width: 921px)" srcset="{% static 'images/parking-hero.webp' %}" type="image/webp" />
+              <source media="(max-width: 920px)" srcset="">
+              <img src="" alt="Hero Diagram" />
+            </picture>
           </div>
         </div>
         

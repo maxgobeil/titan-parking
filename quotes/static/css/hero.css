@@ -217,15 +217,15 @@
   .hero-diagram {
     display: none;
   }
+  .yellow-line-animation {
+    width: 105%;
+    animation: none;
+  }
 }
 
 @media (max-width: 768px) {
   .container-hero {
     padding: var(--container-padding-mobile);
-  }
-  .yellow-line-animation {
-    width: 105%;
-    animation: none;
   }
 }
 

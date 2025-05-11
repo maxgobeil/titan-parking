@@ -29,7 +29,7 @@
       <link rel="alternate" hreflang="fr-CA" href="https://titanparking.ca{{ request.path|slice:'3:' }}" />
     {% endif %}
 
-    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preload" href="{% static 'font/AlegreyaSansSC-Medium.ttf' %}" as="font" type="font/ttf" crossorigin>
     <link rel="preconnect" href="https://unpkg.com">
 
     <link rel="alternate" hreflang="x-default" href="https://titanparking.ca/" />
@@ -44,17 +44,7 @@
     {% include 'partials/schema/base.html' %}
     {% block schema %}{% endblock %}
     <script src="https://unpkg.com/htmx.org@1.9.5/dist/htmx.min.js" defer integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
-    {% if not debug %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBMTRQWR3K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-FBMTRQWR3K');
-    </script>
-    {% endif %}
+    <link rel="preconnect" href="https://www.googletagmanager.com">
   </head>
   <body>
     {% block header %}
@@ -69,5 +59,16 @@
 
     {% block extra_js %}{% endblock %}
     <script src="{% static 'js/base.js' %}" defer></script>
+    {% if not debug %}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FBMTRQWR3K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FBMTRQWR3K');
+    </script>
+    {% endif %}
   </body>
 </html>
