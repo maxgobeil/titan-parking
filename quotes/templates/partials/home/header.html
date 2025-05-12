@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="{% static 'css/header.css' %}" />
 {% endblock %}
 
+{% block extra_js %}
+<script src="{% static 'js/nav-dropdown.js' %}" defer></script>
+{% endblock %}
+
 <header id="main-header" class="header fixed">
   <div class="container">
     <div class="header-content">
