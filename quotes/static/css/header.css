@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Alegreya Sans';
-  src: url('/static/font/AlegreyaSansSC-Medium.ttf') format('truetype');
+  src: url('/static/font/AlegreyaSansSc-Medium.woff2') format('woff2');
   font-display: swap;
 }
 
