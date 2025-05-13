@@ -5,6 +5,8 @@ from django.contrib.auth.models import (
     BaseUserManager,
     PermissionsMixin,
 )
+from django.core.exceptions import ValidationError
+from django.core.validators import MaxValueValidator
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -382,3 +384,84 @@ class BlogPost(models.Model):
         if len(parts) <= 1 or not parts[1].strip():
             return self.get_meta_description_en()
         return parts[1].strip()
+
+
+class MileageEntry(models.Model):
+    TRIP_PURPOSE_CHOICES = [
+        ("CLIENT_VISIT", "Client Visit"),
+        ("PROSPECTING", "Prospecting"),
+        ("SUPPLIES", "Picking up Supplies"),
+        ("SERVICE", "Service Call"),
+        ("OTHER", "Other Business Purpose"),
+    ]
+
+    date = models.DateField()
+    trip_purpose = models.CharField(max_length=20, choices=TRIP_PURPOSE_CHOICES)
+    start_odometer = models.PositiveIntegerField(
+        null=True,
+        blank=True,
+        validators=[
+            MaxValueValidator(999999, message="Odometer reading cannot exceed 999,999")
+        ],
+    )
+    end_odometer = models.PositiveIntegerField(
+        null=True,
+        blank=True,
+        validators=[
+            MaxValueValidator(999999, message="Odometer reading cannot exceed 999,999")
+        ],
+    )
+    notes = models.TextField(blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-date"]
+        verbose_name = "Mileage Entry"
+        verbose_name_plural = "Mileage Entries"
+
+    def __str__(self):
+        return f"{self.date} - {self.trip_purpose}"
+
+    def clean(self):
+        # Check if both odometer readings are provided
+        if self.start_odometer is not None and self.end_odometer is not None:
+            if self.end_odometer <= self.start_odometer:
+                raise ValidationError(
+                    {
+                        "end_odometer": "End odometer reading must be greater than start odometer reading"
+                    }
+                )
+
+
+class BusinessVisit(models.Model):
+    VISIT_TYPE_CHOICES = [
+        ("COLD_VISIT", "Cold Visit"),
+        ("COLD_CALL", "Cold Call"),
+        ("FOLLOW_UP", "Follow-up Visit"),
+        ("NETWORKING", "Networking Event"),
+        ("REFERRAL", "Referral Visit"),
+        ("OTHER", "Other"),
+    ]
+
+    date = models.DateField()
+    business_name = models.CharField(max_length=200)
+    address = models.TextField()
+    contact_person = models.CharField(max_length=100, blank=True)
+    contact_position = models.CharField(max_length=100, blank=True)
+    visit_type = models.CharField(max_length=20, choices=VISIT_TYPE_CHOICES)
+    cards_left = models.PositiveIntegerField(default=1)
+    notes = models.TextField(blank=True)
+    follow_up_date = models.DateField(null=True, blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-date"]
+        verbose_name = "Business Visit"
+        verbose_name_plural = "Business Visits"
+
+    def __str__(self):
+        return f"{self.date} - {self.business_name}"

@@ -2,7 +2,15 @@ from django.contrib import admin
 from django.urls import reverse
 from django.utils.html import format_html
 
-from .models import BlogPost, Client, Quote, QuoteItem, Service
+from .models import (
+    BlogPost,
+    BusinessVisit,
+    Client,
+    MileageEntry,
+    Quote,
+    QuoteItem,
+    Service,
+)
 
 
 class QuoteItemInline(admin.TabularInline):
@@ -71,3 +79,21 @@ class BlogPostAdmin(admin.ModelAdmin):
     search_fields = ("title", "content", "summary")
     list_editable = ("status",)
     list_per_page = 20
+
+
+@admin.register(MileageEntry)
+class MileageEntryAdmin(admin.ModelAdmin):
+    list_display = ("date", "trip_purpose", "start_odometer", "end_odometer", "notes")
+    list_filter = ("trip_purpose",)
+    search_fields = ("notes",)
+
+
+@admin.register(BusinessVisit)
+class BusinessVisitAdmin(admin.ModelAdmin):
+    list_display = (
+        "date",
+        "business_name",
+        "visit_type",
+        "cards_left",
+    )
+    list_filter = ("visit_type",)
