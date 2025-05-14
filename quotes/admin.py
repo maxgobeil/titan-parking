@@ -6,11 +6,18 @@ from .models import (
     BlogPost,
     BusinessVisit,
     Client,
+    CustomUser,
     MileageEntry,
     Quote,
     QuoteItem,
     Service,
 )
+
+
+@admin.register(CustomUser)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ("email", "first_name", "last_name", "is_staff")
+    search_fields = ("email", "first_name", "last_name", "is_staff")
 
 
 class QuoteItemInline(admin.TabularInline):
