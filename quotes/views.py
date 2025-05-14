@@ -158,11 +158,11 @@ def invoice_view_pdf(request, pk):
 
 
 @login_required
-def invoice_view_html(request):
+def invoice_view_html(request, pk):
     quote = (
         Quote.objects.select_related("client")
         .prefetch_related("items__service")
-        .get(id=1)
+        .get(id=pk)
     )
 
     image_path = os.path.join(
