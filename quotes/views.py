@@ -103,11 +103,11 @@ def submit_contact(request):
 
 
 @login_required
-def invoice_view_pdf(request):
+def invoice_view_pdf(request, pk):
     quote = (
         Quote.objects.select_related("client")
         .prefetch_related("items__service")
-        .get(id=2)
+        .get(id=pk)
     )
 
     image_path = os.path.join(
