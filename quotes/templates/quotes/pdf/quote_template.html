@@ -35,10 +35,8 @@
             <div class="invoice-info-base invoice-job-info">
                 <div class="invoice-info-title">Information</div>
                 <div>Numéro: {{ quote.invoice_number }}</div>
-                <!--<div>Date: {{ quote.created_at|date:"M d, Y" }}</div>-->
-                <div>Date: 14 mai 2025</div>
-                <!--<div>Date d'échéance: {{ quote.due_date|date:"M d, Y" }}</div>-->
-                <div>Date d'échéance: 31 juin 2025</div>
+                <div>Date: {{ quote.created_at|date:"M d, Y" }}</div>
+                <div>Date d'échéance: {{ quote.due_date|date:"M d, Y" }}</div>
                 <!--<div>Détails du travail: {{ quote.job_location }}</div>-->
             </div>
         </div>
@@ -88,7 +86,7 @@
             </div>
             <div class="quote-total-container">
                 <div class="quote-total-item">
-                    <div>Sub-total</div>
+                    <div>Sous-total</div>
                     <div>{{ quote.subtotal }}$</div>
                 </div>
                 {% if quote.discount_percentage > 0 %}
