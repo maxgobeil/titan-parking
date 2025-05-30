@@ -12,7 +12,7 @@
     <div class="header">
         <img src="data:image/png;base64,{{ image_data }}" alt="Company Logo">
         <div class="business-info">
-            <div class="business-info-status">SOUMISSION</div>
+            <div class="business-info-status">FACTURE</div>
             <div>
                 <div class="business-info-title">Titan Parking | 16484557 Canada Inc.</div>
                 <div class="business-info-text">355 rue du Murier, Drummondville, QC, J2C 0N9</div>
@@ -35,9 +35,9 @@
             <div class="invoice-info-base invoice-job-info">
                 <div class="invoice-info-title">Information</div>
                 <div>Numéro: {{ quote.invoice_number }}</div>
-                <div>Date: {{ quote.created_at|date:"M d, Y" }}</div>
-                <div>Date d'échéance: {{ quote.due_date|date:"M d, Y" }}</div>
-                <!--<div>Détails du travail: {{ quote.job_location }}</div>-->
+                <div>Date: 29 mai 2025<!--{{ quote.created_at|date:"M d, Y" }}--></div>
+                <!--<div>Date d'échéance: {{ quote.expires_at|date:"M d, Y" }}</div>-->
+                <!--<div>Location: {{ quote.job_location }}</div>-->
             </div>
         </div>
 
@@ -76,8 +76,10 @@
 
         <div class="services-footer">
             <div class="footer-conditions">
-                <div class="footer-conditions-title">Autres conditions</div>
+                <div class="footer-conditions-title">Notes</div>
                 <div class="footer-conditions-description">
+                <div>Payable sur reception.</div>
+                <div>Virement bancaire: contact@titanparking.ca</div>
                     <!--<div>Vous pouvez trouver toutes les conditions ci-dessous</div>
                     <div>Faites un chèque pour le montant dû et envoyez-le à l'adresse ci-dessus. Veuillez faire le chèque payable à Titan Parking.</div>
                     <div>Notes: {{ quote.notes }}</div>-->
