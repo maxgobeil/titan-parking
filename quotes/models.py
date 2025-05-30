@@ -79,7 +79,7 @@ class Client(models.Model):
     address = models.TextField(blank=True)
 
     def __str__(self):
-        return self.name
+        return self.company
 
 
 class Service(models.Model):
@@ -131,6 +131,8 @@ class Quote(models.Model):
         ("accepted", "Accepted"),
         ("declined", "Declined"),
         ("expired", "Expired"),
+        ("modified", "Modified (Locked)"),
+        ("invoice", "Invoice"),
     ]
 
     TIME_PERIOD_CHOICES = [
@@ -166,6 +168,14 @@ class Quote(models.Model):
     job_location = models.TextField(blank=True)
     expected_completion_date = models.DateField(null=True, blank=True)
 
+    original_quote = models.ForeignKey(
+        "self",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="versions",
+    )
+
     def __str__(self):
         return f"Quote {self.id} for {self.client.name}"
 
@@ -179,7 +189,127 @@ class Quote(models.Model):
             self.verification_code = "".join(
                 [str(random.randint(0, 9)) for _ in range(6)]
             )
+
+        if not self.invoice_number:
+            self.invoice_number = self.generate_invoice_number()
+
         super().save(*args, **kwargs)
+
+    def generate_invoice_number(self):
+        """Generate in format Q0525-201 or INV0525-201"""
+        from datetime import datetime
+
+        now = datetime.now()
+        month_year = now.strftime("%m%y")
+
+        if self.status == "invoice":
+            prefix = "INV"
+        else:
+            prefix = "Q"
+
+        # If this is a modification of an existing quote, increment by 1
+        if self.original_quote:
+            original_number = self.original_quote.invoice_number
+            try:
+                base_part, number_part = original_number.split("-")
+                original_month_year = "".join(c for c in base_part if c.isdigit())
+                new_number = int(number_part) + 1
+                return f"{prefix}{original_month_year}-{new_number}"
+            except (ValueError, IndexError):
+                pass
+
+        # For new quotes, keep a gap of 10 from the last one
+        existing_numbers = Quote.objects.filter(
+            invoice_number__startswith=f"{prefix}{month_year}-"
+        ).values_list("invoice_number", flat=True)
+
+        base_number = 201
+        used_numbers = set()
+
+        for number_str in existing_numbers:
+            try:
+                last_part = int(number_str.split("-")[-1])
+                used_numbers.add(last_part)
+            except (ValueError, IndexError):
+                continue
+
+        # Find the next available "base" number (multiples of 10 + 1)
+        # 201, 211, 221, 231, etc.
+        current_base = base_number
+        while True:
+            group_used = any(
+                num in used_numbers for num in range(current_base, current_base + 10)
+            )
+            if not group_used:
+                return f"{prefix}{month_year}-{current_base}"
+            current_base += 10
+
+    def create_modification(self):
+        if self.status in ["modified", "invoice"]:
+            raise ValueError(
+                "Cannot modify a quote that is already modified or invoiced"
+            )
+
+        self.status = "modified"
+        self.save()
+
+        new_quote = Quote.objects.create(
+            client=self.client,
+            title=self.title,
+            expires_at=self.expires_at,
+            time_period=self.time_period,
+            evening_fee=self.evening_fee,
+            weekend_fee=self.weekend_fee,
+            number_of_days=self.number_of_days,
+            discount_percentage=self.discount_percentage,
+            notes=self.notes,
+            job_location=self.job_location,
+            expected_completion_date=self.expected_completion_date,
+            original_quote=self.original_quote or self,
+            status="draft",
+        )
+
+        for item in self.items.all():
+            QuoteItem.objects.create(
+                quote=new_quote,
+                service=item.service,
+                quantity=item.quantity,
+                unit_price=item.unit_price,
+                notes=item.notes,
+            )
+
+        return new_quote
+
+    def create_invoice(self):
+        if self.status != "accepted":
+            raise ValueError("Can only create invoice from accepted quotes")
+
+        invoice = Quote.objects.create(
+            client=self.client,
+            title=f"Invoice - {self.title}",
+            expires_at=self.expires_at,
+            time_period=self.time_period,
+            evening_fee=self.evening_fee,
+            weekend_fee=self.weekend_fee,
+            number_of_days=self.number_of_days,
+            discount_percentage=self.discount_percentage,
+            notes=self.notes,
+            job_location=self.job_location,
+            expected_completion_date=self.expected_completion_date,
+            original_quote=self,
+            status="invoice",
+        )
+
+        for item in self.items.all():
+            QuoteItem.objects.create(
+                quote=invoice,
+                service=item.service,
+                quantity=item.quantity,
+                unit_price=item.unit_price,
+                notes=item.notes,
+            )
+
+        return invoice
 
     @property
     def subtotal(self):
@@ -212,6 +342,18 @@ class Quote(models.Model):
     @property
     def final_total(self):
         return round(self.total_amount + self.tps_amount + self.tvq_amount, 2)
+
+    @property
+    def can_be_modified(self):
+        return self.status not in ["modified", "invoice", "accepted"]
+
+    @property
+    def can_be_invoiced(self):
+        return self.status == "accepted"
+
+    @property
+    def is_invoice(self):
+        return self.status == "invoice"
 
 
 class QuoteItem(models.Model):
