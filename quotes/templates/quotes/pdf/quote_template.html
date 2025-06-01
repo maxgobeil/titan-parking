@@ -12,7 +12,13 @@
     <div class="header">
         <img src="data:image/png;base64,{{ image_data }}" alt="Company Logo">
         <div class="business-info">
-            <div class="business-info-status">FACTURE</div>
+            <div class="business-info-status">
+                {% if quote.status == 'invoice' %}
+                    FACTURE
+                {% else %}
+                    SOUMISSION
+                {% endif %}
+            </div>
             <div>
                 <div class="business-info-title">Titan Parking | 16484557 Canada Inc.</div>
                 <div class="business-info-text">355 rue du Murier, Drummondville, QC, J2C 0N9</div>
@@ -33,11 +39,16 @@
                 <div>{{ quote.client.email }}</div>
             </div>
             <div class="invoice-info-base invoice-job-info">
-                <div class="invoice-info-title">Information</div>
+                <div class="invoice-info-title">Informations:</div>
                 <div>Numéro: {{ quote.invoice_number }}</div>
                 <div>Date: 29 mai 2025<!--{{ quote.created_at|date:"M d, Y" }}--></div>
-                <!--<div>Date d'échéance: {{ quote.expires_at|date:"M d, Y" }}</div>-->
-                <!--<div>Location: {{ quote.job_location }}</div>-->
+                {% if quote.status != 'invoice' %}
+                    <div>Date d'échéance: {{ quote.expires_at|date:"M d, Y" }}</div>
+                {% endif %}
+                {% if quote.job_location %}
+                    <div>Location: {{ quote.job_location }}</div>
+                {% endif %}
+                
             </div>
         </div>
 
@@ -78,11 +89,15 @@
             <div class="footer-conditions">
                 <div class="footer-conditions-title">Notes</div>
                 <div class="footer-conditions-description">
-                <div>Payable sur reception.</div>
-                <div>Virement bancaire: contact@titanparking.ca</div>
-                    <!--<div>Vous pouvez trouver toutes les conditions ci-dessous</div>
-                    <div>Faites un chèque pour le montant dû et envoyez-le à l'adresse ci-dessus. Veuillez faire le chèque payable à Titan Parking.</div>
-                    <div>Notes: {{ quote.notes }}</div>-->
+                {% if quote.notes %}
+                    {{ quote.notes }}
+                {% endif %}
+                {% if quote.status == 'invoice' %}
+                    <div>Payable sur reception.</div>
+                    <div>Virement bancaire: contact@titanparking.ca</div>
+                {% elif not quote.notes %}
+                    <br>
+                {% endif %}
                 </div>
                 
             </div>
