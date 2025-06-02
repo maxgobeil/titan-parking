@@ -18,4 +18,5 @@ urlpatterns = [
     path("invoice/<int:pk>/", views.invoice_view_pdf, name="invoice_pdf"),
     path("invoice-html/<int:pk>/", views.invoice_view_html, name="invoice_html"),
     path("terms-pdf/", views.terms_view_pdf, name="terms_pdf"),
+    path("quote-calculator/", views.quote_calculator_view, name="quote_calculator"),
 ]

@@ -335,3 +335,8 @@ def blog_detail(request, slug):
             "popular_posts": popular_posts,
         },
     )
+
+
+@login_required
+def quote_calculator_view(request):
+    return render(request, "pages/quote-calculator.html")
