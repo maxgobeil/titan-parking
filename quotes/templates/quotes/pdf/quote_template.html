@@ -41,12 +41,12 @@
             <div class="invoice-info-base invoice-job-info">
                 <div class="invoice-info-title">Informations:</div>
                 <div>Numéro: {{ quote.invoice_number }}</div>
-                <div>Date: 29 mai 2025<!--{{ quote.created_at|date:"M d, Y" }}--></div>
+                <div>Date: {{ quote.created_at|date:"j F Y" }}</div>
                 {% if quote.status != 'invoice' %}
-                    <div>Date d'échéance: {{ quote.expires_at|date:"M d, Y" }}</div>
+                    <div>Date d'échéance: {{ quote.expires_at|date:"j F Y" }}</div>
                 {% endif %}
                 {% if quote.job_location %}
-                    <div>Location: {{ quote.job_location }}</div>
+                    <div>Lieu: {{ quote.job_location }}</div>
                 {% endif %}
                 
             </div>
