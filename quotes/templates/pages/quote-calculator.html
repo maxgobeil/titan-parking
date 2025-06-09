@@ -269,6 +269,13 @@
                             <input type="number" id="number_of_employees" name="number_of_employees" class="form-control" min="1" value="1">
                         </div>
                     </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lot_preparation">Lot Preparation ($)</label>
+                            <input type="number" id="lot_preparation" name="lot_preparation" class="form-control" step="0.01" min="0" value="0.00">
+                            <small class="text-muted">Site preparation and setup costs</small>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Management Costs -->
@@ -368,6 +375,7 @@
             const jobTime = parseFloat(document.getElementById('job_time_hours').value) || 0;
             const numEmployees = parseInt(document.getElementById('number_of_employees').value) || 1;
             const managementCost = parseFloat(document.getElementById('management_cost').value) || 0;
+            const lotPreparation = parseFloat(document.getElementById('lot_preparation').value) || 0;
 
             // Calculate additional costs
             let additionalTotal = 0;
@@ -388,7 +396,7 @@
             const travelCost = travelTime * travelRate * numEmployees;
             const mileageCost = travelDistance * mileageRate;
             const laborCost = jobTime * jobRate * numEmployees;
-            const grandTotal = fixedCost + travelCost + mileageCost + laborCost + managementCost + additionalTotal;
+            const grandTotal = fixedCost + travelCost + mileageCost + laborCost + managementCost + lotPreparation + additionalTotal;
 
             // Display results
             let resultsHTML = `
@@ -411,6 +419,10 @@
                 <div class="result-row">
                     <span>Management Cost:</span>
                     <span>$${managementCost.toFixed(2)}</span>
+                </div>
+                <div class="result-row">
+                    <span>Lot Preparation:</span>
+                    <span>$${lotPreparation.toFixed(2)}</span>
                 </div>
             `;
 
