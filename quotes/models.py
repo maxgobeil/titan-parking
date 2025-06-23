@@ -1,3 +1,4 @@
+from datetime import timedelta
 from decimal import Decimal
 
 from django.contrib.auth.models import (
@@ -180,6 +181,15 @@ class Quote(models.Model):
         return f"Quote {self.id} for {self.client.name}"
 
     def save(self, *args, **kwargs):
+        create_follow_up = False
+        if self.pk:
+            try:
+                old_quote = Quote.objects.get(pk=self.pk)
+                if old_quote.status != "sent" and self.status == "sent":
+                    create_follow_up = True
+            except Quote.DoesNotExist:
+                pass
+
         if not self.access_token:
             # Generate token on first save
             import random
@@ -194,6 +204,9 @@ class Quote(models.Model):
             self.invoice_number = self.generate_invoice_number()
 
         super().save(*args, **kwargs)
+
+        if create_follow_up:
+            self.create_quote_follow_up()
 
     def generate_invoice_number(self):
         """Generate in format Q0525-201 or INV0525-201"""
@@ -310,6 +323,15 @@ class Quote(models.Model):
             )
 
         return invoice
+
+    def create_quote_follow_up(self, days_after=5):
+        follow_up_date = timezone.now().date() + timedelta(days=days_after)
+
+        FollowUp.objects.create(
+            quote=self,
+            due_date=follow_up_date,
+            notes="Check if client has reviewed the quote",
+        )
 
     @property
     def subtotal(self):
@@ -607,3 +629,46 @@ class BusinessVisit(models.Model):
 
     def __str__(self):
         return f"{self.date} - {self.business_name}"
+
+
+class FollowUp(models.Model):
+
+    STATUS_CHOICES = [
+        ("PENDING", "Pending"),
+        ("COMPLETED", "Completed"),
+    ]
+
+    quote = models.ForeignKey(
+        Quote,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="follow_ups",
+    )
+    client = models.ForeignKey(
+        Client,
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="follow_ups",
+    )
+    due_date = models.DateField()
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="PENDING")
+    notes = models.TextField(blank=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["due_date"]
+        verbose_name = "Follow-up"
+        verbose_name_plural = "Follow-ups"
+
+    def __str__(self):
+        entity = self.quote or self.client
+        return f"{entity} ({self.due_date})"
+
+    @property
+    def is_overdue(self):
+        from django.utils import timezone
+
+        return self.due_date <= timezone.now().date() and self.status == "PENDING"

@@ -9,6 +9,7 @@ from .models import (
     BusinessVisit,
     Client,
     CustomUser,
+    FollowUp,
     MileageEntry,
     Quote,
     QuoteItem,
@@ -276,3 +277,24 @@ class BusinessVisitAdmin(admin.ModelAdmin):
         "cards_left",
     )
     list_filter = ("visit_type",)
+
+
+@admin.register(FollowUp)
+class FollowUpAdmin(admin.ModelAdmin):
+    list_display = ("due_date", "client_company", "status", "is_overdue")
+    list_filter = ("status", "due_date")
+    search_fields = ("notes",)
+
+    def client_company(self, obj):
+        if obj.quote:
+            return obj.quote.client.company or obj.quote.client.name
+        elif obj.client:
+            return obj.client.company or obj.client.name
+        return "No Client"
+
+    client_company.short_description = "Client"
+
+    def is_overdue(self, obj):
+        return obj.is_overdue
+
+    is_overdue.boolean = True
