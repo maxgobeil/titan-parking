@@ -3,6 +3,7 @@ Allow: /
 Disallow: /terms-of-service/
 Disallow: /invoice/
 Disallow: /invoice-html/
+Disallow: /client-pdf/
 
 # Sitemap location
 Sitemap: https://titanparking.ca/sitemap.xml

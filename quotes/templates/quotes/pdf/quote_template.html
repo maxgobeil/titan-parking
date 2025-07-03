@@ -13,7 +13,7 @@
         <img src="data:image/png;base64,{{ image_data }}" alt="Company Logo">
         <div class="business-info">
             <div class="business-info-status">
-                {% if quote.status == 'invoice' %}
+                {% if quote.is_invoice %}
                     FACTURE
                 {% else %}
                     SOUMISSION

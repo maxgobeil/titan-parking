@@ -7,6 +7,7 @@ from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render
 from django.template.loader import render_to_string
+from django.utils import timezone
 from weasyprint import HTML
 
 from .forms import ContactForm
@@ -340,3 +341,75 @@ def blog_detail(request, slug):
 @login_required
 def quote_calculator_view(request):
     return render(request, "pages/quote-calculator.html")
+
+
+def client_pdf(request, access_token):
+    quote = get_object_or_404(Quote, access_token=access_token)
+
+    if quote.expires_at < timezone.now():
+        return render(
+            request,
+            "quotes/pdf/quote_expired.html",
+            {"quote": quote, "expired_date": quote.expires_at},
+        )
+
+    # Update status to track if the quote has been viewed by the client
+    if quote.status == "sent":
+        quote.status = "quote_viewed"
+        quote.save()
+    elif quote.status == "invoice":
+        quote.status = "invoice_viewed"
+        quote.save()
+
+    image_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "templates",
+        "quotes",
+        "pdf",
+        "assets",
+        "invoice-header.png",
+    )
+    # Read CSS
+    css_path = os.path.join(
+        settings.BASE_DIR,
+        "quotes",
+        "templates",
+        "quotes",
+        "pdf",
+        "assets",
+        "quote_template.css",
+    )
+
+    import base64
+
+    with open(image_path, "rb") as f:
+        image_data = base64.b64encode(f.read()).decode()
+
+    with open(css_path) as f:
+        css_data = f.read()
+
+    context = {
+        "image_data": image_data,
+        "css_data": css_data,
+        "quote": quote,
+    }
+
+    # Render HTML content
+    html_string = render_to_string("quotes/pdf/quote_template.html", context)
+
+    if quote.is_invoice:
+        filename = f"facture-{quote.invoice_number}.pdf"
+    else:
+        filename = f"soumission-{quote.invoice_number}.pdf"
+
+    # Create PDF response
+    response = HttpResponse(content_type="application/pdf")
+    response["Content-Disposition"] = f'inline; filename="{filename}"'
+
+    response["X-Robots-Tag"] = "noindex, nofollow, noarchive, nosnippet"
+
+    # Generate PDF
+    HTML(string=html_string).write_pdf(response)
+
+    return response

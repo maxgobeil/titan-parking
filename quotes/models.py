@@ -129,6 +129,8 @@ class Quote(models.Model):
         ("draft", "Draft"),
         ("sent", "Sent to Client"),
         ("viewed", "Viewed by Client"),
+        ("quote_viewed", "Quote Viewed by Client"),
+        ("invoice_viewed", "Invoice Viewed by Client"),
         ("accepted", "Accepted"),
         ("declined", "Declined"),
         ("expired", "Expired"),
@@ -294,7 +296,7 @@ class Quote(models.Model):
         return new_quote
 
     def create_invoice(self):
-        if self.status != "accepted":
+        if not self.can_be_invoiced:
             raise ValueError("Can only create invoice from accepted quotes")
 
         invoice = Quote.objects.create(
@@ -371,11 +373,11 @@ class Quote(models.Model):
 
     @property
     def can_be_invoiced(self):
-        return self.status == "accepted"
+        return self.status in ["accepted", "sent", "viewed", "quote_viewed"]
 
     @property
     def is_invoice(self):
-        return self.status == "invoice"
+        return self.status in ["invoice", "invoice_viewed"]
 
 
 class QuoteItem(models.Model):
