@@ -1258,7 +1258,7 @@ msgstr "Numéro de téléphone"
 #: quotes/forms.py:36 quotes/templates/partials/home/footer.html:60
 #: quotes/templates/partials/home/services.html:26
 msgid "Parking Lot Striping"
-msgstr "Traçage de lignes de stationnement"
+msgstr "Marquage de lignes de stationnement"
 
 #: quotes/forms.py:37 quotes/templates/partials/home/footer.html:61
 #: quotes/templates/partials/home/services.html:37
@@ -1393,7 +1393,7 @@ msgid ""
 "Titan Parking - Professional line striping services in Quebec. We offer "
 "exceptional customer service."
 msgstr ""
-"Titan Parking - Traçage de lignes de stationnement au Québec. Nous offrons "
+"Titan Parking - Marquage de lignes de stationnement au Québec. Nous offrons "
 "un service exceptionnel."
 
 #: quotes/templates/base.html:14
@@ -1713,7 +1713,7 @@ msgstr ""
 
 #: quotes/templates/pages/index.html:5
 msgid "Professional Parking Lot Striping"
-msgstr "Traçage de lignes de stationnement"
+msgstr "Marquage de lignes de stationnement"
 
 #: quotes/templates/pages/privacy-policy.html:5
 #: quotes/templates/partials/schema/privacy-policy.html:6
@@ -2063,7 +2063,7 @@ msgid ""
 "Professional line striping services for parking lots and indoor spaces. "
 "Serving businesses with precision and reliability."
 msgstr ""
-"Service de traçage de lignes de stationnement extérieur et intérieur. Au "
+"Service de marquage de lignes de stationnement extérieur et intérieur. Au "
 "service des entreprises avec précision et fiabilité."
 
 #: quotes/templates/partials/home/footer.html:71
@@ -2133,11 +2133,11 @@ msgstr "Appeler"
 
 #: quotes/templates/partials/home/hero.html:20
 msgid "Professional Line Striping Services"
-msgstr "Services de traçage professionnels"
+msgstr "Services de marquage professionnels"
 
 #: quotes/templates/partials/home/hero.html:23
 msgid "Precision Line Striping for Your Parking Lot"
-msgstr "Traçage précis de vos lignes de stationnement"
+msgstr "Marquage précis de vos lignes de stationnement"
 
 #: quotes/templates/partials/home/hero.html:26
 msgid ""
@@ -2227,14 +2227,14 @@ msgstr "Nos services d'experts"
 
 #: quotes/templates/partials/home/services.html:13
 msgid "Complete Line Striping Solutions"
-msgstr "La solution complète en traçage de lignes"
+msgstr "La solution complète en marquage de lignes"
 
 #: quotes/templates/partials/home/services.html:15
 msgid ""
 "We deliver high-quality line striping services for commercial, industrial, "
 "and public sector properties"
 msgstr ""
-"Nous offrons les services de traçage de lignes de stationnement de haute "
+"Nous offrons les services de marquage de lignes de stationnement de haute "
 "qualité pour le secteur commercial, industriel et public."
 
 #: quotes/templates/partials/home/services.html:27
@@ -2406,7 +2406,7 @@ msgstr ""
 
 #: quotes/templates/partials/terms/terms.html:23
 msgid "Parking lot striping and restriping"
-msgstr "Traçage de lignes de stationnement;"
+msgstr "Marquage de lignes de stationnement;"
 
 #: quotes/templates/partials/terms/terms.html:24
 msgid "Accessibility parking"
@@ -2488,9 +2488,8 @@ msgstr ""
 "complet est exigé dès l'achèvement des travaux."
 
 #: quotes/templates/partials/terms/terms.html:49
-#, python-format
 msgid ""
-"For projects over $1,000: A 30%% deposit may be required before work begins, "
+"For projects over $1,000: A 30% deposit may be required before work begins, "
 "with the balance due upon completion."
 msgstr ""
 "Pour les projets totalisant un montant supérieur à 1000$: Un dépôt de "
@@ -2506,7 +2505,7 @@ msgstr ""
 #, python-format
 msgid ""
 "Invoices are due within 30 days of issuance. Late payments may incur a fee "
-"of 1.5%% per month."
+"of 1.5% per month."
 msgstr ""
 "Les factures sont dues dans les 30 jours suivant leur émission. Les retards "
 "de paiement peuvent entraîner des frais de 1,5% par mois. "
@@ -2697,11 +2696,11 @@ msgstr ""
 #: quotes/templates/partials/terms/terms.html:105
 #, python-format
 msgid ""
-"Cancellations made less than 48 hours before the scheduled start time: 25%% "
+"Cancellations made less than 48 hours before the scheduled start time: 25% "
 "of the quoted price may be charged to cover preparation costs."
 msgstr ""
 "Annulations effectuées moins de 48 heures avant l'heure de début prévue : "
-"25%% du prix soumissionné pourrait être facturé pour couvrir les frais de "
+"25% du prix soumissionné pourrait être facturé pour couvrir les frais de "
 "préparation."
 
 #: quotes/templates/partials/terms/terms.html:106
