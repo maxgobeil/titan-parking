@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Custom Layout Design - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}{% trans "Custom parking lot layout design services in Quebec. Professional space optimization, traffic flow analysis, and compliance design for maximum efficiency." %}{% endblock %}
+{% block og_title %}{% trans "Custom Parking Layout Design Services | Titan Parking" %}{% endblock %}
+{% block og_description %}{% trans "Optimize your parking space with custom layout design. We provide professional space planning, traffic flow optimization, and compliance solutions for businesses across Quebec." %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/custom-layout-design.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

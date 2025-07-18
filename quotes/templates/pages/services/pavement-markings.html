@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Pavement Markings - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}{% trans "Professional pavement marking services for roads, crosswalks, and traffic areas. Durable road striping, pedestrian crossings, and safety markings in Quebec." %}{% endblock %}
+{% block og_title %}{% trans "Professional Pavement Marking Services | Titan Parking" %}{% endblock %}
+{% block og_description %}{% trans "Professional pavement marking for roads and traffic areas. We provide durable crosswalk striping, stop lines, turn arrows, and safety markings for municipalities and businesses across Quebec." %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/pavement-markings.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

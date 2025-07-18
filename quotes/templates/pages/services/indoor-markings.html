@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Indoor Markings - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}{% trans "Professional indoor marking services for warehouses, factories, and industrial spaces. Safety zone markings, walkway delineation, and equipment area designation in Quebec." %}{% endblock %}
+{% block og_title %}{% trans "Professional Indoor Marking Services | Titan Parking" %}{% endblock %}
+{% block og_description %}{% trans "Enhance workplace safety with professional indoor markings. We provide safety zone markings, walkway delineation, and equipment area designation for industrial facilities across Quebec." %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/indoor-markings.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %} 

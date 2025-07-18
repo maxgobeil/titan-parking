@@ -22,7 +22,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const scrolledPages = ['/terms-of-service/', '/privacy-policy/', '/blog/', '/about-us/'];
+  const scrolledPages = [
+    '/terms-of-service/',
+    '/privacy-policy/',
+    '/blog/',
+    '/about-us/',
+    '/marquage-de-stationnement/',
+    '/marquage-interieur/',
+    '/marquage-au-sol/',
+    '/marquage-personnalise/',
+    '/restauration-de-lignes/',
+    '/retrait-de-lignes/',
+  ];
   const currentPath = window.location.pathname;
   const shouldBeScrolled = scrolledPages.some(
     (page) => currentPath.includes(page) || currentPath.endsWith(page.slice(0, -1)) // Handle with or without trailing slash

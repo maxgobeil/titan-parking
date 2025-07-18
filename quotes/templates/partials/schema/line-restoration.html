@@ -1,0 +1,28 @@
+{% load i18n %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{% trans 'Line Restoration' %}",
+  "description": "{% trans 'Professional line restoration services to refresh faded parking lot lines, renew safety markings, and restore visibility to existing pavement markings.' %}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "url": "https://titanparking.ca",
+    "telephone": "+14189554461",
+    "email": "contact@titanparking.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Drummondville",
+      "addressRegion": "Quebec",
+      "addressCountry": "CA"
+    }
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Quebec"
+  },
+  "serviceType": "{% trans 'Line Restoration' %}",
+  "category": "{% trans 'Line Maintenance Services' %}"
+}
+</script> 

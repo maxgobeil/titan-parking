@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Line Removal - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}{% trans "Professional line removal services in Quebec. Safe removal of old pavement markings, parking lot reconfiguration, and surface preparation for new layouts." %}{% endblock %}
+{% block og_title %}{% trans "Professional Line Removal Services | Titan Parking" %}{% endblock %}
+{% block og_description %}{% trans "Professional removal of old pavement markings and parking lines. We provide safe, complete line removal and surface preparation for layout changes across Quebec." %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/line-removal.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

@@ -13,11 +13,34 @@ urlpatterns = [
     path("blog/", views.blog_list, name="blog"),
     path("blog/search/", views.blog_search, name="blog_search"),
     path("blog/<slug:slug>/", views.blog_detail, name="blog_detail"),
-    path("about-us/", views.about_view, name="about-us"),
+    path("a-propos/", views.about_view, name="about-us"),
     # Temporary invoice url
     path("invoice/<int:pk>/", views.invoice_view_pdf, name="invoice_pdf"),
     path("invoice-html/<int:pk>/", views.invoice_view_html, name="invoice_html"),
     path("terms-pdf/", views.terms_view_pdf, name="terms_pdf"),
     path("quote-calculator/", views.quote_calculator_view, name="quote_calculator"),
     path("client-pdf/<str:access_token>/", views.client_pdf, name="client_pdf"),
+    # Services
+    path(
+        "marquage-de-stationnement/",
+        views.parking_lot_striping_view,
+        name="parking-lot-striping",
+    ),
+    path("marquage-interieur/", views.indoor_markings_view, name="indoor-markings"),
+    path(
+        "marquage-au-sol/",
+        views.pavement_markings_view,
+        name="pavement-markings",
+    ),
+    path(
+        "marquage-personnalise/",
+        views.custom_layout_design_view,
+        name="custom-layout-design",
+    ),
+    path(
+        "restauration-de-lignes/",
+        views.line_restoration_view,
+        name="line-restoration",
+    ),
+    path("retrait-de-lignes/", views.line_removal_view, name="line-removal"),
 ]

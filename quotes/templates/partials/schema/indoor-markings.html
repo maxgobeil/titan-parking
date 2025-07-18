@@ -1,0 +1,28 @@
+{% load i18n %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{% trans 'Indoor Markings' %}",
+  "description": "{% trans 'Professional indoor marking services for warehouses, factories, and industrial spaces including safety zone markings and walkway delineation.' %}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "url": "https://titanparking.ca",
+    "telephone": "+14189554461",
+    "email": "contact@titanparking.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Drummondville",
+      "addressRegion": "Quebec",
+      "addressCountry": "CA"
+    }
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Quebec"
+  },
+  "serviceType": "{% trans 'Indoor Markings' %}",
+  "category": "{% trans 'Industrial Safety Markings' %}"
+}
+</script> 

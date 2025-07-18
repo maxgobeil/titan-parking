@@ -1,0 +1,28 @@
+{% load i18n %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{% trans 'Pavement Markings' %}",
+  "description": "{% trans 'Professional pavement marking services for roads, crosswalks, and traffic areas including durable road striping and safety markings.' %}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "url": "https://titanparking.ca",
+    "telephone": "+14189554461",
+    "email": "contact@titanparking.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Drummondville",
+      "addressRegion": "Quebec",
+      "addressCountry": "CA"
+    }
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Quebec"
+  },
+  "serviceType": "{% trans 'Pavement Markings' %}",
+  "category": "{% trans 'Road Marking Services' %}"
+}
+</script> 

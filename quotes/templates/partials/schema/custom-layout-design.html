@@ -1,0 +1,28 @@
+{% load i18n %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{% trans 'Custom Layout Design' %}",
+  "description": "{% trans 'Custom parking lot layout design services including space optimization, traffic flow analysis, and compliance design for maximum efficiency.' %}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "url": "https://titanparking.ca",
+    "telephone": "+14189554461",
+    "email": "contact@titanparking.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Drummondville",
+      "addressRegion": "Quebec",
+      "addressCountry": "CA"
+    }
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Quebec"
+  },
+  "serviceType": "{% trans 'Custom Layout Design' %}",
+  "category": "{% trans 'Parking Design Services' %}"
+}
+</script> 

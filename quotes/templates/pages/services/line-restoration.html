@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Line Restoration - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}{% trans "Professional line restoration services in Quebec. Refresh faded parking lot lines, renew safety markings, and restore visibility to existing pavement markings." %}{% endblock %}
+{% block og_title %}{% trans "Professional Line Restoration Services | Titan Parking" %}{% endblock %}
+{% block og_description %}{% trans "Restore faded parking lines with professional line restoration services. We refresh existing markings, improve visibility, and maintain compliance for businesses across Quebec." %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/line-restoration.html" %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}

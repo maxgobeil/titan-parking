@@ -1,0 +1,28 @@
+{% load i18n %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{% trans 'Line Removal' %}",
+  "description": "{% trans 'Professional line removal services for safe removal of old pavement markings, parking lot reconfiguration, and surface preparation for new layouts.' %}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Titan Parking",
+    "url": "https://titanparking.ca",
+    "telephone": "+14189554461",
+    "email": "contact@titanparking.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Drummondville",
+      "addressRegion": "Quebec",
+      "addressCountry": "CA"
+    }
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Quebec"
+  },
+  "serviceType": "{% trans 'Line Removal' %}",
+  "category": "{% trans 'Line Removal Services' %}"
+}
+</script> 

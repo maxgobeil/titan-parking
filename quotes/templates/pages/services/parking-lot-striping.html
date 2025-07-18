@@ -1,0 +1,106 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Parking Lot Striping - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}{% trans "Professional parking lot striping services in Quebec. Expert line marking, compliance, and durable pavement striping for businesses. Get a free quote today!" %}{% endblock %}
+{% block og_title %}{% trans "Professional Parking Lot Striping Services | Titan Parking" %}{% endblock %}
+{% block og_description %}{% trans "Transform your parking lot with professional line striping services. We provide precise, durable parking space markings, handicap accessibility compliance, and traffic flow optimization for businesses across Quebec." %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/services-page.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/parking-lot-striping.html" %}
+{% endblock %}
+
+{% block content %}
+
+<section class="service-section">
+    <div class="service-container">
+            <div class="service-header">
+                <div class="badge">{% trans 'Our Services' %}</div>
+                <div class="service-title-group">
+                    <h1>{% trans 'Parking Lot Striping' %}</h1>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-content-top">
+                    <div class="service-content-top-left">
+                        <h2>{% trans 'Clean and Durable Line Striping for Well-Organized Parking Lots' %}</h2>
+                        <p>
+                            {% trans 'Parking lot striping is an essential step to ensure order, safety, and proper vehicle circulation on your properties. At Titan Parking, we specialize in tracing and marking straight, uniform, and durable lines for all types of parking lots: commercial, residential, industrial, or institutional.' %}
+                        </p>
+                        <p>
+                            {% trans 'Our parking line striping service maximizes space utilization while reducing the risk of confusion or collisions. Our technicians use precision equipment and high-performance paints designed to withstand Quebec conditions — rain, frost, abrasion, and heavy traffic.' %}
+                        </p>
+                        <p>
+                            {% trans 'Each parking line is applied with care, following standard dimensions or specific site requirements. Whether for perpendicular, angled, or parallel parking, our team ensures the striping is consistent, visible, and compliant with applicable standards.' %}
+                        </p>
+                    </div>
+                    <div class="service-content-top-right">
+                        <img src="{% static 'images/services/line-striping.jpg' %}" alt="{% trans 'Parking Lot Striping' %}" />
+                    </div>
+                </div>     
+            </div>
+    </div>
+</section>
+<section class="service-section section-bottom">
+    <div class="service-container">
+        <div class="bottom-card">
+            <div class="service-content-bottom">
+                <h2 class="service-content-bottom-title">Fast, Reliable Service Adapted to Your Reality</h2>
+                <p>
+                    {% trans 'Before each project, we conduct a visual surface inspection to assess the asphalt condition, identify old markings, and plan clear, structured striping. Our priority is to deliver clean work within the best timeframes while minimizing disruptions to your operations.' %}
+                </p>
+                <p>
+                    {% trans 'We offer:' %}
+                </p>
+                <ul>
+                    <li>{% trans 'Initial striping on new or resurfaced asphalt' %}</li>
+                    <li>{% trans 'Re-striping of existing faded lines' %}</li>
+                    <li>{% trans 'Line refreshing after sealant application' %}</li>
+                    <li>{% trans 'Space layout adjustments to optimize space utilization' %}</li>
+                </ul>
+                <p>
+                    {% trans 'We work with building owners, facility managers, and sealcoating contractors alike. Our team adapts to your schedule and on-site constraints.' %}
+                </p>
+                <p>
+                    {% trans 'Trust Titan Parking for clear, straight, and durable parking lot striping. Contact us now for a free estimate and quick handling of your project.' %}
+                </p>
+                <div class="service-bottom-cards">
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/phone.svg' %}
+                        </div>
+                        <h3>{% trans 'Get Your Free Quote' %}</h3>
+                        <p>{% trans 'Ready to transform your parking lot? Contact us today for a personalized estimate.' %}</p>
+                        <a href="#" class="card-btn">{% trans 'Contact Us' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/refresh.svg' %}
+                        </div>
+                        <h3>{% trans 'Line Restoration' %}</h3>
+                        <p>{% trans 'Refresh faded or damaged parking lines with our professional restoration service.' %}</p>
+                        <a href="#" class="card-btn">{% trans 'Learn More' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/ruler.svg' %}
+                        </div>
+                        <h3>{% trans 'Custom Layout Design' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our custom layout and design services.' %}</p>
+                        <a href="#" class="card-btn">{% trans 'Discover' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

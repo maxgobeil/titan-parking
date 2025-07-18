@@ -413,3 +413,27 @@ def client_pdf(request, access_token):
     HTML(string=html_string).write_pdf(response)
 
     return response
+
+
+def parking_lot_striping_view(request):
+    return render(request, "pages/services/parking-lot-striping.html")
+
+
+def indoor_markings_view(request):
+    return render(request, "pages/services/indoor-markings.html")
+
+
+def pavement_markings_view(request):
+    return render(request, "pages/services/pavement-markings.html")
+
+
+def custom_layout_design_view(request):
+    return render(request, "pages/services/custom-layout-design.html")
+
+
+def line_restoration_view(request):
+    return render(request, "pages/services/line-restoration.html")
+
+
+def line_removal_view(request):
+    return render(request, "pages/services/line-removal.html")
