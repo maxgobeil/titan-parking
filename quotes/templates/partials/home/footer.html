@@ -52,12 +52,12 @@
       <div class="footer-column">
         <h3 class="footer-heading">{% trans 'Our Services' %}</h3>
         <ul class="footer-list">
-          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Parking Lot Striping' %}</a></li>
-          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Indoor Markings' %}</a></li>
-          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Pavement Markings' %}</a></li>
-          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Custom Layout Design' %}</a></li>
-          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Line Restoration' %}</a></li>
-          <li><a href="{% url 'home' %}#services" class="footer-link">{% trans 'Line Removal' %}</a></li>
+          <li><a href="{% url 'parking-lot-striping' %}" class="footer-link">{% trans 'Parking Lot Striping' %}</a></li>
+          <li><a href="{% url 'indoor-markings' %}" class="footer-link">{% trans 'Indoor Markings' %}</a></li>
+          <li><a href="{% url 'pavement-markings' %}" class="footer-link">{% trans 'Pavement Markings' %}</a></li>
+          <li><a href="{% url 'custom-layout-design' %}" class="footer-link">{% trans 'Custom Layout Design' %}</a></li>
+          <li><a href="{% url 'line-restoration' %}" class="footer-link">{% trans 'Line Restoration' %}</a></li>
+          <li><a href="{% url 'line-removal' %}" class="footer-link">{% trans 'School Playground Markings' %}</a></li>
         </ul>
       </div>
       
@@ -98,6 +98,9 @@
     <div class="footer-bottom">
       <p class="copyright">
         © <script>document.write(new Date().getFullYear())</script> Titan Parking. {% trans 'All rights reserved.' %}
+      </p>
+      <p class="copyright">
+        RBQ: 5865-9798-01
       </p>
       <div class="legal-links">
         <a href="{% url 'privacy-policy' %}" class="legal-link">
