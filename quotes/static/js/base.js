@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
     '/terms-of-service/',
     '/privacy-policy/',
     '/blog/',
-    '/about-us/',
+    '/a-propos/',
     '/marquage-de-stationnement/',
     '/marquage-interieur/',
     '/marquage-au-sol/',
     '/marquage-personnalise/',
     '/restauration-de-lignes/',
-    '/retrait-de-lignes/',
+    '/jeux-exterieurs/',
   ];
   const currentPath = window.location.pathname;
   const shouldBeScrolled = scrolledPages.some(

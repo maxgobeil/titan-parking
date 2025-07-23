@@ -9,7 +9,7 @@
 {% block og_description %}{% trans "Enhance workplace safety with professional indoor markings. We provide safety zone markings, walkway delineation, and equipment area designation for industrial facilities across Quebec." %}{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<link rel="stylesheet" href="{% static 'css/services-page.css' %}" />
 {% endblock %}
 
 {% block schema %}
@@ -17,5 +17,91 @@
 {% endblock %}
 
 {% block content %}
+
+<section class="service-section">
+    <div class="service-container">
+            <div class="service-header">
+                <div class="badge">{% trans 'Our Services' %}</div>
+                <div class="service-title-group">
+                    <h1>{% trans 'Indoor Line Marking' %}</h1>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-content-top">
+                    <div class="service-content-top-left">
+                        <h2>{% trans 'Clear indoor markings for efficient and safe circulation' %}</h2>
+                        <p>
+                            {% trans 'In industrial, commercial, or institutional environments, indoor line marking plays a key role in ensuring safe movement, organized spaces, and improved productivity. At Titan Parking, we offer custom indoor marking services tailored to your facility’s layout and aligned with your operational needs.' %}
+                        </p>
+                        <p>
+                            {% trans 'Whether in a warehouse, underground parking, factory, or commercial garage, well-planned markings help define vehicle lanes, pedestrian zones, loading areas, and hazardous zones. This helps prevent accidents and facilitates safe, fluid circulation throughout the building.' %}
+                        </p>
+                        <p>
+                            {% trans 'We use specialized indoor paints that are low-odor, fast-drying, and resistant to repeated traffic from forklifts and pedestrians. Many clients ask us: What kind of paint is used for indoor concrete marking? We typically use epoxy or urethane-based products, depending on the surface and traffic, to ensure long-lasting durability. Others ask: Can the work be done outside of business hours? Absolutely. We provide flexible scheduling, including evening, overnight, and off-peak services, to minimize disruptions to your operations.' %}
+                        </p>
+                    </div>
+                    <div class="service-content-top-right">
+                        <img src="{% static 'images/services/warehouse-lines.webp' %}" alt="{% trans 'Parking Lot Striping' %}" />
+                    </div>
+                </div>     
+            </div>
+    </div>
+</section>
+<section class="service-section section-bottom">
+    <div class="service-container">
+        <div class="bottom-card">
+            <div class="service-content-bottom">
+                <h2 class="service-content-bottom-title">{% trans 'Tailored service for warehouses, indoor parking lots and industrial buildings'%}</h2>
+                <p>
+                    {% trans 'Every building has its own layout and challenges. That’s why we begin each project with a site analysis to understand your activities and suggest a clear and functional marking plan tailored to your flow and safety priorities.' %}
+                </p>
+                <p>
+                    {% trans 'Our indoor line marking services include:' %}
+                </p>
+                <ul>
+                    <li>{% trans 'Defining traffic lanes for vehicles and forklifts' %}</li>
+                    <li>{% trans 'Marking pedestrian walkways and safe crossings' %}</li>
+                    <li>{% trans 'Identifying loading and unloading zones' %}</li>
+                    <li>{% trans 'Organizing storage areas, waiting zones, and production lines' %}</li>
+                    <li>{% trans 'Painting parking lines in indoor or underground garages' %}</li>
+                    <li>{% trans 'Using color codes to identify zones or highlight hazards' %}</li>
+                    <li>{% trans 'Refreshing existing markings to maintain visibility and compliance' %}</li>
+                </ul>
+                <p>
+                    {% trans 'Our goal is to deliver safe, efficient, and durable results on time and with minimal disruption. With our flexible, professional approach, Titan Parking is your trusted partner for all your indoor marking projects.' %}
+                </p>
+                <div class="service-bottom-cards">
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/phone.svg' %}
+                        </div>
+                        <h3>{% trans 'Get Your Free Quote' %}</h3>
+                        <p>{% trans 'Ready to transform your indoor space? Contact us today for a personalized estimate.' %}</p>
+                        <a href="{% url 'home' %}#contact" class="card-btn">{% trans 'Contact Us' %}</a>
+                    </div>
+                    
+                     <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/refresh.svg' %}
+                        </div>
+                        <h3>{% trans 'Parking Lot Striping' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our parking lot striping services.' %}</p>
+                        <a href="{% url 'parking-lot-striping' %}" class="card-btn">{% trans 'Learn More' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/ruler.svg' %}
+                        </div>
+                        <h3>{% trans 'Pavement Markings' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our pavement markings services.' %}</p>
+                        <a href="{% url 'pavement-markings' %}" class="card-btn">{% trans 'Discover' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %} 

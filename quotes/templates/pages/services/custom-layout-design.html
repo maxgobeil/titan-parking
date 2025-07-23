@@ -9,7 +9,7 @@
 {% block og_description %}{% trans "Optimize your parking space with custom layout design. We provide professional space planning, traffic flow optimization, and compliance solutions for businesses across Quebec." %}{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<link rel="stylesheet" href="{% static 'css/services-page.css' %}" />
 {% endblock %}
 
 {% block schema %}
@@ -17,5 +17,99 @@
 {% endblock %}
 
 {% block content %}
+
+<section class="service-section">
+    <div class="service-container">
+            <div class="service-header">
+                <div class="badge">{% trans 'Our Services' %}</div>
+                <div class="service-title-group">
+                    <h1>{% trans 'Custom Pavement Markings' %}</h1>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-content-top">
+                    <div class="service-content-top-left">
+                        <h2>{% trans 'Tailor-made line painting: our expertise, your brand on the ground' %}</h2>
+                        <p>
+                            {% trans 'At Titan Parking, we go beyond standard line painting. Thanks to our direct partnership with our sister company, Nordik Stencil, we are one of the few providers in the industry that designs and manufactures our own industrial marking stencils. This gives us full control over the creative process, ensuring custom pavement markings that meet your specific needs, without compromising on quality, speed, or originality.' %}
+                        </p>
+                        <p>
+                            {% trans "Wondering if it's possible to paint your company logo or a custom symbol on the pavement? The answer is yes. We create fully personalized ground markings aligned with your brand identity, whether for parking lots, entrances, sidewalks, or indoor traffic zones. As both stencil makers and marking experts, we can turn even the most unique requests into reality—efficiently and accurately." %}
+                        </p>
+                        <p>
+                            {% trans 'We offer this custom service to businesses, municipalities, schools, public institutions, and construction sites looking for functional, visually distinctive ground signage.' %}
+                        </p>
+                    </div>
+                    <div class="service-content-top-right">
+                        <img src="{% static 'images/services/custom-layout.webp' %}" alt="{% trans 'Parking Lot Striping' %}" />
+                    </div>
+                </div>     
+            </div>
+    </div>
+</section>
+<section class="service-section section-bottom">
+    <div class="service-container">
+        <div class="bottom-card">
+            <div class="service-content-bottom">
+                <h2 class="service-content-bottom-title">{% trans 'A creative, durable, and branded solution' %}</h2>
+                <p>
+                    {% trans 'Custom pavement marking goes far beyond regulatory signage. It can transform a space, improve wayfinding, reinforce brand identity, or meet specific safety or accessibility requirements. Wondering how to paint a message or graphic on the pavement using specific colors or shapes? That’s exactly what we specialize in. Whether outdoors (loading docks, parking lots, sidewalks) or indoors (warehouses, sports facilities, lobbies), we have the tools and expertise to bring your vision to life.' %}
+                </p>
+                <p>
+                    {% trans 'Here are just a few examples of custom markings we regularly provide:' %}
+                </p>
+                <ul>
+                    <li>{% trans 'Company logos in parking lots or building entrances' %}</li>
+                    <li>{% trans 'Branded wayfinding signage in malls, campuses, or tourist areas' %}</li>
+                    <li>{% trans 'Custom pictograms for sorting zones, themed areas, or institutional needs' %}</li>
+                    <li>{% trans 'Text-based messages to inform, guide, or direct foot traffic' %}</li>
+                    <li>{% trans 'Temporary or creative markings for corporate events or festivals' %}</li>
+                    <li>{% trans 'Custom colors and typography aligned with your brand guidelines' %}</li>
+                </ul>
+                <h2 class="service-content-bottom-title">
+                    {% trans 'How long does custom pavement marking take? ' %}
+                </h2>
+                <p>
+                    {% trans 'Each project starts with a quick design consultation. We help you choose the right layout, dimensions, paint colors, and materials. Then we manufacture the stencil in-house, which eliminates delays from external suppliers. Finally, our expert team applies the markings with precision using durable, weather-resistant paint, suited to the intended surface and usage.' %}
+                </p>
+                <p>
+                    {% trans 'Trust Titan Parking for ground markings that reflect your brand. With full control over both stencil production and field application, we are your all-in-one partner for custom pavement marking solutions.' %}
+                </p>
+                <p>
+                    {% trans 'Contact us today for a fast quote and bring your ideas to life, without compromise.' %}
+                </p>
+                <div class="service-bottom-cards">
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/phone.svg' %}
+                        </div>
+                        <h3>{% trans 'Get Your Free Quote' %}</h3>
+                        <p>{% trans 'Ready to transform your parking lot? Contact us today for a personalized estimate.' %}</p>
+                        <a href="{% url 'home' %}#contact" class="card-btn">{% trans 'Contact Us' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/refresh.svg' %}
+                        </div>
+                        <h3>{% trans 'Parking Lot Striping' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our parking lot striping services.' %}</p>
+                        <a href="{% url 'parking-lot-striping' %}" class="card-btn">{% trans 'Learn More' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/ruler.svg' %}
+                        </div>
+                        <h3>{% trans 'Pavement Markings' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our pavement markings services.' %}</p>
+                        <a href="{% url 'pavement-markings' %}" class="card-btn">{% trans 'Discover' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

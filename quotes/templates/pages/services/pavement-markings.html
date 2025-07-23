@@ -9,7 +9,7 @@
 {% block og_description %}{% trans "Professional pavement marking for roads and traffic areas. We provide durable crosswalk striping, stop lines, turn arrows, and safety markings for municipalities and businesses across Quebec." %}{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<link rel="stylesheet" href="{% static 'css/services-page.css' %}" />
 {% endblock %}
 
 {% block schema %}
@@ -17,5 +17,103 @@
 {% endblock %}
 
 {% block content %}
+
+<section class="service-section">
+    <div class="service-container">
+            <div class="service-header">
+                <div class="badge">{% trans 'Our Services' %}</div>
+                <div class="service-title-group">
+                    <h1>{% trans 'Pavement Marking' %}</h1>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-content-top">
+                    <div class="service-content-top-left">
+                        <h2>{% trans 'Clear and compliant road markings to guide and protect' %}</h2>
+                        <p>
+                            {% trans 'Pavement marking plays a key role in organizing traffic, enhancing safety, and improving user navigation. Whether it’s for a private road, a commercial access lane, or a bike path, well-executed line painting reduces the risk of accidents and ensures smooth, predictable circulation. At Titan Parking, we provide professional pavement marking services that fully comply with Quebec’s Ministry of Transportation (MTQ) standards and municipal regulations.' %}
+                        </p>
+                        <p>
+                            {% trans 'Our team can apply all types of ground markings: directional arrows, letters, numbers, regulatory symbols, no-parking zones, and more. We use standardized templates for consistent, high-precision application and high-performance road paints built to withstand Quebec’s harsh climate, including UV, snow, salt, and tire wear.' %}
+                        </p>
+                        <p>
+                            {% trans 'Wondering if this service applies to private properties too? Absolutely. Whether you manage a municipality, business, construction site, or residential complex, we tailor our solutions to every setting: access roads, private streets, school drop-off zones, and commercial parking lots.' %}
+                        </p>
+                    </div>
+                    <div class="service-content-top-right">
+                        <img src="{% static 'images/services/handicap.webp' %}" alt="{% trans 'Parking Lot Striping' %}" />
+                    </div>
+                </div>     
+            </div>
+    </div>
+</section>
+<section class="service-section section-bottom">
+    <div class="service-container">
+        <div class="bottom-card">
+            <div class="service-content-bottom">
+                <h2 class="service-content-bottom-title">{% trans 'Custom Markings for Your Needs and Environment' %}</h2>
+                <p>
+                    {% trans 'Before any work begins, we carry out an on-site evaluation to understand your goals, assess surface conditions, and recommend the best pavement marking approach for your location. Every project is customized to meet your traffic flow, safety, and visibility requirements.' %}
+                </p>
+                <p>
+                    {% trans 'Here are some common pavement markings we provide:' %}
+                </p>
+                <ul>
+                    <li>{% trans 'Directional arrows (all sizes)' %}</li>
+                    <li>{% trans 'Ground lettering: "STOP", "ENTRANCE", "EXIT", etc.' %}</li>
+                    <li>{% trans 'Numbered parking stalls or unit designations' %}</li>
+                    <li>{% trans 'Regulatory symbols: bike, no parking, loading, etc.' %}</li>
+                    <li>{% trans 'Hatched/zebra zones for restricted areas' %}</li>
+                    <li>{% trans 'Lane or zone boundary lines' %}</li>
+                    <li>{% trans 'Custom pictograms tailored to specific needs' %}</li>
+                </ul>
+                <p>
+                    {% trans 'We also offer line repainting and restoration, especially after resurfacing or redesign work. A common question we get is:' %}
+                </p>
+                <h2 class="service-content-bottom-title">
+                    {% trans 'How long do pavement markings last?' %}
+                </h2>
+                <p>
+                    {% trans 'With quality materials and periodic upkeep, road markings can remain visible and effective for several years.' %}
+                </p>
+                <p>
+                    {% trans 'With Titan Parking, you get clear, long-lasting, regulation-compliant pavement markings that enhance safety and organization.' %}
+                </p>
+                <p>
+                    {% trans 'Contact us today for a fast quote and a service adapted to your site’s specific needs.' %}
+                </p>
+                <div class="service-bottom-cards">
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/phone.svg' %}
+                        </div>
+                        <h3>{% trans 'Get Your Free Quote' %}</h3>
+                        <p>{% trans 'Ready to transform your parking lot? Contact us today for a personalized estimate.' %}</p>
+                        <a href="{% url 'home' %}#contact" class="card-btn">{% trans 'Contact Us' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/refresh.svg' %}
+                        </div>
+                        <h3>{% trans 'Parking Lot Striping' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our parking lot striping services.' %}</p>
+                        <a href="{% url 'parking-lot-striping' %}" class="card-btn">{% trans 'Learn More' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/ruler.svg' %}
+                        </div>
+                        <h3>{% trans 'Line Restoration' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our line restoration services.' %}</p>
+                        <a href="{% url 'line-restoration' %}" class="card-btn">{% trans 'Discover' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}

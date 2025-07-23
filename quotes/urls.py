@@ -42,5 +42,5 @@ urlpatterns = [
         views.line_restoration_view,
         name="line-restoration",
     ),
-    path("retrait-de-lignes/", views.line_removal_view, name="line-removal"),
+    path("jeux-exterieurs/", views.playground_view, name="playground"),
 ]

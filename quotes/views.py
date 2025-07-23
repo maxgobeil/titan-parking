@@ -435,5 +435,5 @@ def line_restoration_view(request):
     return render(request, "pages/services/line-restoration.html")
 
 
-def line_removal_view(request):
-    return render(request, "pages/services/line-removal.html")
+def playground_view(request):
+    return render(request, "pages/services/playground.html")

@@ -52,7 +52,7 @@
     <div class="service-container">
         <div class="bottom-card">
             <div class="service-content-bottom">
-                <h2 class="service-content-bottom-title">Fast, Reliable Service Adapted to Your Reality</h2>
+                <h2 class="service-content-bottom-title">{% trans 'Fast, Reliable Service Adapted to Your Reality' %}</h2>
                 <p>
                     {% trans 'Before each project, we conduct a visual surface inspection to assess the asphalt condition, identify old markings, and plan clear, structured striping. Our priority is to deliver clean work within the best timeframes while minimizing disruptions to your operations.' %}
                 </p>
@@ -78,7 +78,7 @@
                         </div>
                         <h3>{% trans 'Get Your Free Quote' %}</h3>
                         <p>{% trans 'Ready to transform your parking lot? Contact us today for a personalized estimate.' %}</p>
-                        <a href="#" class="card-btn">{% trans 'Contact Us' %}</a>
+                        <a href="{% url 'home' %}#contact" class="card-btn">{% trans 'Contact Us' %}</a>
                     </div>
                     
                     <div class="bottom-card-item">
@@ -87,16 +87,16 @@
                         </div>
                         <h3>{% trans 'Line Restoration' %}</h3>
                         <p>{% trans 'Refresh faded or damaged parking lines with our professional restoration service.' %}</p>
-                        <a href="#" class="card-btn">{% trans 'Learn More' %}</a>
+                        <a href="{% url 'line-restoration' %}" class="card-btn">{% trans 'Learn More' %}</a>
                     </div>
                     
                     <div class="bottom-card-item">
                         <div class="card-icon">
                             {% include 'icons/ruler.svg' %}
                         </div>
-                        <h3>{% trans 'Custom Layout Design' %}</h3>
-                        <p>{% trans 'Optimize your parking space with our custom layout and design services.' %}</p>
-                        <a href="#" class="card-btn">{% trans 'Discover' %}</a>
+                        <h3>{% trans 'Pavement Markings' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our pavement markings services.' %}</p>
+                        <a href="{% url 'pavement-markings' %}" class="card-btn">{% trans 'Discover' %}</a>
                     </div>
                 </div>
             </div>

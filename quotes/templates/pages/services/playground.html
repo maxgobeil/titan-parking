@@ -1,0 +1,111 @@
+{% extends "base.html" %} 
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans 'Playground Marking - Titan Parking' %}{% endblock %}
+
+{% block meta_description %}{% trans "Professional playground marking services in Quebec. We provide complete playground marking services for schools, parks, and playgrounds across Quebec." %}{% endblock %}
+{% block og_title %}{% trans "Professional Playground Marking Services | Titan Parking" %}{% endblock %}
+{% block og_description %}{% trans "Professional playground marking services in Quebec. We provide complete playground marking services for schools, parks, and playgrounds across Quebec." %}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/services-page.css' %}" />
+{% endblock %}
+
+{% block schema %}
+{% include "partials/schema/playground.html" %}
+{% endblock %}
+
+{% block content %}
+
+<section class="service-section">
+    <div class="service-container">
+            <div class="service-header">
+                <div class="badge">{% trans 'Our Services' %}</div>
+                <div class="service-title-group">
+                    <h1>{% trans 'Playground & Sports Court Markings' %}</h1>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-content-top">
+                    <div class="service-content-top-left">
+                        <h2>{% trans 'Durable, safe, and educational markings for schools and outdoor play areas' %}</h2>
+                        <p>
+                            {% trans 'Looking to transform a schoolyard with playground games or wondering how to paint an outdoor pickleball or basketball court? At Titan Parking, we offer a complete outdoor game marking service for schoolyards, municipal parks, and private sports facilities. With our custom stencil production through our sister company Nordik Stencil, we deliver custom projects that are durable, safe, and tailored to each environment.' %}
+                        </p>
+                        <p>
+                            {% trans "We regularly work with elementary schools, school service centers, municipalities, and sports centers. All our markings are compliant with current safety standards and made with non-toxic, slip-resistant, UV-resistant paints designed to withstand Quebec's tough weather conditions." %}
+                        </p>
+                        <p>
+                            {% trans "Whether it's for educational playground games, motor skill paths, or official sports court lines, our mission is simple: to create fun, safe, and well-organized outdoor spaces." %}
+                        </p>
+                    </div>
+                    <div class="service-content-top-right">
+                        <img src="{% static 'images/services/sport-court.webp' %}" alt="{% trans 'Parking Lot Striping' %}" />
+                    </div>
+                </div>     
+            </div>
+    </div>
+</section>
+<section class="service-section section-bottom">
+    <div class="service-container">
+        <div class="bottom-card">
+            <div class="service-content-bottom">
+                <h2 class="service-content-bottom-title">{% trans 'A turnkey solution for playful and sports-friendly environments' %}</h2>
+                <p>
+                    {% trans 'Schoolyard markings help create interactive play zones, organize movement, and encourage physical activity. Outdoor sports court markings let you set up or refresh playing areas for basketball, pickleball, floor hockey, volleyball, and more, always following official dimensions.' %}
+                </p>
+                <p>
+                    {% trans 'What kind of playground games can we paint on asphalt? How to mark a sports court? Here are some of our most popular markings:' %}
+                </p>
+                <ul>
+                    <li>{% trans 'Classic games for kids: hopscotch, snakes and ladders, targets, mazes' %}</li>
+                    <li>{% trans 'Motor skill circuits and cooperative educational games' %}</li>
+                    <li>{% trans 'Lines for pickleball, basketball, mini-soccer, floor hockey courts' %}</li>
+                    <li>{% trans 'Safety zones: waiting lines, walking paths, drop-off areas' %}</li>
+                    <li>{% trans 'Refreshing old playground markings or adding temporary game zones' %}</li>
+                </ul>
+                <p>
+                    {% trans "Before starting any project, our team visits the site to assess space, surface type (asphalt, concrete, etc.), and specific needs. We'll then recommend the best games or sports lines to install, taking into account the age of users, educational goals, sports priorities, and available budget." %}
+                </p>
+                <p>
+                    {% trans "Our work is flexibly scheduled, during school breaks, pedagogical days, evenings, or weekends, to avoid disrupting regular activities. We stick to deadlines, provide quick estimates, and deliver flawless results." %}
+                </p>
+                <p>
+                    {% trans "With Titan Parking, transform your outdoor space into a dynamic, safe, and engaging zone for kids and athletes. Whether you want to brighten up a schoolyard or mark an official sport court, we're your trusted partner." %}
+                </p>
+                <div class="service-bottom-cards">
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/phone.svg' %}
+                        </div>
+                        <h3>{% trans 'Get Your Free Quote' %}</h3>
+                        <p>{% trans 'Ready to transform your parking lot? Contact us today for a personalized estimate.' %}</p>
+                        <a href="{% url 'home' %}#contact" class="card-btn">{% trans 'Contact Us' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/ruler.svg' %}
+                        </div>
+                        <h3>{% trans 'Pavement Markings' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our pavement markings services.' %}</p>
+                        <a href="{% url 'pavement-markings' %}" class="card-btn">{% trans 'Discover' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/refresh.svg' %}
+                        </div>
+                        <h3>{% trans 'Parking Lot Striping' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our parking lot striping services.' %}</p>
+                        <a href="{% url 'parking-lot-striping' %}" class="card-btn">{% trans 'Learn More' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

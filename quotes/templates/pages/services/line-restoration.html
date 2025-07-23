@@ -9,7 +9,7 @@
 {% block og_description %}{% trans "Restore faded parking lines with professional line restoration services. We refresh existing markings, improve visibility, and maintain compliance for businesses across Quebec." %}{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+<link rel="stylesheet" href="{% static 'css/services-page.css' %}" />
 {% endblock %}
 
 {% block schema %}
@@ -17,5 +17,98 @@
 {% endblock %}
 
 {% block content %}
+
+<section class="service-section">
+    <div class="service-container">
+            <div class="service-header">
+                <div class="badge">{% trans 'Our Services' %}</div>
+                <div class="service-title-group">
+                    <h1>{% trans 'Line Restoration' %}</h1>
+                </div>
+            </div>
+
+            <div class="service-content">
+                <div class="service-content-top">
+                    <div class="service-content-top-left">
+                        <h2>{% trans 'Bring your pavement markings back to life with our professional line restoration service' %}</h2>
+                        <p>
+                            {% trans 'Over time, parking lines, directional arrows, pictograms, and pedestrian zones naturally fade due to seasonal changes, heavy vehicle traffic, and harsh weather. Wondering how to repaint worn-out parking lot lines? At Titan Parking, we offer a fast, precise, and long-lasting line restoration service that gives your asphalt surfaces a fresh, safe, and professional look.' %}
+                        </p>
+                        <p>
+                            {% trans "Faded line markings don't just affect safety, they can also reflect poorly on your business or property. Our parking line repainting service helps businesses, schools, institutions, and property managers improve curb appeal, enhance traffic flow, reduce incident risks, and stay compliant with current standards." %}
+                        </p>
+                        <p>
+                            {% trans 'We use high-performance paints designed to resist salt, UV rays, and harsh Quebec winters. Depending on the condition of the existing markings, our team can either paint over the faded lines or prepare the surface for a cleaner, more uniform result.' %}
+                        </p>
+                    </div>
+                    <div class="service-content-top-right">
+                        <img src="{% static 'images/services/line-restauration.webp' %}" alt="{% trans 'Parking Lot Striping' %}" />
+                    </div>
+                </div>     
+            </div>
+    </div>
+</section>
+<section class="service-section section-bottom">
+    <div class="service-container">
+        <div class="bottom-card">
+            <div class="service-content-bottom">
+                <h2 class="service-content-bottom-title">{% trans 'Essential maintenance for safety, appearance, and compliance' %}</h2>
+                <p>
+                    {% trans 'Want to repaint faded parking lines without redoing the entire layout? In most cases, it’s entirely possible. Line repainting is a simple, effective, and affordable solution to extend the life of your pavement markings without starting from scratch.' %}
+                </p>
+                <p>
+                    {% trans 'Our services are available for retail businesses, corporate lots, schools, municipalities, property managers, and asphalt contractors. Whether you need to refresh parking stalls, loading zones, pedestrian crossings, or accessibility symbols, we deliver efficient results, even on large surfaces.' %}
+                </p>
+                <p>
+                    {% trans 'Our line restoration services include:' %}
+                </p>
+                <ul>
+                    <li>{% trans 'Repainting of faded parking lines' %}</li>
+                    <li>{% trans 'Refreshing regulatory symbols and pictograms' %}</li>
+                    <li>{% trans 'Restoring pedestrian and safety zones' %}</li>
+                    <li>{% trans 'Realignment or correction of existing markings' %}</li>
+                    <li>{% trans 'Seasonal or annual maintenance programs' %}</li>
+                </ul>
+                <h2 class="service-content-bottom-title">
+                    {% trans 'When should you repaint your parking lot?' %}
+                </h2>
+                <p>
+                    {% trans 'We recommend repainting once or twice a year, depending on traffic volume and weather exposure. All our services are scheduled to minimize disruption. We can work overnight, on weekends, or during off-peak hours. Before every job, we conduct a full assessment to determine the best technical approach.' %}
+                </p>
+                <p>
+                    {% trans 'Restore clarity, safety, and professionalism to your pavement markings with Titan Parking. Fresh, visible lines make all the difference.' %}
+                </p>
+                <div class="service-bottom-cards">
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/phone.svg' %}
+                        </div>
+                        <h3>{% trans 'Get Your Free Quote' %}</h3>
+                        <p>{% trans 'Contact us today for a fast, free quote. Your lines have never looked this sharp!' %}</p>
+                        <a href="{% url 'home' %}#contact" class="card-btn">{% trans 'Contact Us' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/ruler.svg' %}
+                        </div>
+                        <h3>{% trans 'Pavement Markings' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our pavement markings services.' %}</p>
+                        <a href="{% url 'pavement-markings' %}" class="card-btn">{% trans 'Discover' %}</a>
+                    </div>
+                    
+                    <div class="bottom-card-item">
+                        <div class="card-icon">
+                            {% include 'icons/refresh.svg' %}
+                        </div>
+                        <h3>{% trans 'Parking Lot Striping' %}</h3>
+                        <p>{% trans 'Optimize your parking space with our parking lot striping services.' %}</p>
+                        <a href="{% url 'parking-lot-striping' %}" class="card-btn">{% trans 'Learn More' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
