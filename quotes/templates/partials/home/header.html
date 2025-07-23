@@ -21,9 +21,24 @@
       
       <!-- Desktop Navigation -->
       <nav class="desktop-nav">
-        <a href="{% url 'home' %}#services" class="nav-link">{% trans 'Services' %}</a>
+        <!-- Services Dropdown -->
+        <div class="dropdown">
+          <button class="dropbtn">{% trans 'Services' %} 
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-chevron-down">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="dropdown-content">
+            <a href="{% url 'parking-lot-striping' %}">{% trans 'Parking Lot Striping' %}</a>
+            <a href="{% url 'indoor-markings' %}">{% trans 'Indoor Markings' %}</a>
+            <a href="{% url 'pavement-markings' %}">{% trans 'Pavement Markings' %}</a>
+            <a href="{% url 'custom-layout-design' %}">{% trans 'Custom Layout Design' %}</a>
+            <a href="{% url 'line-restoration' %}">{% trans 'Line Restoration' %}</a>
+            <a href="{% url 'playground' %}">{% trans 'School Playground Markings' %}</a>
+          </div>
+        </div>
         
-        <!-- Dropdown Menu -->
+        <!-- More Dropdown -->
         <div class="dropdown">
           <button class="dropbtn">{% trans 'More' %} 
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-chevron-down">
@@ -87,17 +102,33 @@
       </svg>
     </button>
     <div class="mobile-nav-content">
-      <a href="{% url 'home' %}#services" class="mobile-nav-link">{% trans 'Services' %}</a>
-      
-      <!-- Mobile Dropdown -->
+      <!-- Mobile Services Dropdown -->
       <div class="mobile-dropdown">
-        <button class="mobile-dropbtn">
+        <button class="mobile-dropbtn mobile-services-btn">
+          {% trans 'Services' %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-chevron-down">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+        <div class="mobile-dropdown-content mobile-services-content">
+          <a href="{% url 'parking-lot-striping' %}" class="mobile-nav-link">{% trans 'Parking Lot Striping' %}</a>
+          <a href="{% url 'indoor-markings' %}" class="mobile-nav-link">{% trans 'Indoor Markings' %}</a>
+          <a href="{% url 'pavement-markings' %}" class="mobile-nav-link">{% trans 'Pavement Markings' %}</a>
+          <a href="{% url 'custom-layout-design' %}" class="mobile-nav-link">{% trans 'Custom Layout Design' %}</a>
+          <a href="{% url 'line-restoration' %}" class="mobile-nav-link">{% trans 'Line Restoration' %}</a>
+          <a href="{% url 'playground' %}" class="mobile-nav-link">{% trans 'School Playground Markings' %}</a>
+        </div>
+      </div>
+      
+      <!-- Mobile More Dropdown -->
+      <div class="mobile-dropdown">
+        <button class="mobile-dropbtn mobile-more-btn">
           {% trans 'More' %}
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-chevron-down">
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         </button>
-        <div class="mobile-dropdown-content">
+        <div class="mobile-dropdown-content mobile-more-content">
           <a href="{% url 'home' %}#why-choose-us" class="mobile-nav-link">{% trans 'Why Choose Us' %}</a>
           <a href="{% url 'home' %}#gallery" class="mobile-nav-link">{% trans 'Our Work' %}</a>
           <a href="{% url 'about-us' %}" class="mobile-nav-link">{% trans 'About Us' %}</a>
