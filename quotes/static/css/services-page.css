@@ -262,3 +262,182 @@
   background-color: white;
   transform: translateY(-2px);
 }
+
+/* Tablet Styles */
+@media (max-width: 968px) {
+  .badge {
+    margin-top: 2rem;
+  }
+
+  .service-section {
+    padding: 4rem 0;
+  }
+
+  .service-container {
+    padding: 0 1.5rem;
+  }
+
+  .service-content {
+    padding: 2rem;
+  }
+
+  .service-content-top {
+    gap: 1.5rem;
+  }
+
+  .service-content-top-left {
+    width: 55%;
+  }
+
+  .service-content-top-right {
+    width: 45%;
+    height: 300px;
+  }
+
+  .service-title-group h1 {
+    font-size: 2.2rem;
+  }
+
+  .service-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .badge {
+    margin-top: 3rem;
+  }
+
+  .service-section {
+    padding: 3rem 0;
+  }
+
+  .service-container {
+    padding: 0 1rem;
+  }
+
+  .service-content {
+    padding: 1.5rem;
+  }
+
+  .service-content-top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .service-content-top-left,
+  .service-content-top-right {
+    width: 100%;
+  }
+
+  .service-content-top-right {
+    height: 250px;
+    order: -1; /* Move image above text on mobile */
+  }
+
+  .service-content-top-right img {
+    border-radius: 0.5rem;
+  }
+
+  .service-title-group h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .service-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .service-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .bottom-card {
+    padding: 1.5rem;
+  }
+
+  .service-content-bottom-title {
+    font-size: 1.4rem;
+  }
+
+  .service-content-bottom p {
+    font-size: 0.95rem;
+  }
+
+  .service-bottom-cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .bottom-card-item {
+    padding: 1.5rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .badge {
+    margin-top: 4.5rem;
+  }
+  .service-section {
+    padding: 2rem 0;
+  }
+
+  .service-container {
+    padding: 0 0.75rem;
+  }
+
+  .service-content {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .service-content-top-right {
+    height: 200px;
+  }
+
+  .service-title-group h1 {
+    font-size: 1.5rem;
+  }
+
+  .service-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .service-content p,
+  .service-content-bottom p {
+    font-size: 0.9rem;
+  }
+
+  .bottom-card {
+    padding: 1rem;
+  }
+
+  .service-content-bottom-title {
+    font-size: 1.2rem;
+  }
+
+  .bottom-card-item {
+    padding: 1rem;
+  }
+
+  .bottom-card-item h3 {
+    font-size: 1.2rem;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+}

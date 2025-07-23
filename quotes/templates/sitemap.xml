@@ -40,20 +40,20 @@
 
   <!-- About Us Page -->
   <url>
-    <loc>https://titanparking.ca/about-us/</loc>
+    <loc>https://titanparking.ca/a-propos/</loc>
     <lastmod>2025-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/about-us/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://titanparking.ca/a-propos/" />
   </url>
 
   <!-- English About Us Page -->
   <url>
-    <loc>https://titanparking.ca/en/about-us/</loc>
+    <loc>https://titanparking.ca/en/a-propos/</loc>
     <lastmod>2025-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/about-us/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://titanparking.ca/en/a-propos/" />
   </url>
 
   <!-- Blog Index Page -->
