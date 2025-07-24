@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-22 21:10-0400\n"
+"POT-Creation-Date: 2025-07-24 09:57-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1265,7 +1265,7 @@ msgstr "Numéro de téléphone"
 #: quotes/templates/pages/services/parking-lot-striping.html:26
 #: quotes/templates/pages/services/parking-lot-striping.html:45
 #: quotes/templates/pages/services/pavement-markings.html:45
-#: quotes/templates/pages/services/pavement-markings.html:100
+#: quotes/templates/pages/services/pavement-markings.html:97
 #: quotes/templates/pages/services/playground.html:45
 #: quotes/templates/pages/services/playground.html:101
 #: quotes/templates/partials/home/footer.html:55
@@ -1312,7 +1312,7 @@ msgstr "Marquage au sol personnalisé"
 
 #: quotes/forms.py:40 quotes/templates/pages/services/line-restoration.html:26
 #: quotes/templates/pages/services/parking-lot-striping.html:88
-#: quotes/templates/pages/services/pavement-markings.html:109
+#: quotes/templates/pages/services/pavement-markings.html:106
 #: quotes/templates/partials/home/footer.html:59
 #: quotes/templates/partials/home/header.html:36
 #: quotes/templates/partials/home/header.html:118
@@ -1938,7 +1938,7 @@ msgstr "Vous désinscrire des communications futures de notre part"
 #: quotes/templates/pages/services/indoor-markings.html:81
 #: quotes/templates/pages/services/line-restoration.html:88
 #: quotes/templates/pages/services/parking-lot-striping.html:81
-#: quotes/templates/pages/services/pavement-markings.html:93
+#: quotes/templates/pages/services/pavement-markings.html:90
 #: quotes/templates/pages/services/playground.html:85
 #: quotes/templates/partials/home/contact.html:14
 msgid "Contact Us"
@@ -1983,7 +1983,10 @@ msgid ""
 "Custom parking lot layout design services in Quebec. Professional space "
 "optimization, traffic flow analysis, and compliance design for maximum "
 "efficiency."
-msgstr "Service de marquage de stationnement personnalisé au Québec. Optimisation de l'espace, analyse du flux de la circulation et conception conforme aux normes, pour une efficacité optimale."
+msgstr ""
+"Service de marquage de stationnement personnalisé au Québec. Optimisation de "
+"l'espace, analyse du flux de la circulation et conception conforme aux "
+"normes, pour une efficacité optimale."
 
 #: quotes/templates/pages/services/custom-layout-design.html:8
 msgid "Custom Parking Layout Design Services | Titan Parking"
@@ -1994,7 +1997,11 @@ msgid ""
 "Optimize your parking space with custom layout design. We provide "
 "professional space planning, traffic flow optimization, and compliance "
 "solutions for businesses across Quebec."
-msgstr "Optimisez votre espace de stationnement grâce à un aménagement sur mesure. Nous offrons des solutions professionnelles d'aménagement d'espace, d'optimisation de la circulation et de conformité aux normes pour les entreprises du Québec."
+msgstr ""
+"Optimisez votre espace de stationnement grâce à un aménagement sur mesure. "
+"Nous offrons des solutions professionnelles d'aménagement d'espace, "
+"d'optimisation de la circulation et de conformité aux normes pour les "
+"entreprises du Québec."
 
 #: quotes/templates/pages/services/custom-layout-design.html:26
 msgid "Custom Pavement Markings"
@@ -2012,7 +2019,12 @@ msgid ""
 "marking stencils. This gives us full control over the creative process, "
 "ensuring custom pavement markings that meet your specific needs, without "
 "compromising on quality, speed, or originality."
-msgstr "Chez Titan Parking, nous offrons bien plus que du marquage standard. Grâce à notre lien direct avec notre entreprise sœur Nordik Stencil, nous sommes l’une des rares entreprises à concevoir et fabriquer nos propres gabarits de marquage industriel. Cela nous permet d’offrir un service entièrement personnalisé, sans compromis sur la qualité, les délais ou la créativité."
+msgstr ""
+"Chez Titan Parking, nous offrons bien plus que du marquage standard. Grâce à "
+"notre lien direct avec notre entreprise sœur Nordik Stencil, nous sommes "
+"l’une des rares entreprises à concevoir et fabriquer nos propres gabarits de "
+"marquage industriel. Cela nous permet d’offrir un service entièrement "
+"personnalisé, sans compromis sur la qualité, les délais ou la créativité."
 
 #: quotes/templates/pages/services/custom-layout-design.html:38
 msgid ""
@@ -2022,14 +2034,25 @@ msgid ""
 "entrances, sidewalks, or indoor traffic zones. As both stencil makers and "
 "marking experts, we can turn even the most unique requests into reality—"
 "efficiently and accurately."
-msgstr "Vous vous demandez s’il est possible de faire marquer un logo au sol ou un pictogramme personnalisé pour votre entreprise? La réponse est oui. Nous créons des marquages sur mesure adaptés à votre identité visuelle, que ce soit pour un stationnement, une entrée, un trottoir ou une zone de circulation intérieure. En étant à la fois fabricant de gabarits et spécialiste du marquage, nous avons un contrôle total sur la conception et l’application, ce qui nous permet de répondre rapidement à des demandes précises et uniques."
+msgstr ""
+"Vous vous demandez s’il est possible de faire marquer un logo au sol ou un "
+"pictogramme personnalisé pour votre entreprise? La réponse est oui. Nous "
+"créons des marquages sur mesure adaptés à votre identité visuelle, que ce "
+"soit pour un stationnement, une entrée, un trottoir ou une zone de "
+"circulation intérieure. En étant à la fois fabricant de gabarits et "
+"spécialiste du marquage, nous avons un contrôle total sur la conception et "
+"l’application, ce qui nous permet de répondre rapidement à des demandes "
+"précises et uniques."
 
 #: quotes/templates/pages/services/custom-layout-design.html:41
 msgid ""
 "We offer this custom service to businesses, municipalities, schools, public "
 "institutions, and construction sites looking for functional, visually "
 "distinctive ground signage."
-msgstr "Nous offrons ce service sur mesure aux entreprises, municipalités, écoles, institutions ou chantiers de construction qui souhaitent une signalisation au sol distinctive, à la fois fonctionnelle et esthétique."
+msgstr ""
+"Nous offrons ce service sur mesure aux entreprises, municipalités, écoles, "
+"institutions ou chantiers de construction qui souhaitent une signalisation "
+"au sol distinctive, à la fois fonctionnelle et esthétique."
 
 #: quotes/templates/pages/services/custom-layout-design.html:55
 msgid "A creative, durable, and branded solution"
@@ -2044,7 +2067,15 @@ msgid ""
 "we specialize in. Whether outdoors (loading docks, parking lots, sidewalks) "
 "or indoors (warehouses, sports facilities, lobbies), we have the tools and "
 "expertise to bring your vision to life."
-msgstr "Le marquage personnalisé peut servir à bien plus que la simple signalisation réglementaire. Il peut transformer un espace, améliorer l’orientation des usagers, renforcer l’image de marque ou répondre à des besoins spécifiques de sécurité ou d’accessibilité. Vous cherchez comment faire marquer un message ou un symbole au sol avec des couleurs spécifiques? C’est exactement ce que nous faisons. Que ce soit à l’extérieur (stationnement, quais de chargement, trottoirs) ou à l’intérieur (entrepôts, halls, installations sportives), nous avons les outils pour que votre vision devienne réalité."
+msgstr ""
+"Le marquage personnalisé peut servir à bien plus que la simple signalisation "
+"réglementaire. Il peut transformer un espace, améliorer l’orientation des "
+"usagers, renforcer l’image de marque ou répondre à des besoins spécifiques "
+"de sécurité ou d’accessibilité. Vous cherchez comment faire marquer un "
+"message ou un symbole au sol avec des couleurs spécifiques? C’est exactement "
+"ce que nous faisons. Que ce soit à l’extérieur (stationnement, quais de "
+"chargement, trottoirs) ou à l’intérieur (entrepôts, halls, installations "
+"sportives), nous avons les outils pour que votre vision devienne réalité."
 
 #: quotes/templates/pages/services/custom-layout-design.html:60
 msgid "Here are just a few examples of custom markings we regularly provide:"
@@ -2056,12 +2087,15 @@ msgstr "Logos d’entreprise dans les stationnements ou à l’entrée des bâti
 
 #: quotes/templates/pages/services/custom-layout-design.html:64
 msgid "Branded wayfinding signage in malls, campuses, or tourist areas"
-msgstr "Signalisation personnalisée dans des centres commerciaux ou touristiques"
+msgstr ""
+"Signalisation personnalisée dans des centres commerciaux ou touristiques"
 
 #: quotes/templates/pages/services/custom-layout-design.html:65
 msgid ""
 "Custom pictograms for sorting zones, themed areas, or institutional needs"
-msgstr "Pictogrammes adaptés à des environnements particuliers (zones de tri, thématiques, etc.)"
+msgstr ""
+"Pictogrammes adaptés à des environnements particuliers (zones de tri, "
+"thématiques, etc.)"
 
 #: quotes/templates/pages/services/custom-layout-design.html:66
 msgid "Text-based messages to inform, guide, or direct foot traffic"
@@ -2086,60 +2120,67 @@ msgid ""
 "the stencil in-house, which eliminates delays from external suppliers. "
 "Finally, our expert team applies the markings with precision using durable, "
 "weather-resistant paint, suited to the intended surface and usage."
-msgstr "Chaque projet commence par une étape de conception rapide : nous vous aidons à choisir le bon design, les dimensions, les couleurs et le support. Ensuite, nous fabriquons le gabarit ici même, ce qui réduit les délais liés aux fournisseurs externes. Enfin, notre équipe applique le marquage avec précision, en utilisant des peintures résistantes et durables, adaptées à l’usage prévu."
+msgstr ""
+"Chaque projet commence par une étape de conception rapide : nous vous aidons "
+"à choisir le bon design, les dimensions, les couleurs et le support. "
+"Ensuite, nous fabriquons le gabarit ici même, ce qui réduit les délais liés "
+"aux fournisseurs externes. Enfin, notre équipe applique le marquage avec "
+"précision, en utilisant des peintures résistantes et durables, adaptées à "
+"l’usage prévu."
 
 #: quotes/templates/pages/services/custom-layout-design.html:77
 msgid ""
 "Trust Titan Parking for ground markings that reflect your brand. With full "
 "control over both stencil production and field application, we are your all-"
 "in-one partner for custom pavement marking solutions."
-msgstr "Faites confiance à Titan Parking pour un marquage qui vous ressemble. Grâce à notre expertise complète, nous sommes votre partenaire de confiance pour tous vos projets sur mesure."
+msgstr ""
+"Faites confiance à Titan Parking pour un marquage qui vous ressemble. Grâce "
+"à notre expertise complète, nous sommes votre partenaire de confiance pour "
+"tous vos projets sur mesure."
 
 #: quotes/templates/pages/services/custom-layout-design.html:80
 msgid ""
 "Contact us today for a fast quote and bring your ideas to life, without "
 "compromise."
-msgstr "Contactez-nous dès aujourd’hui pour une soumission rapide et concrétisez vos idées sans compromis."
+msgstr ""
+"Contactez-nous dès aujourd’hui pour une soumission rapide et concrétisez vos "
+"idées sans compromis."
 
 #: quotes/templates/pages/services/custom-layout-design.html:87
 #: quotes/templates/pages/services/indoor-markings.html:79
 #: quotes/templates/pages/services/line-restoration.html:86
 #: quotes/templates/pages/services/parking-lot-striping.html:79
-#: quotes/templates/pages/services/pavement-markings.html:91
+#: quotes/templates/pages/services/pavement-markings.html:88
 #: quotes/templates/pages/services/playground.html:83
-#, fuzzy
-#| msgid "Get Your Free Quote Today"
 msgid "Get Your Free Quote"
-msgstr "Obtenez votre soumission gratuite dès aujourd'hui"
+msgstr "Obtenez votre soumission gratuite"
 
 #: quotes/templates/pages/services/custom-layout-design.html:88
 #: quotes/templates/pages/services/parking-lot-striping.html:80
-#: quotes/templates/pages/services/pavement-markings.html:92
+#: quotes/templates/pages/services/pavement-markings.html:89
 #: quotes/templates/pages/services/playground.html:84
-#, fuzzy
-#| msgid ""
-#| "Ready to transform your parking lot? Contact us for a free, no-obligation "
-#| "quote."
 msgid ""
 "Ready to transform your parking lot? Contact us today for a personalized "
 "estimate."
-msgstr "Prêts à transformer votre stationnement? Contactez-nous dès aujourd'hui pour un devis personnalisé."
-"Prêts à transformer votre stationnement? Contactez-nous pour une soumission "
-"gratuite, sans obligation."
+msgstr ""
+"Prêts à transformer votre stationnement? Contactez-nous dès aujourd'hui pour "
+"un devis personnalisé."
 
 #: quotes/templates/pages/services/custom-layout-design.html:97
 #: quotes/templates/pages/services/indoor-markings.html:89
 #: quotes/templates/pages/services/line-restoration.html:105
-#: quotes/templates/pages/services/pavement-markings.html:101
+#: quotes/templates/pages/services/pavement-markings.html:98
 #: quotes/templates/pages/services/playground.html:102
 msgid "Optimize your parking space with our parking lot striping services."
-msgstr "Optimisez votre espace de stationnement avec notre service de marquage de lignes de stationnement."
+msgstr ""
+"Optimisez votre espace de stationnement avec notre service de marquage de "
+"lignes de stationnement."
 
 #: quotes/templates/pages/services/custom-layout-design.html:98
 #: quotes/templates/pages/services/indoor-markings.html:90
 #: quotes/templates/pages/services/line-restoration.html:106
 #: quotes/templates/pages/services/parking-lot-striping.html:90
-#: quotes/templates/pages/services/pavement-markings.html:102
+#: quotes/templates/pages/services/pavement-markings.html:99
 #: quotes/templates/pages/services/playground.html:103
 #: quotes/templates/partials/home/services.html:29
 #: quotes/templates/partials/home/services.html:43
@@ -2147,8 +2188,6 @@ msgstr "Optimisez votre espace de stationnement avec notre service de marquage d
 #: quotes/templates/partials/home/services.html:71
 #: quotes/templates/partials/home/services.html:85
 #: quotes/templates/partials/home/services.html:99
-#, fuzzy
-#| msgid "Read More"
 msgid "Learn More"
 msgstr "En savoir plus"
 
@@ -2158,13 +2197,15 @@ msgstr "En savoir plus"
 #: quotes/templates/pages/services/parking-lot-striping.html:98
 #: quotes/templates/pages/services/playground.html:93
 msgid "Optimize your parking space with our pavement markings services."
-msgstr "Optimisez votre espace de stationnement avec notre service de marquage de chaussée."
+msgstr ""
+"Optimisez votre espace de stationnement avec notre service de marquage de "
+"chaussée."
 
 #: quotes/templates/pages/services/custom-layout-design.html:107
 #: quotes/templates/pages/services/indoor-markings.html:99
 #: quotes/templates/pages/services/line-restoration.html:97
 #: quotes/templates/pages/services/parking-lot-striping.html:99
-#: quotes/templates/pages/services/pavement-markings.html:111
+#: quotes/templates/pages/services/pavement-markings.html:108
 #: quotes/templates/pages/services/playground.html:94
 msgid "Discover"
 msgstr "Découvrir"
@@ -2178,7 +2219,10 @@ msgid ""
 "Professional indoor marking services for warehouses, factories, and "
 "industrial spaces. Safety zone markings, walkway delineation, and equipment "
 "area designation in Quebec."
-msgstr "ervices professionnels de marquage intérieur pour entrepôts, usines et espaces industriels. Marquage de zones de sécurité, délimitation de voies piétonnes et identification de zones d'équipement au Québec."
+msgstr ""
+"ervices professionnels de marquage intérieur pour entrepôts, usines et "
+"espaces industriels. Marquage de zones de sécurité, délimitation de voies "
+"piétonnes et identification de zones d'équipement au Québec."
 
 #: quotes/templates/pages/services/indoor-markings.html:8
 msgid "Professional Indoor Marking Services | Titan Parking"
@@ -2189,7 +2233,11 @@ msgid ""
 "Enhance workplace safety with professional indoor markings. We provide "
 "safety zone markings, walkway delineation, and equipment area designation "
 "for industrial facilities across Quebec."
-msgstr "Améliorez la sécurité au travail grâce à un marquage intérieur professionnel. Nous fournissons des services de marquage de zones de sécurité, de délimitation de voies piétonnières et d'identification de zones d'équipement pour les installations industrielles du Québec."
+msgstr ""
+"Améliorez la sécurité au travail grâce à un marquage intérieur "
+"professionnel. Nous fournissons des services de marquage de zones de "
+"sécurité, de délimitation de voies piétonnières et d'identification de zones "
+"d'équipement pour les installations industrielles du Québec."
 
 #: quotes/templates/pages/services/indoor-markings.html:26
 msgid "Indoor Line Marking"
@@ -2197,7 +2245,8 @@ msgstr "Marquages intérieurs"
 
 #: quotes/templates/pages/services/indoor-markings.html:33
 msgid "Clear indoor markings for efficient and safe circulation"
-msgstr "Un marquage intérieur clair pour une circulation efficace et sécuritaire"
+msgstr ""
+"Un marquage intérieur clair pour une circulation efficace et sécuritaire"
 
 #: quotes/templates/pages/services/indoor-markings.html:35
 msgid ""
@@ -2206,7 +2255,12 @@ msgid ""
 "improved productivity. At Titan Parking, we offer custom indoor marking "
 "services tailored to your facility’s layout and aligned with your "
 "operational needs."
-msgstr "Dans les milieux industriels, commerciaux ou institutionnels, le marquage au sol intérieur joue un rôle essentiel pour sécuriser les déplacements, organiser les espaces et améliorer la productivité. Chez Titan Parking, nous proposons un service de marquage intérieur personnalisé, conforme aux normes de sécurité, adapté à la réalité de vos opérations."
+msgstr ""
+"Dans les milieux industriels, commerciaux ou institutionnels, le marquage au "
+"sol intérieur joue un rôle essentiel pour sécuriser les déplacements, "
+"organiser les espaces et améliorer la productivité. Chez Titan Parking, nous "
+"proposons un service de marquage intérieur personnalisé, conforme aux normes "
+"de sécurité, adapté à la réalité de vos opérations."
 
 #: quotes/templates/pages/services/indoor-markings.html:38
 msgid ""
@@ -2214,7 +2268,12 @@ msgid ""
 "well-planned markings help define vehicle lanes, pedestrian zones, loading "
 "areas, and hazardous zones. This helps prevent accidents and facilitates "
 "safe, fluid circulation throughout the building."
-msgstr "Que ce soit dans un entrepôt, un stationnement souterrain, une usine ou un garage commercial, un marquage bien pensé permet de délimiter clairement les voies de circulation, les zones piétonnes, les aires de chargement et les zones à risque. Cela permet de prévenir les accidents tout en facilitant la circulation des personnes et des véhicules."
+msgstr ""
+"Que ce soit dans un entrepôt, un stationnement souterrain, une usine ou un "
+"garage commercial, un marquage bien pensé permet de délimiter clairement les "
+"voies de circulation, les zones piétonnes, les aires de chargement et les "
+"zones à risque. Cela permet de prévenir les accidents tout en facilitant la "
+"circulation des personnes et des véhicules."
 
 #: quotes/templates/pages/services/indoor-markings.html:41
 msgid ""
@@ -2226,12 +2285,23 @@ msgid ""
 "of business hours? Absolutely. We provide flexible scheduling, including "
 "evening, overnight, and off-peak services, to minimize disruptions to your "
 "operations."
-msgstr "Nous utilisons des peintures spécialement conçues pour l’intérieur, à faible odeur, à séchage rapide et résistantes aux passages répétés de chariots élévateurs ou de piétons. Plusieurs clients nous demandent: Quel type de peinture est utilisé pour le marquage sur béton à l’intérieur? Nous utilisons des produits à base d’époxy ou d’uréthane, selon les besoins, qui assurent une excellente durabilité. D’autres nous demandent: Est-ce que le marquage peut être fait en dehors des heures d’ouverture? Absolument. Nous offrons des services de marquage de soir, de nuit ou pendant les périodes creuses, afin de minimiser les interruptions."
+msgstr ""
+"Nous utilisons des peintures spécialement conçues pour l’intérieur, à faible "
+"odeur, à séchage rapide et résistantes aux passages répétés de chariots "
+"élévateurs ou de piétons. Plusieurs clients nous demandent: Quel type de "
+"peinture est utilisé pour le marquage sur béton à l’intérieur? Nous "
+"utilisons des produits à base d’époxy ou d’uréthane, selon les besoins, qui "
+"assurent une excellente durabilité. D’autres nous demandent: Est-ce que le "
+"marquage peut être fait en dehors des heures d’ouverture? Absolument. Nous "
+"offrons des services de marquage de soir, de nuit ou pendant les périodes "
+"creuses, afin de minimiser les interruptions."
 
 #: quotes/templates/pages/services/indoor-markings.html:55
 msgid ""
 "Tailored service for warehouses, indoor parking lots and industrial buildings"
-msgstr "Un service personnalisé pour entrepôts, stationnements intérieurs et bâtiments industriels"
+msgstr ""
+"Un service personnalisé pour entrepôts, stationnements intérieurs et "
+"bâtiments industriels"
 
 #: quotes/templates/pages/services/indoor-markings.html:57
 msgid ""
@@ -2239,7 +2309,11 @@ msgid ""
 "project with a site analysis to understand your activities and suggest a "
 "clear and functional marking plan tailored to your flow and safety "
 "priorities."
-msgstr "Chaque bâtiment a ses particularités. C’est pourquoi nous débutons chaque projet par une analyse complète de vos installations, pour bien comprendre vos activités et vous proposer un plan de marquage structuré, clair et fonctionnel."
+msgstr ""
+"Chaque bâtiment a ses particularités. C’est pourquoi nous débutons chaque "
+"projet par une analyse complète de vos installations, pour bien comprendre "
+"vos activités et vous proposer un plan de marquage structuré, clair et "
+"fonctionnel."
 
 #: quotes/templates/pages/services/indoor-markings.html:60
 msgid "Our indoor line marking services include:"
@@ -2247,7 +2321,8 @@ msgstr "Nos services de marquage intérieur incluent:"
 
 #: quotes/templates/pages/services/indoor-markings.html:63
 msgid "Defining traffic lanes for vehicles and forklifts"
-msgstr "Délimitation des voies de circulation pour véhicules et chariots élévateurs"
+msgstr ""
+"Délimitation des voies de circulation pour véhicules et chariots élévateurs"
 
 #: quotes/templates/pages/services/indoor-markings.html:64
 msgid "Marking pedestrian walkways and safe crossings"
@@ -2259,7 +2334,9 @@ msgstr "Marquage des aires de chargement et déchargement"
 
 #: quotes/templates/pages/services/indoor-markings.html:66
 msgid "Organizing storage areas, waiting zones, and production lines"
-msgstr "Organisation des espaces de rangement, zones d’attente et lignes de production"
+msgstr ""
+"Organisation des espaces de rangement, zones d’attente et lignes de "
+"production"
 
 #: quotes/templates/pages/services/indoor-markings.html:67
 msgid "Painting parking lines in indoor or underground garages"
@@ -2267,24 +2344,34 @@ msgstr "Lignes de stationnement intérieur pour garages souterrains"
 
 #: quotes/templates/pages/services/indoor-markings.html:68
 msgid "Using color codes to identify zones or highlight hazards"
-msgstr "Utilisation de codes de couleur pour identifier les types de zones ou les niveaux de risque"
+msgstr ""
+"Utilisation de codes de couleur pour identifier les types de zones ou les "
+"niveaux de risque"
 
 #: quotes/templates/pages/services/indoor-markings.html:69
 msgid "Refreshing existing markings to maintain visibility and compliance"
-msgstr "Rafraîchissement de marquage existant pour assurer une bonne visibilité en tout temps"
+msgstr ""
+"Rafraîchissement de marquage existant pour assurer une bonne visibilité en "
+"tout temps"
 
 #: quotes/templates/pages/services/indoor-markings.html:72
 msgid ""
 "Our goal is to deliver safe, efficient, and durable results on time and with "
 "minimal disruption. With our flexible, professional approach, Titan Parking "
 "is your trusted partner for all your indoor marking projects."
-msgstr "Notre objectif est de combiner sécurité, efficacité et durabilité, tout en respectant vos délais et votre environnement de travail. Grâce à notre approche souple et professionnelle, Titan Parking est le partenaire idéal pour tous vos projets de marquage intérieur."
+msgstr ""
+"Notre objectif est de combiner sécurité, efficacité et durabilité, tout en "
+"respectant vos délais et votre environnement de travail. Grâce à notre "
+"approche souple et professionnelle, Titan Parking est le partenaire idéal "
+"pour tous vos projets de marquage intérieur."
 
 #: quotes/templates/pages/services/indoor-markings.html:80
 msgid ""
 "Ready to transform your indoor space? Contact us today for a personalized "
 "estimate."
-msgstr "Prêts à transformer votre espace intérieur? Contactez-nous dès aujourd'hui pour un devis personnalisé."
+msgstr ""
+"Prêts à transformer votre espace intérieur? Contactez-nous dès aujourd'hui "
+"pour un devis personnalisé."
 
 #: quotes/templates/pages/services/line-restoration.html:5
 msgid "Line Restoration - Titan Parking"
@@ -2295,7 +2382,10 @@ msgid ""
 "Professional line restoration services in Quebec. Refresh faded parking lot "
 "lines, renew safety markings, and restore visibility to existing pavement "
 "markings."
-msgstr "Services professionnels de restauration de lignes au Québec. Rafraîchir les lignes de stationnement décolorées, renouveler le marquage de sécurité et restaurer la visibilité des marquages au sol existants."
+msgstr ""
+"Services professionnels de restauration de lignes au Québec. Rafraîchir les "
+"lignes de stationnement décolorées, renouveler le marquage de sécurité et "
+"restaurer la visibilité des marquages au sol existants."
 
 #: quotes/templates/pages/services/line-restoration.html:8
 msgid "Professional Line Restoration Services | Titan Parking"
@@ -2306,13 +2396,18 @@ msgid ""
 "Restore faded parking lines with professional line restoration services. We "
 "refresh existing markings, improve visibility, and maintain compliance for "
 "businesses across Quebec."
-msgstr "Restaurez les lignes de stationnement décolorées grâce à des services professionnels de restauration de lignes. Nous rafraîchissons le marquage existant, améliorons la visibilité et assurons la conformité des entreprises du Québec."
+msgstr ""
+"Restaurez les lignes de stationnement décolorées grâce à des services "
+"professionnels de restauration de lignes. Nous rafraîchissons le marquage "
+"existant, améliorons la visibilité et assurons la conformité des entreprises "
+"du Québec."
 
 #: quotes/templates/pages/services/line-restoration.html:33
 msgid ""
 "Bring your pavement markings back to life with our professional line "
 "restoration service"
-msgstr "Redonnez vie à vos marquages avec notre service de restauration de lignes"
+msgstr ""
+"Redonnez vie à vos marquages avec notre service de restauration de lignes"
 
 #: quotes/templates/pages/services/line-restoration.html:35
 msgid ""
@@ -2321,7 +2416,14 @@ msgid ""
 "harsh weather. Wondering how to repaint worn-out parking lot lines? At Titan "
 "Parking, we offer a fast, precise, and long-lasting line restoration service "
 "that gives your asphalt surfaces a fresh, safe, and professional look."
-msgstr "Les lignes de stationnement, les flèches directionnelles, les pictogrammes et les zones piétonnes s’effacent avec le temps, l’usure, les changements de saison et le passage répété des véhicules. Vous vous demandez comment refaire les lignes de stationnement effacées ou usées? Chez Titan Parking, nous offrons un service professionnel de restauration de lignes, rapide, précis et durable, qui redonne une apparence nette et sécuritaire à vos surfaces asphaltées."
+msgstr ""
+"Les lignes de stationnement, les flèches directionnelles, les pictogrammes "
+"et les zones piétonnes s’effacent avec le temps, l’usure, les changements de "
+"saison et le passage répété des véhicules. Vous vous demandez comment "
+"refaire les lignes de stationnement effacées ou usées? Chez Titan Parking, "
+"nous offrons un service professionnel de restauration de lignes, rapide, "
+"précis et durable, qui redonne une apparence nette et sécuritaire à vos "
+"surfaces asphaltées."
 
 #: quotes/templates/pages/services/line-restoration.html:38
 msgid ""
@@ -2330,7 +2432,13 @@ msgid ""
 "businesses, schools, institutions, and property managers improve curb "
 "appeal, enhance traffic flow, reduce incident risks, and stay compliant with "
 "current standards."
-msgstr "Un marquage au sol affaibli nuit non seulement à la sécurité, mais peut aussi projeter une image négligée de votre entreprise ou établissement. Grâce à notre service de rafraîchissement de lignes de stationnement, nous aidons les commerces, institutions, écoles et immeubles à rehausser l’apparence de leurs stationnements, à organiser la circulation, à réduire les risques d’incidents et à rester conformes aux normes en vigueur."
+msgstr ""
+"Un marquage au sol affaibli nuit non seulement à la sécurité, mais peut "
+"aussi projeter une image négligée de votre entreprise ou établissement. "
+"Grâce à notre service de rafraîchissement de lignes de stationnement, nous "
+"aidons les commerces, institutions, écoles et immeubles à rehausser "
+"l’apparence de leurs stationnements, à organiser la circulation, à réduire "
+"les risques d’incidents et à rester conformes aux normes en vigueur."
 
 #: quotes/templates/pages/services/line-restoration.html:41
 msgid ""
@@ -2338,7 +2446,12 @@ msgid ""
 "Quebec winters. Depending on the condition of the existing markings, our "
 "team can either paint over the faded lines or prepare the surface for a "
 "cleaner, more uniform result."
-msgstr "Nous utilisons des peintures haute performance conçues pour résister au sel, aux UV et aux hivers québécois. Selon l’état du marquage existant, notre équipe peut appliquer une superposition de peinture, ou procéder à une préparation de surface avant de repeindre les lignes de stationnement pour un rendu clair et uniforme."
+msgstr ""
+"Nous utilisons des peintures haute performance conçues pour résister au sel, "
+"aux UV et aux hivers québécois. Selon l’état du marquage existant, notre "
+"équipe peut appliquer une superposition de peinture, ou procéder à une "
+"préparation de surface avant de repeindre les lignes de stationnement pour "
+"un rendu clair et uniforme."
 
 #: quotes/templates/pages/services/line-restoration.html:55
 msgid "Essential maintenance for safety, appearance, and compliance"
@@ -2350,7 +2463,11 @@ msgid ""
 "most cases, it’s entirely possible. Line repainting is a simple, effective, "
 "and affordable solution to extend the life of your pavement markings without "
 "starting from scratch."
-msgstr "Vous souhaitez faire repeindre vos lignes de stationnement sans tout refaire? C’est souvent possible. La restauration de marquage est une solution simple, efficace et économique pour prolonger la durée de vie de vos marquages actuels, sans devoir repartir à neuf."
+msgstr ""
+"Vous souhaitez faire repeindre vos lignes de stationnement sans tout "
+"refaire? C’est souvent possible. La restauration de marquage est une "
+"solution simple, efficace et économique pour prolonger la durée de vie de "
+"vos marquages actuels, sans devoir repartir à neuf."
 
 #: quotes/templates/pages/services/line-restoration.html:60
 msgid ""
@@ -2358,7 +2475,13 @@ msgid ""
 "municipalities, property managers, and asphalt contractors. Whether you need "
 "to refresh parking stalls, loading zones, pedestrian crossings, or "
 "accessibility symbols, we deliver efficient results, even on large surfaces."
-msgstr "Nos services s’adressent à tous les types de clients: commerces de détail, entreprises, écoles, municipalités, gestionnaires immobiliers et entrepreneurs en asphalte. Que vous ayez besoin de retracer des lignes de stationnement effacées, des zones de chargement, des passages piétons, ou encore de repeindre des symboles comme les zones pour personnes handicapées, notre équipe peut intervenir efficacement, même sur de grandes surfaces."
+msgstr ""
+"Nos services s’adressent à tous les types de clients: commerces de détail, "
+"entreprises, écoles, municipalités, gestionnaires immobiliers et "
+"entrepreneurs en asphalte. Que vous ayez besoin de retracer des lignes de "
+"stationnement effacées, des zones de chargement, des passages piétons, ou "
+"encore de repeindre des symboles comme les zones pour personnes handicapées, "
+"notre équipe peut intervenir efficacement, même sur de grandes surfaces."
 
 #: quotes/templates/pages/services/line-restoration.html:63
 msgid "Our line restoration services include:"
@@ -2394,19 +2517,28 @@ msgid ""
 "and weather exposure. All our services are scheduled to minimize disruption. "
 "We can work overnight, on weekends, or during off-peak hours. Before every "
 "job, we conduct a full assessment to determine the best technical approach."
-msgstr "Un entretien périodique est recommandé une à deux fois par année, selon l’achalandage et les conditions météo. Nos interventions sont planifiées pour ne pas déranger vos activités : soir, nuit, week-end; tout est possible. Avant chaque intervention, nous effectuons une évaluation complète afin de recommander la meilleure approche technique."
+msgstr ""
+"Un entretien périodique est recommandé une à deux fois par année, selon "
+"l’achalandage et les conditions météo. Nos interventions sont planifiées "
+"pour ne pas déranger vos activités : soir, nuit, week-end; tout est "
+"possible. Avant chaque intervention, nous effectuons une évaluation complète "
+"afin de recommander la meilleure approche technique."
 
 #: quotes/templates/pages/services/line-restoration.html:79
 msgid ""
 "Restore clarity, safety, and professionalism to your pavement markings with "
 "Titan Parking. Fresh, visible lines make all the difference."
-msgstr "Avec Titan Parking, redonnez un second souffle à vos lignes existantes. Un marquage bien visible, propre et conforme fait toute la différence."
+msgstr ""
+"Avec Titan Parking, redonnez un second souffle à vos lignes existantes. Un "
+"marquage bien visible, propre et conforme fait toute la différence."
 
 #: quotes/templates/pages/services/line-restoration.html:87
 msgid ""
 "Contact us today for a fast, free quote. Your lines have never looked this "
 "sharp!"
-msgstr "Contactez-nous pour une soumission rapide et sans frais. Vos lignes n’auront jamais été aussi nettes!"
+msgstr ""
+"Contactez-nous pour une soumission rapide et sans frais. Vos lignes n’auront "
+"jamais été aussi nettes!"
 
 #: quotes/templates/pages/services/parking-lot-striping.html:5
 msgid "Parking Lot Striping - Titan Parking"
@@ -2417,7 +2549,10 @@ msgid ""
 "Professional parking lot striping services in Quebec. Expert line marking, "
 "compliance, and durable pavement striping for businesses. Get a free quote "
 "today!"
-msgstr "Services professionnels de marquage de lignes de stationnement au Québec. Marquage de lignes professionnel. Marquage au sol durable et conforme pour les enteprises. Obtenez vote soumission gratuite dès maintenant!"
+msgstr ""
+"Services professionnels de marquage de lignes de stationnement au Québec. "
+"Marquage de lignes professionnel. Marquage au sol durable et conforme pour "
+"les enteprises. Obtenez vote soumission gratuite dès maintenant!"
 
 #: quotes/templates/pages/services/parking-lot-striping.html:8
 msgid "Professional Parking Lot Striping Services | Titan Parking"
@@ -2428,11 +2563,17 @@ msgid ""
 "Transform your parking lot with professional line striping services. We "
 "provide precise, durable parking space markings, handicap accessibility "
 "compliance, and traffic flow optimization for businesses across Quebec."
-msgstr "Transformez votre stationnement grâce à nos services professionnels de marquage au sol. Nous offrons un marquage précis et durable des places de stationnement, une conformité aux normes d'accessibilité pour les personnes handicapées et une optimisation de la circulation pour les entreprises du Québec."
+msgstr ""
+"Transformez votre stationnement grâce à nos services professionnels de "
+"marquage au sol. Nous offrons un marquage précis et durable des places de "
+"stationnement, une conformité aux normes d'accessibilité pour les personnes "
+"handicapées et une optimisation de la circulation pour les entreprises du "
+"Québec."
 
 #: quotes/templates/pages/services/parking-lot-striping.html:33
 msgid "Clean and Durable Line Striping for Well-Organized Parking Lots"
-msgstr "Un marquage de lignes net et durable pour des stationnements bien organisés"
+msgstr ""
+"Un marquage de lignes net et durable pour des stationnements bien organisés"
 
 #: quotes/templates/pages/services/parking-lot-striping.html:35
 msgid ""
@@ -2441,15 +2582,25 @@ msgid ""
 "specialize in tracing and marking straight, uniform, and durable lines for "
 "all types of parking lots: commercial, residential, industrial, or "
 "institutional."
-msgstr "Le marquage de stationnement est une étape essentielle pour assurer l'ordre, la sécurité et la bonne circulation des véhicules sur vos propriétés. Chez Titan Parking, nous nous spécialisons dans le traçage et marquage de lignes droites, uniformes et durables pour tous types de stationnements : commerciaux, résidentiels, industriels ou institutionnels."
+msgstr ""
+"Le marquage de stationnement est une étape essentielle pour assurer l'ordre, "
+"la sécurité et la bonne circulation des véhicules sur vos propriétés. Chez "
+"Titan Parking, nous nous spécialisons dans le traçage et marquage de lignes "
+"droites, uniformes et durables pour tous types de stationnements : "
+"commerciaux, résidentiels, industriels ou institutionnels."
 
 #: quotes/templates/pages/services/parking-lot-striping.html:38
 msgid ""
 "Our parking line striping service maximizes space utilization while reducing "
 "the risk of confusion or collisions. Our technicians use precision equipment "
-"and high-performance paints designed to withstand Quebec conditions like rain, "
-"frost, abrasion, and heavy traffic."
-msgstr "Notre service de lignage de stationnement permet de maximiser l'utilisation de l'espace tout en réduisant les risques de confusion ou d'accrochage. Nos techniciens utilisent un équipement de précision et des peintures de haute performance conçues pour résister aux conditions québécoises comme la pluie, le gel, l’abrasion et le trafic intense."
+"and high-performance paints designed to withstand Quebec conditions like "
+"rain, frost, abrasion, and heavy traffic."
+msgstr ""
+"Notre service de lignage de stationnement permet de maximiser l'utilisation "
+"de l'espace tout en réduisant les risques de confusion ou d'accrochage. Nos "
+"techniciens utilisent un équipement de précision et des peintures de haute "
+"performance conçues pour résister aux conditions québécoises comme la pluie, "
+"le gel, l’abrasion et le trafic intense."
 
 #: quotes/templates/pages/services/parking-lot-striping.html:41
 msgid ""
@@ -2457,7 +2608,12 @@ msgid ""
 "specific site requirements. Whether for perpendicular, angled, or parallel "
 "parking, our team ensures the striping is consistent, visible, and compliant "
 "with applicable standards."
-msgstr "Chaque ligne de stationnement est appliquée avec soin, selon les dimensions standard ou selon les exigences spécifiques du site. Que ce soit pour un stationnement à angles droits, en angle ou en parallèle, notre équipe s'assure que le traçage soit cohérent, visible et conforme aux normes applicables."
+msgstr ""
+"Chaque ligne de stationnement est appliquée avec soin, selon les dimensions "
+"standard ou selon les exigences spécifiques du site. Que ce soit pour un "
+"stationnement à angles droits, en angle ou en parallèle, notre équipe "
+"s'assure que le traçage soit cohérent, visible et conforme aux normes "
+"applicables."
 
 #: quotes/templates/pages/services/parking-lot-striping.html:55
 msgid "Fast, Reliable Service Adapted to Your Reality"
@@ -2469,7 +2625,12 @@ msgid ""
 "asphalt condition, identify old markings, and plan clear, structured "
 "striping. Our priority is to deliver clean work within the best timeframes "
 "while minimizing disruptions to your operations."
-msgstr "Avant chaque projet, nous procédons à une inspection visuelle de la surface pour évaluer l'état de l'asphalte, repérer d'anciens marquages, et planifier un traçage clair et structuré. Notre priorité est de livrer un travail propre, dans les meilleurs délais, tout en minimisant les interruptions à vos opérations."
+msgstr ""
+"Avant chaque projet, nous procédons à une inspection visuelle de la surface "
+"pour évaluer l'état de l'asphalte, repérer d'anciens marquages, et planifier "
+"un traçage clair et structuré. Notre priorité est de livrer un travail "
+"propre, dans les meilleurs délais, tout en minimisant les interruptions à "
+"vos opérations."
 
 #: quotes/templates/pages/services/parking-lot-striping.html:60
 msgid "We offer:"
@@ -2495,19 +2656,25 @@ msgstr "L'ajustement de la disposition des cases pour optimiser l'espace"
 msgid ""
 "We work with building owners, facility managers, and sealcoating contractors "
 "alike. Our team adapts to your schedule and on-site constraints."
-msgstr "Nous travaillons autant pour les propriétaires d'immeubles que pour les gestionnaires d'installations ou les entrepreneurs en scellant. Notre équipe sait s'adapter à votre horaire et à vos contraintes sur le terrain."
+msgstr ""
+"Nous travaillons autant pour les propriétaires d'immeubles que pour les "
+"gestionnaires d'installations ou les entrepreneurs en scellant. Notre équipe "
+"sait s'adapter à votre horaire et à vos contraintes sur le terrain."
 
 #: quotes/templates/pages/services/parking-lot-striping.html:72
 msgid ""
-"Trust Titan Parking for clear, straight, and durable parking lot striping. "
-"Contact us now for a free estimate and quick handling of your project."
-msgstr "Faites confiance à Titan Parking pour un marquage de stationnement clair, droit et durable. Contactez-nous dès maintenant pour une estimation gratuite et une prise en charge rapide de votre projet."
+"Trust Titan Parking for clear, straight, and durable parking lot striping."
+msgstr ""
+"Faites confiance à Titan Parking pour un marquage de stationnement clair, "
+"droit et durable."
 
 #: quotes/templates/pages/services/parking-lot-striping.html:89
 msgid ""
 "Refresh faded or damaged parking lines with our professional restoration "
 "service."
-msgstr "Rafraîchissez les lignes de stationnement décolorées ou endommagées avec notre service de restauration de lignes professionnel."
+msgstr ""
+"Rafraîchissez les lignes de stationnement décolorées ou endommagées avec "
+"notre service de restauration de lignes professionnel."
 
 #: quotes/templates/pages/services/pavement-markings.html:5
 msgid "Pavement Markings - Titan Parking"
@@ -2518,7 +2685,10 @@ msgid ""
 "Professional pavement marking services for roads, crosswalks, and traffic "
 "areas. Durable road striping, pedestrian crossings, and safety markings in "
 "Quebec."
-msgstr "Services professionnels de marquage de la chaussée pour routes, passages piétons et zones de circulation. Marquage durable des passages piétons et autres marquages de sécurité au Québec."
+msgstr ""
+"Services professionnels de marquage de la chaussée pour routes, passages "
+"piétons et zones de circulation. Marquage durable des passages piétons et "
+"autres marquages de sécurité au Québec."
 
 #: quotes/templates/pages/services/pavement-markings.html:8
 msgid "Professional Pavement Marking Services | Titan Parking"
@@ -2529,7 +2699,11 @@ msgid ""
 "Professional pavement marking for roads and traffic areas. We provide "
 "durable crosswalk striping, stop lines, turn arrows, and safety markings for "
 "municipalities and businesses across Quebec."
-msgstr "Marquage routier professionnel pour routes et aires de circulation. Nous fournissons des marquages durables pour passages piétons, des lignes d'arrêt, des flèches directionnelles et des marquages de sécurité aux municipalités et aux entreprises du Québec."
+msgstr ""
+"Marquage routier professionnel pour routes et aires de circulation. Nous "
+"fournissons des marquages durables pour passages piétons, des lignes "
+"d'arrêt, des flèches directionnelles et des marquages de sécurité aux "
+"municipalités et aux entreprises du Québec."
 
 #: quotes/templates/pages/services/pavement-markings.html:26
 msgid "Pavement Marking"
@@ -2548,7 +2722,15 @@ msgid ""
 "provide professional pavement marking services that fully comply with "
 "Quebec’s Ministry of Transportation (MTQ) standards and municipal "
 "regulations."
-msgstr "Le marquage de chaussée est essentiel pour organiser la circulation, renforcer la sécurité et améliorer l’orientation des usagers. Que ce soit pour une rue privée, un accès commercial ou une piste cyclable, un marquage horizontal bien réalisé permet de réduire les risques d’accidents et de maintenir une circulation fluide. Chez Titan Parking, nous offrons un service de marquage de chaussée complet et professionnel, en conformité avec les normes du Ministère des Transports du Québec (MTQ) et les règlements municipaux."
+msgstr ""
+"Le marquage de chaussée est essentiel pour organiser la circulation, "
+"renforcer la sécurité et améliorer l’orientation des usagers. Que ce soit "
+"pour une rue privée, un accès commercial ou une piste cyclable, un marquage "
+"horizontal bien réalisé permet de réduire les risques d’accidents et de "
+"maintenir une circulation fluide. Chez Titan Parking, nous offrons un "
+"service de marquage de chaussée complet et professionnel, en conformité avec "
+"les normes du Ministère des Transports du Québec (MTQ) et les règlements "
+"municipaux."
 
 #: quotes/templates/pages/services/pavement-markings.html:38
 msgid ""
@@ -2557,7 +2739,13 @@ msgid ""
 "standardized templates for consistent, high-precision application and high-"
 "performance road paints built to withstand Quebec’s harsh climate, including "
 "UV, snow, salt, and tire wear."
-msgstr "Notre équipe réalise tous les types de symboles au sol: flèches directionnelles, lettres, chiffres, pictogrammes, zones interdites, et bien plus. Nous utilisons des gabarits (ou stencils) pour une application précise et uniforme, et des peintures durables conçues pour résister aux intempéries, à l’abrasion des pneus et aux conditions difficiles du climat québécois."
+msgstr ""
+"Notre équipe réalise tous les types de symboles au sol: flèches "
+"directionnelles, lettres, chiffres, pictogrammes, zones interdites, et bien "
+"plus. Nous utilisons des gabarits (ou stencils) pour une application précise "
+"et uniforme, et des peintures durables conçues pour résister aux "
+"intempéries, à l’abrasion des pneus et aux conditions difficiles du climat "
+"québécois."
 
 #: quotes/templates/pages/services/pavement-markings.html:41
 msgid ""
@@ -2565,7 +2753,12 @@ msgid ""
 "Whether you manage a municipality, business, construction site, or "
 "residential complex, we tailor our solutions to every setting: access roads, "
 "private streets, school drop-off zones, and commercial parking lots."
-msgstr "Vous vous demandez: Est-ce que ces marquages conviennent aussi aux propriétés privées? Absolument! Que vous soyez une municipalité, une entreprise ou un gestionnaire immobilier, nous adaptons nos solutions à chaque type de chaussée: voies d’accès, stationnements, rues internes, chantiers ou écoles."
+msgstr ""
+"Vous vous demandez: Est-ce que ces marquages conviennent aussi aux "
+"propriétés privées? Absolument! Que vous soyez une municipalité, une "
+"entreprise ou un gestionnaire immobilier, nous adaptons nos solutions à "
+"chaque type de chaussée: voies d’accès, stationnements, rues internes, "
+"chantiers ou écoles."
 
 #: quotes/templates/pages/services/pavement-markings.html:55
 msgid "Custom Markings for Your Needs and Environment"
@@ -2577,7 +2770,12 @@ msgid ""
 "your goals, assess surface conditions, and recommend the best pavement "
 "marking approach for your location. Every project is customized to meet your "
 "traffic flow, safety, and visibility requirements."
-msgstr "Avant toute intervention, nous procédons à une évaluation sur place. Cela nous permet de comprendre vos objectifs, de vérifier l’état des surfaces et de recommander les meilleurs types de marquages pour votre environnement. Chaque projet est pensé sur mesure, en fonction de vos besoins de circulation, de sécurité et de visibilité."
+msgstr ""
+"Avant toute intervention, nous procédons à une évaluation sur place. Cela "
+"nous permet de comprendre vos objectifs, de vérifier l’état des surfaces et "
+"de recommander les meilleurs types de marquages pour votre environnement. "
+"Chaque projet est pensé sur mesure, en fonction de vos besoins de "
+"circulation, de sécurité et de visibilité."
 
 #: quotes/templates/pages/services/pavement-markings.html:60
 msgid "Here are some common pavement markings we provide:"
@@ -2615,7 +2813,10 @@ msgstr "Pictogrammes personnalisés selon vos besoins spécifiques"
 msgid ""
 "We also offer line repainting and restoration, especially after resurfacing "
 "or redesign work. A common question we get is:"
-msgstr "Nous offrons également un service de rafraîchissement des marquages existants, notamment après des travaux ou des réaménagements. Beaucoup de nos clients nous demandent:"
+msgstr ""
+"Nous offrons également un service de rafraîchissement des marquages "
+"existants, notamment après des travaux ou des réaménagements. Beaucoup de "
+"nos clients nous demandent:"
 
 #: quotes/templates/pages/services/pavement-markings.html:75
 msgid "How long do pavement markings last?"
@@ -2625,23 +2826,23 @@ msgstr "Combien de temps dure un marquage de chaussée?"
 msgid ""
 "With quality materials and periodic upkeep, road markings can remain visible "
 "and effective for several years."
-msgstr "Avec les bons matériaux et un entretien périodique, les marquages peuvent rester visibles et efficaces pendant plusieurs années."
+msgstr ""
+"Avec les bons matériaux et un entretien périodique, les marquages peuvent "
+"rester visibles et efficaces pendant plusieurs années."
 
 #: quotes/templates/pages/services/pavement-markings.html:81
 msgid ""
 "With Titan Parking, you get clear, long-lasting, regulation-compliant "
 "pavement markings that enhance safety and organization."
-msgstr "Avec Titan Parking, vous bénéficiez d’un marquage de chaussée clair, durable et conforme aux normes en vigueur."
+msgstr ""
+"Avec Titan Parking, vous bénéficiez d’un marquage de chaussée clair, durable "
+"et conforme aux normes en vigueur."
 
-#: quotes/templates/pages/services/pavement-markings.html:84
-msgid ""
-"Contact us today for a fast quote and a service adapted to your site’s "
-"specific needs."
-msgstr "Contactez-nous dès maintenant pour une soumission rapide et un service professionnel adapté à votre réalité."
-
-#: quotes/templates/pages/services/pavement-markings.html:110
+#: quotes/templates/pages/services/pavement-markings.html:107
 msgid "Optimize your parking space with our line restoration services."
-msgstr "Optimisez votre espace de stationnement avec notre service de restauration de lignes."
+msgstr ""
+"Optimisez votre espace de stationnement avec notre service de restauration "
+"de lignes."
 
 #: quotes/templates/pages/services/playground.html:5
 msgid "Playground Marking - Titan Parking"
@@ -2653,11 +2854,16 @@ msgid ""
 "Professional playground marking services in Quebec. We provide complete "
 "playground marking services for schools, parks, and playgrounds across "
 "Quebec."
-msgstr "Services professionnels de marquage de terrains de jeux au Québec. Nous offrons des services complets de marquage de terrains de jeux pour les écoles, les parcs et les terrains de jeux partout au Québec."
+msgstr ""
+"Services professionnels de marquage de terrains de jeux au Québec. Nous "
+"offrons des services complets de marquage de terrains de jeux pour les "
+"écoles, les parcs et les terrains de jeux partout au Québec."
 
 #: quotes/templates/pages/services/playground.html:8
 msgid "Professional Playground Marking Services | Titan Parking"
-msgstr "Services professionnels de marquages de jeux pour cours d'école | Titan Parking"
+msgstr ""
+"Services professionnels de marquages de jeux pour cours d'école | Titan "
+"Parking"
 
 #: quotes/templates/pages/services/playground.html:26
 msgid "Playground & Sports Court Markings"
@@ -2666,7 +2872,9 @@ msgstr "Marquage de jeux pour les cours d'écoles"
 #: quotes/templates/pages/services/playground.html:33
 msgid ""
 "Durable, safe, and educational markings for schools and outdoor play areas"
-msgstr "Des marquages durables, sécuritaires et éducatifs pour les écoles et terrains extérieurs"
+msgstr ""
+"Des marquages durables, sécuritaires et éducatifs pour les écoles et "
+"terrains extérieurs"
 
 #: quotes/templates/pages/services/playground.html:35
 msgid ""
@@ -2676,7 +2884,14 @@ msgid ""
 "and private sports facilities. With our custom stencil production through "
 "our sister company Nordik Stencil, we deliver custom projects that are "
 "durable, safe, and tailored to each environment."
-msgstr "Vous souhaitez savoir comment aménager une cour d’école avec des jeux au sol ou comment tracer un terrain de pickleball ou basketball extérieur? Titan Parking propose un service complet de marquage de jeux extérieurs, autant pour les cours d’école que pour les terrains de sport municipaux ou privés. Grâce à notre expertise en marquage et à la fabrication sur mesure de pochoirs avec notre entreprise sœur Nordik Stencil, nous réalisons des projets sur mesure, durables et adaptés à chaque environnement."
+msgstr ""
+"Vous souhaitez savoir comment aménager une cour d’école avec des jeux au sol "
+"ou comment tracer un terrain de pickleball ou basketball extérieur? Titan "
+"Parking propose un service complet de marquage de jeux extérieurs, autant "
+"pour les cours d’école que pour les terrains de sport municipaux ou privés. "
+"Grâce à notre expertise en marquage et à la fabrication sur mesure de "
+"pochoirs avec notre entreprise sœur Nordik Stencil, nous réalisons des "
+"projets sur mesure, durables et adaptés à chaque environnement."
 
 #: quotes/templates/pages/services/playground.html:38
 msgid ""
@@ -2684,14 +2899,22 @@ msgid ""
 "municipalities, and sports centers. All our markings are compliant with "
 "current safety standards and made with non-toxic, slip-resistant, UV-"
 "resistant paints designed to withstand Quebec's tough weather conditions."
-msgstr "Nous travaillons régulièrement avec des écoles primaires, des centres de services scolaires, des municipalités et des centres sportifs. Nos marquages respectent les normes en vigueur, sont conçus pour résister aux conditions climatiques du Québec et sont réalisés avec des peintures non toxiques, antidérapantes et résistantes aux UV."
+msgstr ""
+"Nous travaillons régulièrement avec des écoles primaires, des centres de "
+"services scolaires, des municipalités et des centres sportifs. Nos marquages "
+"respectent les normes en vigueur, sont conçus pour résister aux conditions "
+"climatiques du Québec et sont réalisés avec des peintures non toxiques, "
+"antidérapantes et résistantes aux UV."
 
 #: quotes/templates/pages/services/playground.html:41
 msgid ""
 "Whether it's for educational playground games, motor skill paths, or "
 "official sports court lines, our mission is simple: to create fun, safe, and "
 "well-organized outdoor spaces."
-msgstr "Que ce soit pour des jeux éducatifs, des parcours moteurs ou des lignes sportives réglementaires, notre objectif est clair: offrir des espaces stimulants, sécuritaires et bien structurés."
+msgstr ""
+"Que ce soit pour des jeux éducatifs, des parcours moteurs ou des lignes "
+"sportives réglementaires, notre objectif est clair: offrir des espaces "
+"stimulants, sécuritaires et bien structurés."
 
 #: quotes/templates/pages/services/playground.html:55
 msgid "A turnkey solution for playful and sports-friendly environments"
@@ -2703,17 +2926,26 @@ msgid ""
 "and encourage physical activity. Outdoor sports court markings let you set "
 "up or refresh playing areas for basketball, pickleball, floor hockey, "
 "volleyball, and more, always following official dimensions."
-msgstr "Le marquage de cour d’école permet de créer des zones de jeux interactifs, de structurer les déplacements et d’encourager l’activité physique. Le marquage de terrains sportifs extérieurs permet quant à lui d’installer ou de rafraîchir des surfaces dédiées au basketball, pickleball, hockey cosom, volleyball, etc., dans le respect des dimensions officielles."
+msgstr ""
+"Le marquage de cour d’école permet de créer des zones de jeux interactifs, "
+"de structurer les déplacements et d’encourager l’activité physique. Le "
+"marquage de terrains sportifs extérieurs permet quant à lui d’installer ou "
+"de rafraîchir des surfaces dédiées au basketball, pickleball, hockey cosom, "
+"volleyball, etc., dans le respect des dimensions officielles."
 
 #: quotes/templates/pages/services/playground.html:60
 msgid ""
 "What kind of playground games can we paint on asphalt? How to mark a sports "
 "court? Here are some of our most popular markings:"
-msgstr "Quels jeux au sol peut-on peindre dans une cour d’école? Comment marquer un terrain de sport extérieur? Voici ce que nous réalisons fréquemment:"
+msgstr ""
+"Quels jeux au sol peut-on peindre dans une cour d’école? Comment marquer un "
+"terrain de sport extérieur? Voici ce que nous réalisons fréquemment:"
 
 #: quotes/templates/pages/services/playground.html:63
 msgid "Classic games for kids: hopscotch, snakes and ladders, targets, mazes"
-msgstr "Jeux classiques pour enfants: marelle, serpents et échelles, cible, labyrinthe"
+msgstr ""
+"Jeux classiques pour enfants: marelle, serpents et échelles, cible, "
+"labyrinthe"
 
 #: quotes/templates/pages/services/playground.html:64
 msgid "Motor skill circuits and cooperative educational games"
@@ -2721,11 +2953,14 @@ msgstr "Parcours moteurs et jeux coopératifs éducatifs"
 
 #: quotes/templates/pages/services/playground.html:65
 msgid "Lines for pickleball, basketball, mini-soccer, floor hockey courts"
-msgstr "Lignes pour terrains de pickleball, basketball, mini-soccer, hockey cosom"
+msgstr ""
+"Lignes pour terrains de pickleball, basketball, mini-soccer, hockey cosom"
 
 #: quotes/templates/pages/services/playground.html:66
 msgid "Safety zones: waiting lines, walking paths, drop-off areas"
-msgstr "Zones de sécurité: lignes d’attente, corridors de déplacement, zones de débarcadère"
+msgstr ""
+"Zones de sécurité: lignes d’attente, corridors de déplacement, zones de "
+"débarcadère"
 
 #: quotes/templates/pages/services/playground.html:67
 msgid "Refreshing old playground markings or adding temporary game zones"
@@ -2737,21 +2972,34 @@ msgid ""
 "surface type (asphalt, concrete, etc.), and specific needs. We'll then "
 "recommend the best games or sports lines to install, taking into account the "
 "age of users, educational goals, sports priorities, and available budget."
-msgstr "Avant chaque projet, notre équipe visite les lieux pour analyser l’espace disponible, le type de surface (asphalte, béton, etc.) et les besoins spécifiques. Nous vous conseillons ensuite sur le type de jeux ou de terrains à installer, en tenant compte de l’âge des utilisateurs, des priorités pédagogiques ou sportives, et du budget."
+msgstr ""
+"Avant chaque projet, notre équipe visite les lieux pour analyser l’espace "
+"disponible, le type de surface (asphalte, béton, etc.) et les besoins "
+"spécifiques. Nous vous conseillons ensuite sur le type de jeux ou de "
+"terrains à installer, en tenant compte de l’âge des utilisateurs, des "
+"priorités pédagogiques ou sportives, et du budget."
 
 #: quotes/templates/pages/services/playground.html:73
 msgid ""
 "Our work is flexibly scheduled, during school breaks, pedagogical days, "
 "evenings, or weekends, to avoid disrupting regular activities. We stick to "
 "deadlines, provide quick estimates, and deliver flawless results."
-msgstr "Nos interventions sont planifiées avec flexibilité: pendant les vacances scolaires, les journées pédagogiques ou les soirs et fins de semaine, afin de ne pas nuire aux activités en cours. Nous respectons les échéanciers, offrons des soumissions rapides et garantissons une finition impeccable."
+msgstr ""
+"Nos interventions sont planifiées avec flexibilité: pendant les vacances "
+"scolaires, les journées pédagogiques ou les soirs et fins de semaine, afin "
+"de ne pas nuire aux activités en cours. Nous respectons les échéanciers, "
+"offrons des soumissions rapides et garantissons une finition impeccable."
 
 #: quotes/templates/pages/services/playground.html:76
 msgid ""
 "With Titan Parking, transform your outdoor space into a dynamic, safe, and "
 "engaging zone for kids and athletes. Whether you want to brighten up a "
 "schoolyard or mark an official sport court, we're your trusted partner."
-msgstr "Avec Titan Parking, transformez vos espaces extérieurs en zones dynamiques, sécuritaires et adaptées à vos usagers. Que ce soit pour animer une cour d’école ou tracer un terrain de sport extérieur, nous sommes votre partenaire de confiance."
+msgstr ""
+"Avec Titan Parking, transformez vos espaces extérieurs en zones dynamiques, "
+"sécuritaires et adaptées à vos usagers. Que ce soit pour animer une cour "
+"d’école ou tracer un terrain de sport extérieur, nous sommes votre "
+"partenaire de confiance."
 
 #: quotes/templates/pages/terms-of-service.html:5
 msgid "Terms of Service - Titan Parking"
@@ -3218,7 +3466,10 @@ msgstr ""
 msgid ""
 "Custom parking lot layout design services including space optimization, "
 "traffic flow analysis, and compliance design for maximum efficiency."
-msgstr "Services de conception d'aménagement de stationnement personnalisés, y compris l'optimisation de l'espace, l'analyse du flux de trafic et la conception de conformité pour une efficacité maximale."
+msgstr ""
+"Services de conception d'aménagement de stationnement personnalisés, y "
+"compris l'optimisation de l'espace, l'analyse du flux de trafic et la "
+"conception de conformité pour une efficacité maximale."
 
 #: quotes/templates/partials/schema/custom-layout-design.html:26
 msgid "Parking Design Services"
@@ -3229,7 +3480,9 @@ msgid ""
 "Professional indoor marking services for warehouses, factories, and "
 "industrial spaces including safety zone markings and walkway delineation."
 msgstr ""
-"Services professionnels de marquage intérieur pour entrepôts, usines et espaces industriels, y compris le marquage des zones de sécurité et la délimitation des allées."
+"Services professionnels de marquage intérieur pour entrepôts, usines et "
+"espaces industriels, y compris le marquage des zones de sécurité et la "
+"délimitation des allées."
 
 #: quotes/templates/partials/schema/indoor-markings.html:26
 msgid "Industrial Safety Markings"
@@ -3239,7 +3492,10 @@ msgstr "Marquages intérieurs"
 msgid ""
 "Professional line restoration services to refresh faded parking lot lines, "
 "renew safety markings, and restore visibility to existing pavement markings."
-msgstr "Services professionnels de restauration de lignes pour rafraîchir les lignes de stationnement décolorées, renouveler les marquages de sécurité et restaurer la visibilité des marquages au sol existants."
+msgstr ""
+"Services professionnels de restauration de lignes pour rafraîchir les lignes "
+"de stationnement décolorées, renouveler les marquages de sécurité et "
+"restaurer la visibilité des marquages au sol existants."
 
 #: quotes/templates/partials/schema/line-restoration.html:26
 msgid "Line Maintenance Services"
@@ -3249,7 +3505,9 @@ msgstr "Service de restauration de lignes"
 msgid ""
 "Professional parking lot striping services including line marking, "
 "compliance, and durable pavement striping for businesses."
-msgstr "Services professionnels de marquage de stationnement, y compris le marquage des lignes et le marquage durable des chaussées pour les entreprises."
+msgstr ""
+"Services professionnels de marquage de stationnement, y compris le marquage "
+"des lignes et le marquage durable des chaussées pour les entreprises."
 
 #: quotes/templates/partials/schema/parking-lot-striping.html:26
 msgid "Line Marking Services"
@@ -3259,7 +3517,9 @@ msgstr "Service de marquage de lignes de stationnement"
 msgid ""
 "Professional pavement marking services for roads, crosswalks, and traffic "
 "areas including durable road striping and safety markings."
-msgstr "Services professionnels de marquage durable pour les routes, les passages piétons et les zones de circulation, y compris le marquage de sécurité."
+msgstr ""
+"Services professionnels de marquage durable pour les routes, les passages "
+"piétons et les zones de circulation, y compris le marquage de sécurité."
 
 #: quotes/templates/partials/schema/pavement-markings.html:26
 msgid "Road Marking Services"
@@ -3267,16 +3527,16 @@ msgstr "Services de marquage de chaussée;"
 
 #: quotes/templates/partials/schema/playground.html:6
 #: quotes/templates/partials/schema/playground.html:25
-#, fuzzy
-#| msgid "School Playground Markings"
 msgid "Playground Marking"
-msgstr "Marquage de jeux pour les cours d'écoles"
+msgstr "Marquage de jeux"
 
 #: quotes/templates/partials/schema/playground.html:7
 msgid ""
 "Professional playground marking services for schools, parks, and playgrounds "
 "across Quebec."
-msgstr "Service de marquage de jeux pour cours d'écoles, parc et terrains de jeux partout au Québec."
+msgstr ""
+"Service de marquage de jeux pour cours d'écoles, parc et terrains de jeux "
+"partout au Québec."
 
 #: quotes/templates/partials/schema/playground.html:26
 msgid "Playground Marking Services"
@@ -3395,7 +3655,7 @@ msgstr ""
 #: quotes/templates/partials/terms/terms.html:49
 #, fuzzy, python-format
 #| msgid ""
-#| "For projects over $1,000: A 30% deposit may be required before work "
+#| "For projects over $1,000: A 30%% deposit may be required before work "
 #| "begins, with the balance due upon completion."
 msgid ""
 "For projects over $1,000: A 30%% deposit may be required before work begins, "
@@ -3414,7 +3674,7 @@ msgstr ""
 #, fuzzy, python-format
 #| msgid ""
 #| "Invoices are due within 30 days of issuance. Late payments may incur a "
-#| "fee of 1.5% per month."
+#| "fee of 1.5%% per month."
 msgid ""
 "Invoices are due within 30 days of issuance. Late payments may incur a fee "
 "of 1.5%% per month."
@@ -3609,7 +3869,7 @@ msgstr ""
 #, fuzzy, python-format
 #| msgid ""
 #| "Cancellations made less than 48 hours before the scheduled start time: "
-#| "25% of the quoted price may be charged to cover preparation costs."
+#| "25%% of the quoted price may be charged to cover preparation costs."
 msgid ""
 "Cancellations made less than 48 hours before the scheduled start time: 25%% "
 "of the quoted price may be charged to cover preparation costs."
@@ -4178,3 +4438,10 @@ msgstr "Anglais"
 #: titanparking/settings.py:122
 msgid "French"
 msgstr "Français"
+
+#~ msgid ""
+#~ "Contact us today for a fast quote and a service adapted to your site’s "
+#~ "specific needs."
+#~ msgstr ""
+#~ "Contactez-nous dès maintenant pour une soumission rapide et un service "
+#~ "professionnel adapté à votre réalité."
