@@ -346,7 +346,7 @@ def quote_calculator_view(request):
 def client_pdf(request, access_token):
     quote = get_object_or_404(Quote, access_token=access_token)
 
-    if quote.expires_at < timezone.now():
+    if not quote.is_invoice and quote.expires_at < timezone.now():
         return render(
             request,
             "quotes/pdf/quote_expired.html",

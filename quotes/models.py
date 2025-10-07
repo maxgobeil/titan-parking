@@ -13,6 +13,11 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 
+def get_default_expiration():
+    """Return expiration date 30 days from now"""
+    return timezone.now() + timezone.timedelta(days=30)
+
+
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -148,9 +153,7 @@ class Quote(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name="quotes")
     title = models.CharField(max_length=200, default="Line Striping Quote")
     created_at = models.DateTimeField(auto_now_add=True)
-    expires_at = models.DateTimeField(
-        default=timezone.now() + timezone.timedelta(days=30)
-    )
+    expires_at = models.DateTimeField(default=get_default_expiration)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default="draft")
     invoice_number = models.CharField(max_length=20, unique=True)
 
