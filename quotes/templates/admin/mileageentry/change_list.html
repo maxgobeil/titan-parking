@@ -1,0 +1,31 @@
+{% extends "admin/change_list.html" %}
+
+{% block result_list %}
+    {{ block.super }}
+    
+    {% if fiscal_year_totals %}
+    <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px;">
+        <h3 style="margin-top: 0;">Mileage Summary by Fiscal Year (Nov 1 - Oct 31)</h3>
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr style="border-bottom: 2px solid #dee2e6;">
+                    <th style="text-align: left; padding: 8px;">Fiscal Year</th>
+                    <th style="text-align: right; padding: 8px;">Total Mileage</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fiscal_year, data in fiscal_year_totals.items %}
+                <tr style="border-bottom: 1px solid #dee2e6;">
+                    <td style="padding: 8px; font-weight: bold;">FY {{ fiscal_year|add:"-1" }}-{{ fiscal_year }}</td>
+                    <td style="text-align: right; padding: 8px;">{{ data.formatted }} km</td>
+                </tr>
+                {% endfor %}
+                <tr style="border-top: 2px solid #dee2e6; font-weight: bold; background-color: #e9ecef;">
+                    <td style="padding: 8px;">Grand Total</td>
+                    <td style="text-align: right; padding: 8px;">{{ grand_total_formatted }} km</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+{% endblock %}

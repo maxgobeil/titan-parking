@@ -266,6 +266,66 @@ class MileageEntryAdmin(admin.ModelAdmin):
     list_display = ("date", "trip_purpose", "start_odometer", "end_odometer", "notes")
     list_filter = ("trip_purpose",)
     search_fields = ("notes",)
+    date_hierarchy = "date"
+    change_list_template = "admin/mileageentry/change_list.html"
+
+    def total_mileage(self, obj):
+        """Calculate and display the mileage for this entry"""
+        if obj.start_odometer is not None and obj.end_odometer is not None:
+            mileage = obj.end_odometer - obj.start_odometer
+            return f"{mileage:,} km"
+        return "-"
+
+    total_mileage.short_description = "Mileage"
+    total_mileage.admin_order_field = "end_odometer"
+
+    def changelist_view(self, request, extra_context=None):
+        """Add fiscal year mileage totals to the changelist"""
+        response = super().changelist_view(request, extra_context=extra_context)
+
+        try:
+            qs = response.context_data["cl"].queryset
+        except (AttributeError, KeyError):
+            return response
+
+        # Calculate totals per fiscal year (Nov 1 - Oct 31)
+        fiscal_year_totals = {}
+        for entry in qs.filter(
+            start_odometer__isnull=False, end_odometer__isnull=False
+        ):
+            # Determine fiscal year: Nov 1 to Oct 31
+            # If month is Nov or Dec, fiscal year is the next calendar year
+            # Otherwise, fiscal year is the current calendar year
+            if entry.date.month >= 11:
+                fiscal_year = entry.date.year + 1
+            else:
+                fiscal_year = entry.date.year
+
+            mileage = entry.end_odometer - entry.start_odometer
+            fiscal_year_totals[fiscal_year] = (
+                fiscal_year_totals.get(fiscal_year, 0) + mileage
+            )
+
+        # Sort fiscal years descending and format numbers
+        fiscal_year_totals_formatted = {}
+        for fiscal_year in sorted(fiscal_year_totals.keys(), reverse=True):
+            total = fiscal_year_totals[fiscal_year]
+            fiscal_year_totals_formatted[fiscal_year] = {
+                "total": total,
+                "formatted": f"{total:,.0f}",
+            }
+
+        # Calculate grand total
+        grand_total = sum(fiscal_year_totals.values())
+
+        if extra_context is None:
+            extra_context = {}
+        extra_context["fiscal_year_totals"] = fiscal_year_totals_formatted
+        extra_context["grand_total"] = grand_total
+        extra_context["grand_total_formatted"] = f"{grand_total:,.0f}"
+
+        response.context_data.update(extra_context)
+        return response
 
 
 @admin.register(BusinessVisit)
